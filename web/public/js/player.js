@@ -17,29 +17,35 @@ function submit_request(url, callback) {
 }
 
 function get_request_url() {
-  var buf = [];
-  buf.push("pts=" + $("#text_pts")[0].value);
-  buf.push("tpm=" + $("#text_tpm")[0].value);
-  buf.push("reb=" + $("#text_reb")[0].value);
-  buf.push("ast=" + $("#text_ast")[0].value);
-  buf.push("stl=" + $("#text_stl")[0].value);
-  buf.push("blk=" + $("#text_blk")[0].value);
-  buf.push("fg=" + $("#text_fg")[0].value);
-  buf.push("ft=" + $("#text_ft")[0].value);
-  return '/all_players?' + buf.join('&');
+    var chunks = document.URL.split('=');
+    var player_id = chunks[chunks.length - 1]; // from current URL
+
+    var buf = [];
+    buf.push("player_id=" + player_id);
+    buf.push("pts=" + $("#text_pts")[0].value);
+    buf.push("tpm=" + $("#text_tpm")[0].value);
+    buf.push("reb=" + $("#text_reb")[0].value);
+    buf.push("ast=" + $("#text_ast")[0].value);
+    buf.push("stl=" + $("#text_stl")[0].value);
+    buf.push("blk=" + $("#text_blk")[0].value);
+    buf.push("fg=" + $("#text_fg")[0].value);
+    buf.push("ft=" + $("#text_ft")[0].value);
+    return '/get_player?' + buf.join('&');
 }
 
 function create_table(data) {
 
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Season Games Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
-        var p = data[i];
-        buf.push('<tr>' + format_name(p.name, p.player_id));
-        buf.push(format_season_player(p) + '</tr>');
+        var s = data[i];
+        buf.push('<tr>' + format_name(s.name, undefined)); // name
+        buf.push('<td align="center" bgcolor="#FFF">' + s.season + '</td>');
+        buf.push('<td align="center" bgcolor="#FFF">' + s.games + '</td>');
+        buf.push(format_season_player(s) + '</tr>');
     }
 
     buf.push('</tbody></table>')
@@ -49,7 +55,6 @@ function create_table(data) {
 function on_response(data) {
     document.getElementById("data_div").innerHTML = create_table(data);
     $("#datatable").tablesorter({widgets: ['zebra']});
-    save_local_storage();
 }
 
 function submitenter(field, e) {
