@@ -18,14 +18,15 @@ function submit_request(url, callback) {
 
 function get_request_url() {
   var buf = [];
-  buf.push("pts=" + $("#text_pts")[0].value);
-  buf.push("tpm=" + $("#text_tpm")[0].value);
-  buf.push("reb=" + $("#text_reb")[0].value);
-  buf.push("ast=" + $("#text_ast")[0].value);
-  buf.push("stl=" + $("#text_stl")[0].value);
-  buf.push("blk=" + $("#text_blk")[0].value);
-  buf.push("fg=" + $("#text_fg")[0].value);
-  buf.push("ft=" + $("#text_ft")[0].value);
+  buf.push("pts=" + $("#text_pts").val());
+  buf.push("tpm=" + $("#text_tpm").val());
+  buf.push("reb=" + $("#text_reb").val());
+  buf.push("ast=" + $("#text_ast").val());
+  buf.push("stl=" + $("#text_stl").val());
+  buf.push("blk=" + $("#text_blk").val());
+  buf.push("fg=" + $("#text_fg").val());
+  buf.push("ft=" + $("#text_ft").val());
+  buf.push("season=" + $("#select_season").val());
   return '/all_players?' + buf.join('&');
 }
 
@@ -47,12 +48,12 @@ function create_table(data) {
 }
 
 function on_response(data) {
-    document.getElementById("data_div").innerHTML = create_table(data);
+    $("#data_div").html(create_table(data));
     $("#datatable").tablesorter({widgets: ['zebra']});
     save_local_storage();
 }
 
-function submitenter(field, e) {
+function submitenter(e) {
     var keycode;
     if (window.event)
         keycode = window.event.keyCode;
@@ -70,7 +71,14 @@ function submitenter(field, e) {
     }
 }
 
+function on_seasons_response(seasons) {
+    for (var i = 0; i < seasons.length; i=i+1) {
+        $("#select_season").append('<option value="' + seasons[i] + '">' + seasons[i] + '</option>');
+    }
+    $("#select_season").val(seasons[seasons.length - 1]);
+}
+
 $(document).ready(function() {
     load_local_storage();
-    submit_request(get_request_url(), on_response);
+    submit_request("/get_seasons", on_seasons_response);
 })

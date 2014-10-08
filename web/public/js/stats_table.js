@@ -62,6 +62,17 @@ function format_header(vals) {
   return buf.join('');
 }
 
+function reset_settings() {
+    var vals = "pts tpm reb ast stl blk fg ft".split(' ');
+    for (var i = 0; i < vals.length; i=i+1) {
+        $("#text_" + vals[i]).val("1.0");
+    }
+    if ($("#select_season").length) {
+        var options = $("#select_season option");
+        $("#select_season").val(options[options.length - 1].innerHTML);
+    }
+}
+
 function save_local_storage() {
     var vals = "pts tpm reb ast stl blk fg ft".split(' ');
     for (var i = 0; i < vals.length; i=i+1) {

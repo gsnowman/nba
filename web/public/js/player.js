@@ -22,14 +22,14 @@ function get_request_url() {
 
     var buf = [];
     buf.push("player_id=" + player_id);
-    buf.push("pts=" + $("#text_pts")[0].value);
-    buf.push("tpm=" + $("#text_tpm")[0].value);
-    buf.push("reb=" + $("#text_reb")[0].value);
-    buf.push("ast=" + $("#text_ast")[0].value);
-    buf.push("stl=" + $("#text_stl")[0].value);
-    buf.push("blk=" + $("#text_blk")[0].value);
-    buf.push("fg=" + $("#text_fg")[0].value);
-    buf.push("ft=" + $("#text_ft")[0].value);
+    buf.push("pts=" + $("#text_pts").val());
+    buf.push("tpm=" + $("#text_tpm").val());
+    buf.push("reb=" + $("#text_reb").val());
+    buf.push("ast=" + $("#text_ast").val());
+    buf.push("stl=" + $("#text_stl").val());
+    buf.push("blk=" + $("#text_blk").val());
+    buf.push("fg=" + $("#text_fg").val());
+    buf.push("ft=" + $("#text_ft").val());
     return '/get_player?' + buf.join('&');
 }
 
@@ -53,11 +53,11 @@ function create_table(data) {
 }
 
 function on_response(data) {
-    document.getElementById("data_div").innerHTML = create_table(data);
+    $("#data_div").html(create_table(data));
     $("#datatable").tablesorter({widgets: ['zebra']});
 }
 
-function submitenter(field, e) {
+function submitenter(e) {
     var keycode;
     if (window.event)
         keycode = window.event.keyCode;
