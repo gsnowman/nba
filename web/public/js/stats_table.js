@@ -4,7 +4,7 @@ function format_percent(val) {
     return (val * 100).toFixed(1) + "%";
 }
 
-// returns a formatted name, eventually will have links
+// returns a <td> formatted name, eventually will have links (Y!, Roto, Player Page)
 function format_name(name) {
     return '<td align="left" bgcolor="#FFF">' + name + '</td>'
 }
@@ -12,7 +12,7 @@ function format_name(name) {
 // generates the following table cells:
 // - z pts tpm reb ast stl blk fga fgp fta ftp
 // - Z scores for: pts tpm reb ast stl blk fg ft
-function season_player(p) {
+function format_season_player(p) {
 
     var buf = [];
 
@@ -40,4 +40,13 @@ function season_player(p) {
     buf.push('<td align="center" bgcolor="' + z_color(p.zft, max) + '">' + p.zft.toFixed(1) + '</td>');
 
     return buf.join('');
+}
+
+function format_header(vals) {
+  var buf = ['<thead><tr>'];
+  for (var i = 0; i < vals.length; i=i+1) {
+      buf.push('<th>' + vals[i] + '</th>');
+  }
+  buf.push('</tr></thead>');
+  return buf.join('');
 }
