@@ -1,21 +1,4 @@
 
-function submit_request(url, callback) {
-    var request = new XMLHttpRequest();
-    request.open("GET", url, true);
-
-    // set up the asynchronous callback
-    request.onreadystatechange = function() {
-        if (request.readyState == 4 && request.status == 200) {
-            // parse the response
-            var message = JSON.parse(request.responseText);
-            callback(message)
-        }
-    }
-
-    // send the request
-    request.send(null);
-}
-
 function get_request_url() {
     var chunks = document.URL.split('=');
     var player_id = chunks[chunks.length - 1]; // from current URL

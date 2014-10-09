@@ -1,6 +1,27 @@
 
 var places = 2;
 
+// submits an asynchronous request to some URL, calls callback on success
+function submit_request(url, callback) {
+    var request = new XMLHttpRequest();
+    request.open("GET", url, true);
+
+    // set up the asynchronous callback
+    request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200) {
+            // parse the response
+            var message = JSON.parse(request.responseText);
+            console.log('Received response url="' + url + '" bytes=' +
+                 request.responseText.length + ' rows=' + message.length);
+            callback(message)
+        }
+    }
+
+    // send the request
+    request.send(null);
+}
+
+
 // formats a decimal (0.75) as a percent string "75.0%"
 function format_percent(val) {
     return (val * 100).toFixed(places) + "%";
@@ -78,13 +99,18 @@ function save_local_storage() {
     for (var i = 0; i < vals.length; i=i+1) {
         localStorage[vals[i]] = $("#text_" + vals[i]).val();
     }
+    localStorage['remove_owned'] = $("#chk_remove_owned").prop('checked');
 }
 
 function load_local_storage() {
     var vals = "pts tpm reb ast stl blk fg ft".split(' ');
     for (var i = 0; i < vals.length; i=i+1) {
-        if (localStorage[vals[i]] !== undefined) {
+        if (localStorage[vals[i]] !== undefined && $("#text_" + vals[i]).length) {
             $("#text_" + vals[i]).val(localStorage[vals[i]]);
         }
+    }
+
+    if (localStorage['remove_owned'] !== undefined && $("#chk_remove_owned").length) {
+        $("#chk_remove_owned").attr('checked', localStorage['remove_owned']);
     }
 }
