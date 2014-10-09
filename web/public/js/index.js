@@ -31,6 +31,15 @@ function set_owner(player_id) {
     }
 }
 
+function owner_name(owner_id) {
+    for (var i = 0; i < owners.length; i=i+1) {
+        if (owners[i].owner_id == owner_id) {
+            return owners[i].name;
+        }
+    }
+    return "";
+}
+
 function owner_dialog(player_id, player_name, owner_id) {
     var buf = ['<form id="form_owner">'];
 
@@ -53,12 +62,14 @@ function owner_dialog(player_id, player_name, owner_id) {
 function create_table(data) {
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Owner Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Owner Set Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
         var p = data[i];
         buf.push('<tr>' + format_name(p.name, p.player_id));
+        // add owner
+        buf.push('<td align="center" bgcolor="#FFF">' + owner_name(p.owner_id) + '</td>');
 
         // 'Set Owner' button, calls owner_dialog method above
         buf.push('<td align="center" bgcolor="#FFF"><button id="btn_owner" class="draft" onClick="owner_dialog(');

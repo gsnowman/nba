@@ -34,7 +34,7 @@ SELECT
     season,
     REPLACE(P.first || ' ' || P.last, "'", "") as name,
     SV.player_id,
-    CASE WHEN O.owner_id IS NULL THEN 0 ELSE O.owner_id END,
+    CASE WHEN O.owner_id IS NULL THEN 0 ELSE O.owner_id END as owner_id,
     pts, zpts * %f as zpts,
     tpm, ztpm * %f as ztpm,
     reb, zreb * %f as zreb,
