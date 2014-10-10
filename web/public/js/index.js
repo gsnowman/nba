@@ -46,7 +46,8 @@ function owner_dialog(player_id, player_name, owner_id) {
     for (var i = 0; i < owners.length; i=i+1) {
         var o = owners[i];
         buf.push('<input id="radio_owner" type="radio" name="radio_owner" value="');
-        buf.push(o.owner_id + '" ' + (o.owner_id == owner_id ? " checked" : "") + '>' + o.name + '<br>');
+        buf.push(o.owner_id + '" ' + (o.owner_id == owner_id ? " checked" : "") + '>' + o.name);
+        buf.push(' (<a href="/team?owner_id=' + o.owner_id + '" target="_blank">open</a>)<br>')
     }
 
     // add a 'None' owner (specified with owner_id == 0), and a button for submission
@@ -73,7 +74,7 @@ function create_table(data) {
 
         // 'Set Owner' button, calls owner_dialog method above
         buf.push('<td align="center" bgcolor="#FFF"><button id="btn_owner" class="draft" onClick="owner_dialog(');
-        buf.push(p.player_id + ',\'' + p.name + '\',' + p.owner_id + ');">Set Owner</button></td>');
+        buf.push(p.player_id + ',\'' + p.name + '\',' + p.owner_id + ');">Owners</button></td>');
 
         buf.push(format_season_player(p) + '</tr>');
     }

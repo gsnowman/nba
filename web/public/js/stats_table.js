@@ -21,10 +21,17 @@ function submit_request(url, callback) {
     request.send(null);
 }
 
-
 // formats a decimal (0.75) as a percent string "75.0%"
 function format_percent(val) {
     return (val * 100).toFixed(places) + "%";
+}
+
+function format_percent_plus_minus(a, b) {
+    if (a >= b) {
+        return "+" + format_percent(a - b);
+    } else {
+        return "-" + format_percent(b - a);
+    }
 }
 
 // returns a <td> formatted name, eventually will have links (Y!, Roto, Player Page)
@@ -48,7 +55,6 @@ function format_season_player(p) {
 
     var buf = [];
 
-    // TODO server needs to return z
     buf.push('<td align="center" bgcolor="' + z_color(p.z, 2.0) + '">' + p.z.toFixed(places) + '</td>');
     buf.push('<td align="center" bgcolor="#FFF">' + p.pts.toFixed(places) + '</td>');
     buf.push('<td align="center" bgcolor="#FFF">' + p.tpm.toFixed(places) + '</td>');
@@ -74,13 +80,18 @@ function format_season_player(p) {
     return buf.join('');
 }
 
+function format_row(vals, cell_type) {
+    var begin = '<' + cell_type + '>';
+    var end = '</' + cell_type + '>';
+    var buf = ['<tr>'];
+    for (var i = 0; i < vals.length; i=i+1)
+        buf.push(begin + vals[i] + end);
+    buf.push('</tr>');
+    return buf.join('');
+}
+
 function format_header(vals) {
-  var buf = ['<thead><tr>'];
-  for (var i = 0; i < vals.length; i=i+1) {
-      buf.push('<th>' + vals[i] + '</th>');
-  }
-  buf.push('</tr></thead>');
-  return buf.join('');
+    return ['<thead>', format_row(vals, 'th'), '</thead>'].join('');
 }
 
 function reset_settings() {
