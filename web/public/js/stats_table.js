@@ -122,6 +122,6 @@ function load_local_storage() {
     }
 
     if (localStorage['remove_owned'] !== undefined && $("#chk_remove_owned").length) {
-        $("#chk_remove_owned").attr('checked', localStorage['remove_owned']);
+        $("#chk_remove_owned").attr('checked', localStorage['remove_owned'] == "true");
     }
 }
