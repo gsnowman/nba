@@ -26,9 +26,9 @@ function create_table(data) {
     for (var i = 0; i < data.length; i=i+1) {
         var s = data[i];
         buf.push('<tr>' + format_name(s.name, undefined)); // name
-        buf.push('<td align="center" bgcolor="#FFF">' + s.season + '</td>');
-        buf.push('<td align="center" bgcolor="#FFF">' + s.games + '</td>');
-        buf.push('<td align="center" bgcolor="#FFF">' + s.min.toFixed(places) + '</td>');
+        buf.push('<td align="center">' + s.season + '</td>');
+        buf.push('<td align="center">' + s.games + '</td>');
+        buf.push('<td align="center">' + s.min.toFixed(places) + '</td>');
         buf.push(format_season_player(s) + '</tr>');
     }
 
@@ -42,7 +42,10 @@ function on_response(data) {
     }
 
     $("#data_div").html(create_table(data));
-    $("#datatable").tablesorter({widgets: ['zebra']});
+    $("#datatable").tablesorter({
+        widgets: ['zebra'],
+        sortInitialOrder: 'desc'
+    });
 }
 
 function submitenter(e) {

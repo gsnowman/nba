@@ -1,30 +1,26 @@
-/* tables */
 table.tablesorter {
     font-family:arial;
-    background-color: #CDCDCD;
     margin: 10px 0pt 15px;
     font-size: 8pt;
     width: 100%;
     text-align: left;
 }
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
-    background-color: #e6EEEE;
-    border: 1px solid #FFF;
+    background-color: #D0D0D0;
+    border: 1px solid #909090;
     font-size: 7pt;
     padding: 4px;
     text-align: center;
 }
-table.tablesorter thead tr .header {
-    /*background-image: url(bg.gif);*/
-    background-repeat: no-repeat;
-    background-position: center right;
-    cursor: pointer;
-}
 table.tablesorter tbody td {
     color: #3D3D3D;
     padding: 4px;
-    vertical-align: top;
+    vertical-align: center;
 }
+
+table.tablesorter .even  { background-color: #ECECEC; }
+table.tablesorter .odd   { background-color: #FFFFFF; }
+table.tablesorter .watch { background-color: #FBFFB5; }
 
 button.draft {
     font-size: 80%
@@ -38,6 +34,8 @@ table.tablesorter thead tr .headerSortDown {
     background-image: url(desc.gif);
 }
 */
+
+/* TODO: what is tablesorterstd looking like? */
 
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
     background-color: #8dbdd8;
@@ -69,14 +67,12 @@ table.tablesorterstd tbody td {
     vertical-align: top;
 }
 
-/*
 table.tablesorterstd thead tr .headerSortUp {
     background-image: url(asc.gif);
 }
 table.tablesorterstd thead tr .headerSortDown {
     background-image: url(desc.gif);
 }
-*/
 
 table.tablesorterstd thead tr .headerSortDown, table.tablesorterstd thead tr .headerSortUp {
     background-color: #8dbdd8;

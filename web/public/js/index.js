@@ -60,24 +60,43 @@ function owner_dialog(player_id, player_name, owner_id) {
     $("#dialog").dialog("open");
 }
 
+function set_watch(player_id) {
+    var is_checked = $('#chk_watch_' + player_id).prop('checked');
+    if (is_checked) {
+        $.watch_list.watch(player_id);
+    } else {
+        $.watch_list.unwatch(player_id);
+    }
+    redraw($.last_response);
+}
+
 function create_table(data) {
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Team Pos Age Owner Set Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Team Pos Age Owner Own/Watch Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
         var p = data[i];
-        buf.push('<tr>' + format_name(p.name, p.player_id));
+        var watching = $.watch_list.contains(p.player_id);
+        if (watching) {
+            buf.push('<tr class="watch">' + format_name(p.name, p.player_id));
+        } else {
+            buf.push('<tr>' + format_name(p.name, p.player_id));
+        }
         // add owner
-        buf.push('<td align="center" bgcolor="#FFF">' + p.team + '</td>');
-        buf.push('<td align="center" bgcolor="#FFF">' + p.pos + '</td>');
-        buf.push('<td align="center" bgcolor="#FFF">' + p.age + '</td>');
-        buf.push('<td align="center" bgcolor="#FFF">' + linked_owner_name(p.owner_id) + '</td>');
+        buf.push('<td align="center">' + p.team + '</td>');
+        buf.push('<td align="center">' + p.pos + '</td>');
+        buf.push('<td align="center">' + p.age + '</td>');
+        buf.push('<td align="center">' + linked_owner_name(p.owner_id) + '</td>');
 
         // 'Set Owner' button, calls owner_dialog method above
-        buf.push('<td align="center" bgcolor="#FFF"><button id="btn_owner" class="draft" onClick="owner_dialog(');
-        buf.push(p.player_id + ',\'' + p.name + '\',' + p.owner_id + ');">Owners</button></td>');
+        buf.push('<td align="center"><button id="btn_owner" class="draft" onClick="owner_dialog(');
+        buf.push(p.player_id + ',\'' + p.name + '\',' + p.owner_id + ');">Owners</button>');
+
+        // Add a WatchList checkbox
+        buf.push('<input id="chk_watch_' + p.player_id + '" type="checkbox" name="Watch" onChange="set_watch(' + p.player_id + ')"');
+        buf.push((watching ? ' checked' : '') + '></td>');
 
         buf.push(format_season_player(p) + '</tr>');
     }
@@ -86,10 +105,20 @@ function create_table(data) {
     return buf.join("");
 }
 
-function on_response(data) {
+function redraw(data) {
     $("#data_div").html(create_table(data));
-    $("#datatable").tablesorter({widgets: ['zebra']});
+
+    $("#datatable").tablesorter({
+        widgets: ['zebra'],
+        sortInitialOrder: 'desc'
+    });
+
     save_local_storage();
+}
+
+function on_response(data) {
+    $.last_response = data;
+    redraw(data);
 }
 
 function submitenter(e) {

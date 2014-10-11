@@ -1,6 +1,45 @@
 
 var places = 2;
 
+function WatchList(storage_string) {
+    this.watching = [];
+    if (storage_string !== undefined && storage_string.length > 0) {
+        var watch_list_strings = storage_string.split(',');
+        for (var i = 0; i < watch_list_strings.length; i=i+1) {
+            this.watching.push(parseInt(watch_list_strings[i]));
+        }
+    }
+    console.log('Initialized watch list, size=' + this.watching.length +
+        ' [' + this.watching.join(',') + ']');
+
+    this.index = function(player_id) {
+        return this.watching.indexOf(player_id);
+    };
+
+    this.contains = function(player_id) {
+        return this.index(player_id) != -1;
+    };
+
+    this.storage = function() {
+        return this.watching.join(',');
+    };
+
+    this.watch = function(player_id) {
+        if (!this.contains(player_id)) {
+            console.log('Adding ' + player_id + ' to watch list');
+            this.watching.push(player_id);
+        }
+    };
+
+    this.unwatch = function(player_id) {
+        var ix = this.index(player_id);
+        if (ix != -1) {
+            console.log('Removing ' + player_id + ' from watch list');
+            this.watching.splice(ix, 1);
+        }
+    };
+}
+
 // submits an asynchronous request to some URL, calls callback on success
 function submit_request(url, callback) {
     var request = new XMLHttpRequest();
@@ -34,15 +73,19 @@ function format_percent_plus_minus(a, b) {
     }
 }
 
+function format_bgcolor(bgcolor) {
+    return (bgcolor === undefined ? '' : ('bgcolor="' + bgcolor + '"'));
+}
+
 // returns a <td> formatted name, eventually will have links (Y!, Roto, Player Page)
 function format_name(name, player_id) {
     var buf = [];
 
-    buf.push('<td align="left" bgcolor="#FFF">');
-    if (player_id != undefined)
+    buf.push('<td align="left">');
+    if (player_id !== undefined)
         buf.push('<a href="/player?player_id=' + player_id + '" target="_blank">');
     buf.push(name);
-    if (player_id != undefined)
+    if (player_id !== undefined)
         buf.push('</a>');
     buf.push('</td>');
     return buf.join('');
@@ -52,30 +95,29 @@ function format_name(name, player_id) {
 // - z pts tpm reb ast stl blk fga fgp fta ftp
 // - Z scores for: pts tpm reb ast stl blk fg ft
 function format_season_player(p) {
-
     var buf = [];
 
-    buf.push('<td align="center" bgcolor="' + z_color(p.z, 2.0) + '">' + p.z.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="#FFF">' + p.pts.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="#FFF">' + p.tpm.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="#FFF"><font color="#0000FF">' + p.reb.toFixed(places) + '</font></td>');
-    buf.push('<td align="center" bgcolor="#FFF"><font color="#0000FF">' + p.ast.toFixed(places) + '</font></td>');
-    buf.push('<td align="center" bgcolor="#FFF"><font color="#0000FF">' + p.stl.toFixed(places) + '</font></td>');
-    buf.push('<td align="center" bgcolor="#FFF"><font color="#0000FF">' + p.blk.toFixed(places) + '</font></td>');
-    buf.push('<td align="center" bgcolor="#FFF"><font color="#FF0000">' + p.fga.toFixed(places) + '</font></td>');
-    buf.push('<td align="center" bgcolor="#FFF"><font color="#FF0000">' + format_percent(p.fgp) + '</font></td>');
-    buf.push('<td align="center" bgcolor="#FFF"><font color="#FF0000">' + p.fta.toFixed(places) + '</font></td>');
-    buf.push('<td align="center" bgcolor="#FFF"><font color="#FF0000">' + format_percent(p.ftp) + '</font></td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.z, 2.0)) + '>' + p.z.toFixed(places) + '</td>');
+    buf.push('<td align="center">' + p.pts.toFixed(places) + '</td>');
+    buf.push('<td align="center">' + p.tpm.toFixed(places) + '</td>');
+    buf.push('<td align="center"><font color="#0000FF">' + p.reb.toFixed(places) + '</font></td>');
+    buf.push('<td align="center"><font color="#0000FF">' + p.ast.toFixed(places) + '</font></td>');
+    buf.push('<td align="center"><font color="#0000FF">' + p.stl.toFixed(places) + '</font></td>');
+    buf.push('<td align="center"><font color="#0000FF">' + p.blk.toFixed(places) + '</font></td>');
+    buf.push('<td align="center"><font color="#FF0000">' + p.fga.toFixed(places) + '</font></td>');
+    buf.push('<td align="center"><font color="#FF0000">' + format_percent(p.fgp) + '</font></td>');
+    buf.push('<td align="center"><font color="#FF0000">' + p.fta.toFixed(places) + '</font></td>');
+    buf.push('<td align="center"><font color="#FF0000">' + format_percent(p.ftp) + '</font></td>');
 
     var max = 3.5
-    buf.push('<td align="center" bgcolor="' + z_color(p.zpts, max) + '">' + p.zpts.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="' + z_color(p.ztpm, max) + '">' + p.ztpm.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="' + z_color(p.zreb, max) + '">' + p.zreb.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="' + z_color(p.zast, max) + '">' + p.zast.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="' + z_color(p.zstl, max) + '">' + p.zstl.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="' + z_color(p.zblk, max) + '">' + p.zblk.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="' + z_color(p.zfg, max) + '">' + p.zfg.toFixed(places) + '</td>');
-    buf.push('<td align="center" bgcolor="' + z_color(p.zft, max) + '">' + p.zft.toFixed(places) + '</td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zpts, max)) + '>' + p.zpts.toFixed(places) + '</td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.ztpm, max)) + '>' + p.ztpm.toFixed(places) + '</td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zreb, max)) + '>' + p.zreb.toFixed(places) + '</td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zast, max)) + '>' + p.zast.toFixed(places) + '</td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zstl, max)) + '>' + p.zstl.toFixed(places) + '</td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zblk, max)) + '>' + p.zblk.toFixed(places) + '</td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zfg, max)) + '>' + p.zfg.toFixed(places) + '</td>');
+    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zft, max)) + '>' + p.zft.toFixed(places) + '</td>');
 
     return buf.join('');
 }
@@ -111,6 +153,7 @@ function save_local_storage() {
         localStorage[vals[i]] = $("#text_" + vals[i]).val();
     }
     localStorage['remove_owned'] = $("#chk_remove_owned").prop('checked');
+    localStorage['watch_list'] = $.watch_list.storage();
 }
 
 function load_local_storage() {
@@ -124,4 +167,7 @@ function load_local_storage() {
     if (localStorage['remove_owned'] !== undefined && $("#chk_remove_owned").length) {
         $("#chk_remove_owned").attr('checked', localStorage['remove_owned'] == "true");
     }
+
+    $.watch_list = new WatchList(localStorage['watch_list']);
 }
+
