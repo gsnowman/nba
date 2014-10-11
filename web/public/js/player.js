@@ -20,7 +20,7 @@ function create_table(data) {
 
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Season Games Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Season Games Min Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
@@ -28,6 +28,7 @@ function create_table(data) {
         buf.push('<tr>' + format_name(s.name, undefined)); // name
         buf.push('<td align="center" bgcolor="#FFF">' + s.season + '</td>');
         buf.push('<td align="center" bgcolor="#FFF">' + s.games + '</td>');
+        buf.push('<td align="center" bgcolor="#FFF">' + s.min.toFixed(places) + '</td>');
         buf.push(format_season_player(s) + '</tr>');
     }
 
@@ -36,6 +37,10 @@ function create_table(data) {
 }
 
 function on_response(data) {
+    if (data.length) {
+        document.title = data[0].name;
+    }
+
     $("#data_div").html(create_table(data));
     $("#datatable").tablesorter({widgets: ['zebra']});
 }

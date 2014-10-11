@@ -63,13 +63,16 @@ function owner_dialog(player_id, player_name, owner_id) {
 function create_table(data) {
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Owner Set Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Team Pos Age Owner Set Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
         var p = data[i];
         buf.push('<tr>' + format_name(p.name, p.player_id));
         // add owner
+        buf.push('<td align="center" bgcolor="#FFF">' + p.team + '</td>');
+        buf.push('<td align="center" bgcolor="#FFF">' + p.pos + '</td>');
+        buf.push('<td align="center" bgcolor="#FFF">' + p.age + '</td>');
         buf.push('<td align="center" bgcolor="#FFF">' + linked_owner_name(p.owner_id) + '</td>');
 
         // 'Set Owner' button, calls owner_dialog method above
