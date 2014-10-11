@@ -78,7 +78,7 @@ function format_bgcolor(bgcolor) {
 }
 
 // returns a <td> formatted name, eventually will have links (Y!, Roto, Player Page)
-function format_name(name, player_id) {
+function format_name(name, player_id, rotoworld_id) {
     var buf = [];
 
     buf.push('<td align="left">');
@@ -87,6 +87,15 @@ function format_name(name, player_id) {
     buf.push(name);
     if (player_id !== undefined)
         buf.push('</a>');
+
+    // link to rotoworld
+    if (rotoworld_id !== undefined && rotoworld_id !== 0) {
+        buf.push(' <a href="http://www.rotoworld.com/premium/draftguide/basketball/playerpage.aspx?pid=');
+        buf.push(rotoworld_id + '" target="_blank">');
+        buf.push('<img src="/public/rw_fav.ico" style="width:12px;height:12px"></a>');
+        // style="width:42px;height:42px;border:0"
+    }
+
     buf.push('</td>');
     return buf.join('');
 }

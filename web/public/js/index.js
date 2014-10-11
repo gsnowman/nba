@@ -45,14 +45,16 @@ function owner_dialog(player_id, player_name, owner_id) {
 
     for (var i = 0; i < owners.length; i=i+1) {
         var o = owners[i];
-        buf.push('<input id="radio_owner" type="radio" name="radio_owner" value="');
-        buf.push(o.owner_id + '" ' + (o.owner_id == owner_id ? " checked" : "") + '>' + o.name);
+        buf.push('<input id="radio_owner_' + o.owner_id + '" type="radio" name="radio_owner" value="');
+        buf.push(o.owner_id + '" ' + (o.owner_id == owner_id ? " checked" : "") + '>');
+        buf.push('<label for="radio_owner_' + o.owner_id + '">' + o.name + '</label>');
         buf.push(' (<a href="/team?owner_id=' + o.owner_id + '" target="_blank">open</a>)<br>')
     }
 
     // add a 'None' owner (specified with owner_id == 0), and a button for submission
-    buf.push('<input id="radio_owner" type="radio" name="radio_owner" value="0"');
-    buf.push((owner_id == 0 ? ' checked' : '') + '><strong>None</strong><br></form>');
+    buf.push('<input id="radio_owner_0" type="radio" name="radio_owner" value="0"');
+    buf.push((owner_id == 0 ? ' checked' : '') + '>');
+    buf.push('<label for="radio_owner_0"><strong>None</strong></label><br></form>');
     buf.push('<div align="center"><button id="btn_set_owner" onClick="set_owner(' + player_id + ');">Submit</button></div>');
 
     $("#dialog").html(buf.join(''));
@@ -80,9 +82,9 @@ function create_table(data) {
         var p = data[i];
         var watching = $.watch_list.contains(p.player_id);
         if (watching) {
-            buf.push('<tr class="watch">' + format_name(p.name, p.player_id));
+            buf.push('<tr class="watch">' + format_name(p.name, p.player_id, p.rotoworld_id));
         } else {
-            buf.push('<tr>' + format_name(p.name, p.player_id));
+            buf.push('<tr>' + format_name(p.name, p.player_id, p.rotoworld_id));
         }
         // add owner
         buf.push('<td align="center">' + p.team + '</td>');

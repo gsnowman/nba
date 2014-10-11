@@ -45,6 +45,7 @@ SELECT
     P.pos,
     P.age,
     SV.player_id,
+    CASE WHEN IDS.rotoworld IS NULL THEN 0 ELSE IDS.rotoworld END as rotoworld_id,
     CASE WHEN O.owner_id IS NULL THEN 0 ELSE O.owner_id END as owner_id,
     pts, zpts * %f as zpts,
     tpm, ztpm * %f as ztpm,
@@ -61,6 +62,8 @@ INNER JOIN
     players P ON SV.player_id == P.player_id
 LEFT OUTER JOIN
     owned O ON SV.player_id == O.player_id
+LEFT OUTER JOIN
+    player_ids IDS ON SV.player_id = IDS.yahoo
 WHERE
     season like '%s' %s
 ORDER BY z DESC;
