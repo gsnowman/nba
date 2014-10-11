@@ -25,6 +25,10 @@ class Stats(object):
         return file('public/team.html')
 
     @cherrypy.expose
+    def all(self, *args, **kwargs):
+        return file('public/all.html')
+
+    @cherrypy.expose
     @cherrypy.tools.json_out()
     def all_players(self, pts, tpm, reb, ast, stl, blk, fg, ft, season, remove_owned):
         # convert arguments to floats
@@ -200,6 +204,6 @@ if __name__ == '__main__':
         }
     }
 
-    webbrowser.open('http://127.0.0.1:8080/public/index.html')
+    webbrowser.open('http://127.0.0.1:8080/all')
     cherrypy.quickstart(Stats(), '/', conf)
 
