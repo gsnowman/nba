@@ -5,6 +5,7 @@ function get_request_url() {
 
     var buf = [];
     buf.push("owner_id=" + player_id);
+    buf.push("season=" + $("#select_season").val());
     // TODO: do we want the ability to override scaling factors?
     /*
     buf.push("pts=" + $("#text_pts").val());
@@ -119,8 +120,18 @@ function submitenter(e) {
     }
 }
 
+function on_seasons_response(seasons) {
+    for (var i = 0; i < seasons.length; i=i+1) {
+        $("#select_season").append('<option value="' + seasons[i] + '">' + seasons[i] + '</option>');
+    }
+    $("#select_season").val(seasons[seasons.length - 1]);
+
+    // TODO: load from local storage?
+    submit_request(get_request_url(), on_response);
+}
+
 $(document).ready(function() {
     // TODO: do we want the ability to override scaling factors?
     load_local_storage();
-    submit_request(get_request_url(), on_response);
+    submit_request("/get_seasons", on_seasons_response);
 })

@@ -72,7 +72,7 @@ ORDER BY z DESC;
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def get_player(self, player_id, pts=1.0, tpm=1.0, reb=1.0, ast=1.0, stl=1.0, blk=1.0, fg=1.0, ft=1.0):
+    def get_player(self, player_id, pts, tpm, reb, ast, stl, blk, fg, ft):
         player_id = int(player_id)
         pts, tpm, reb, ast, stl, blk, fg, ft = [float(x) for x in [pts, tpm, reb, ast, stl, blk, fg, ft]]
         sum_z = sum([pts, tpm, reb, ast, stl, blk, fg, ft])
@@ -152,7 +152,7 @@ WHERE SV.player_id = %d ORDER BY season ASC;
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def get_team(self, owner_id):
+    def get_team(self, owner_id, season):
         owner_id = int(owner_id)
         pts, tpm, reb, ast, stl, blk, fg, ft = 8 * [1.0]
         sum_z = sum([pts, tpm, reb, ast, stl, blk, fg, ft])
@@ -176,9 +176,9 @@ INNER JOIN
 LEFT OUTER JOIN
     owned O ON SV.player_id == O.player_id
 WHERE
-    season like '2014-15_ESPN' AND O.owner_id = %d
+    season = '%s' AND O.owner_id = %d
 ORDER BY season ASC;
-""" % (pts, tpm, reb, ast, stl, blk, fg, ft, pts, tpm, reb, ast, stl, blk, fg, ft, sum_z, owner_id)
+""" % (pts, tpm, reb, ast, stl, blk, fg, ft, pts, tpm, reb, ast, stl, blk, fg, ft, sum_z, season, owner_id)
 
         cherrypy.log("owner :: query: %s" % query)
 
