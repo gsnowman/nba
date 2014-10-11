@@ -31,15 +31,3 @@ SELECT
 FROM averages A
     INNER JOIN players P on p.player_id = A.player_id;
 
-SELECT
-    season, name, ztotal / 8.0 as z, zpts, ztpm, zreb, zast, zstl, zblk, zfg, zft, ztotal
-FROM season_values WHERE season like '2014-%' ORDER BY season ASC, ztotal DESC;
-
-SELECT
-    season, name, player_id, ztotal / 8.0 as z, pts, tpm, reb, ast, stl, blk, fga, fgp, fta, ftp
-FROM season_values WHERE season like '2014-%' ORDER BY season ASC, ztotal DESC;
-
-SELECT
-    season, name, player_id, ztotal / 8.0, pts, tpm, reb, ast, stl, blk, fga, fgp, fta, ftp
-FROM season_values WHERE player_id = 4244 ORDER BY season ASC, ztotal DESC;
-
