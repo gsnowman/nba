@@ -1,0 +1,810 @@
+1:  Mapping yahoo 'Kevin Durant' player_id=4244 to espn 'Kevin Durant' player_id=412
+1:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4244, 'okc', 82, 0.0, 7.6, 0.0, 0.0, 5.0, 1.3, 0.9, 30.4, 0.0, 2.1, 19.45789356424519, 9.806778356379576, 8.863830583546031, 7.791307082936961, 0.0, 0.0);
+2:  Mapping yahoo 'LeBron James' player_id=3704 to espn 'LeBron James' player_id=218
+2:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3704, 'cle', 82, 0.0, 5.9, 0.0, 0.0, 5.6, 1.8, 0.9, 23.4, 0.0, 1.3, 19.311273086020385, 11.04604820520366, 8.509107298351566, 6.415866902957081, 0.0, 0.0);
+3:  Mapping yahoo 'Anthony Davis' player_id=5007 to espn 'Anthony Davis' player_id=968
+3:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5007, 'nor', 82, 0.0, 9.3, 0.0, 0.0, 1.3, 1.3, 2.4, 17.9, 0.0, 0.0, 13.520833333333334, 7.017312500000001, 5.549984452736318, 4.328987873134328, 0.0, 0.0);
+4:  Mapping yahoo 'Stephen Curry' player_id=4612 to espn 'Stephen Curry' player_id=622
+4:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4612, 'gsw', 82, 0.0, 4.2, 0.0, 0.0, 7.9, 1.6, 0.2, 23.2, 0.0, 3.3, 15.78227592977593, 7.3545405832755835, 3.4192654192654195, 3.029469161469162, 0.0, 0.0);
+5:  Mapping yahoo 'Kevin Love' player_id=4391 to espn 'Kevin Love' player_id=508
+5:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4391, 'cle', 82, 0.0, 12.2, 0.0, 0.0, 3.4, 0.8, 0.6, 22.2, 0.0, 2.2, 16.323461831267878, 7.68835052252717, 7.432317270803897, 6.049906258434372, 0.0, 0.0);
+6:  Mapping yahoo 'Chris Paul' player_id=3930 to espn 'Chris Paul' player_id=322
+6:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3930, 'lac', 82, 0.0, 4.0, 0.0, 0.0, 10.1, 2.5, 0.1, 18.5, 0.0, 1.2, 13.788027891562837, 6.494161136926096, 5.127865747852306, 4.435603871892245, 0.0, 0.0);
+7:  Mapping yahoo 'James Harden' player_id=4563 to espn 'James Harden' player_id=633
+7:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4563, 'hou', 82, 0.0, 4.6, 0.0, 0.0, 5.7, 1.6, 0.4, 24.2, 0.0, 2.3, 13.721468199838387, 6.21582509452679, 7.70279446172801, 6.624403237086089, 0.0, 0.0);
+8:  Mapping yahoo 'John Wall' player_id=4716 to espn 'John Wall' player_id=719
+8:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4716, 'was', 82, 0.0, 4.0, 0.0, 0.0, 9.1, 1.7, 0.6, 20.0, 0.0, 1.3, 15.139737780777017, 6.661484623541887, 5.5831676428404196, 4.477700449558017, 0.0, 0.0);
+9:  Mapping yahoo 'Russell Westbrook' player_id=4390 to espn 'Russell Westbrook' player_id=527
+9:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4390, 'okc', 82, 0.0, 5.4, 0.0, 0.0, 6.9, 1.8, 0.2, 22.6, 0.0, 1.3, 17.428511749826704, 7.703402193423403, 6.519344329524604, 5.306746284233028, 0.0, 0.0);
+10:  Mapping yahoo 'Carmelo Anthony' player_id=3706 to espn 'Carmelo Anthony' player_id=219
+10:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3706, 'nyk', 82, 0.0, 7.7, 0.0, 0.0, 3.4, 1.3, 0.6, 28.3, 0.0, 2.0, 20.27485397472394, 9.387257390297185, 7.617927236398215, 6.391440951338102, 0.0, 0.0);
+11:  Mapping yahoo 'DeMarcus Cousins' player_id=4720 to espn 'DeMarcus Cousins' player_id=740
+11:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4720, 'sac', 82, 0.0, 11.1, 0.0, 0.0, 2.7, 1.5, 1.1, 20.6, 0.0, 0.0, 15.215240327769084, 7.348961078312468, 6.706033972352634, 4.868580663928012, 0.0, 0.0);
+12:  Mapping yahoo 'Serge Ibaka' player_id=4486 to espn 'Serge Ibaka' player_id=499
+12:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4486, 'okc', 82, 0.0, 8.3, 0.0, 0.0, 0.8, 0.4, 2.9, 13.7, 0.0, 0.2, 9.44402475210583, 5.137549465145573, 2.196377722104789, 1.673639824243849, 0.0, 0.0);
+13:  Mapping yahoo 'LaMarcus Aldridge' player_id=4130 to espn 'LaMarcus Aldridge' player_id=346
+13:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4130, 'por', 82, 0.0, 10.2, 0.0, 0.0, 2.6, 0.9, 1.0, 22.5, 0.0, 0.0, 17.333189849598018, 8.146599229311068, 4.710666163907963, 3.86274625440453, 0.0, 0.0);
+14:  Mapping yahoo 'Kyrie Irving' player_id=4840 to espn 'Kyrie Irving' player_id=852
+14:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4840, 'cle', 82, 0.0, 3.3, 0.0, 0.0, 6.0, 1.6, 0.3, 18.9, 0.0, 1.9, 17.197641816335032, 8.03129872822846, 4.659222645053884, 4.002272252101286, 0.0, 0.0);
+15:  Mapping yahoo 'Dirk Nowitzki' player_id=3252 to espn 'Dirk Nowitzki' player_id=109
+15:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3252, 'dal', 82, 0.0, 6.4, 0.0, 0.0, 2.6, 0.8, 0.6, 20.8, 0.0, 1.5, 16.882983838293484, 8.23889611308722, 6.1161105632725015, 5.4616867330023435, 0.0, 0.0);
+16:  Mapping yahoo 'Joakim Noah' player_id=4287 to espn 'Joakim Noah' player_id=426
+16:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4287, 'chi', 82, 0.0, 11.0, 0.0, 0.0, 4.1, 1.3, 1.7, 12.4, 0.0, 0.0, 8.488872740435239, 4.26141411569849, 3.573414922633673, 2.6514738725941855, 0.0, 0.0);
+17:  Mapping yahoo 'Blake Griffin' player_id=4561 to espn 'Blake Griffin' player_id=630
+17:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4561, 'lac', 82, 0.0, 9.3, 0.0, 0.0, 3.7, 1.1, 0.6, 22.0, 0.0, 0.1, 15.590018477457502, 8.309479848484848, 7.233242793791575, 4.933071585365854, 0.0, 0.0);
+18:  Mapping yahoo 'Al Jefferson' player_id=3832 to espn 'Al Jefferson' player_id=268
+18:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3832, 'cha', 82, 0.0, 10.3, 0.0, 0.0, 2.1, 0.9, 1.2, 22.7, 0.0, 0.0, 16.25726651708956, 8.177405058096047, 3.5555798902369613, 2.567128680751086, 0.0, 0.0);
+19:  Mapping yahoo 'Isaiah Thomas' player_id=4942 to espn 'Isaiah Thomas' player_id=882
+19:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4942, 'pho', 82, 0.0, 2.6, 0.0, 0.0, 5.4, 1.1, 0.1, 17.3, 0.0, 1.6, 12.585762198420426, 5.663592989289191, 4.5117183273828845, 3.8575191699123663, 0.0, 0.0);
+20:  Mapping yahoo 'Goran Dragic' player_id=4507 to espn 'Goran Dragic' player_id=483
+20:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4507, 'pho', 82, 0.0, 3.1, 0.0, 0.0, 6.2, 1.4, 0.3, 17.7, 0.0, 1.4, 10.320571721511572, 5.026118428376135, 3.637281244236131, 2.767971026863696, 0.0, 0.0);
+21:  Mapping yahoo 'Rajon Rondo' player_id=4149 to espn 'Rajon Rondo' player_id=377
+21:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4149, 'bos', 82, 0.0, 5.6, 0.0, 0.0, 11.3, 1.8, 0.1, 14.7, 0.0, 0.9, 10.84455104252816, 4.955959826435369, 2.6687513565296377, 1.6412820842657272, 0.0, 0.0);
+22:  Mapping yahoo 'Eric Bledsoe' player_id=4749 to espn 'Eric Bledsoe' player_id=720
+22:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4749, 'pho', 82, 0.0, 3.7, 0.0, 0.0, 4.1, 1.4, 0.5, 12.6, 0.0, 0.8, 8.644198286413708, 4.019552203182374, 3.1177960620759477, 2.4162919481088596, 0.0, 0.0);
+23:  Mapping yahoo 'Ty Lawson' player_id=4623 to espn 'Ty Lawson' player_id=640
+23:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4623, 'den', 82, 0.0, 3.3, 0.0, 0.0, 7.9, 1.5, 0.1, 16.9, 0.0, 1.1, 11.941786061830976, 5.337978369638447, 4.545655223186682, 3.595613281540665, 0.0, 0.0);
+24:  Mapping yahoo 'Kawhi Leonard' player_id=4896 to espn 'Kawhi Leonard' player_id=860
+24:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4896, 'sas', 82, 0.0, 6.0, 0.0, 0.0, 1.8, 1.6, 0.7, 11.9, 0.0, 1.0, 8.961435475444096, 4.597216398902821, 1.907850052246604, 1.5415428422152562, 0.0, 0.0);
+25:  Mapping yahoo 'Nicolas Batum' player_id=4487 to espn 'Nicolas Batum' player_id=476
+25:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4487, 'por', 82, 0.0, 6.7, 0.0, 0.0, 4.7, 1.0, 0.8, 13.5, 0.0, 1.9, 9.988469411768367, 4.514788174119302, 2.3610412286775313, 1.9313317250582205, 0.0, 0.0);
+26:  Mapping yahoo 'Damian Lillard' player_id=5012 to espn 'Damian Lillard' player_id=991
+26:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5012, 'por', 82, 0.0, 3.4, 0.0, 0.0, 5.9, 0.8, 0.3, 20.0, 0.0, 2.5, 15.83739837398374, 6.746731707317073, 4.7682926829268295, 4.110268292682927, 0.0, 0.0);
+27:  Mapping yahoo 'Marc Gasol' player_id=4325 to espn 'Marc Gasol' player_id=466
+27:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4325, 'mem', 82, 0.0, 7.6, 0.0, 0.0, 3.7, 1.0, 1.5, 14.5, 0.0, 0.0, 10.699008557331629, 5.12482509896185, 4.291751296628446, 3.3904835243364726, 0.0, 0.0);
+28:  Mapping yahoo 'Kyle Lowry' player_id=4152 to espn 'Kyle Lowry' player_id=368
+28:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4152, 'tor', 82, 0.0, 4.6, 0.0, 0.0, 7.6, 1.5, 0.3, 17.1, 0.0, 2.3, 9.871232486961835, 4.126175179550047, 3.916314704359418, 3.195712798757285, 0.0, 0.0);
+29:  Mapping yahoo 'Kobe Bryant' player_id=3118 to espn 'Kobe Bryant' player_id=22
+29:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3118, 'lal', 82, 0.0, 5.3, 0.0, 0.0, 5.6, 1.3, 0.3, 25.7, 0.0, 1.5, 20.148133094714716, 9.046511759526908, 7.615981425601952, 6.397424397505639, 0.0, 0.0);
+30:  Mapping yahoo 'Monta Ellis' player_id=3966 to espn 'Monta Ellis' player_id=302
+30:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3966, 'dal', 82, 0.0, 3.7, 0.0, 0.0, 5.9, 1.8, 0.3, 19.3, 0.0, 1.0, 17.411552258542773, 7.626259889241735, 4.899940208388464, 3.851353003793333, 0.0, 0.0);
+31:  Mapping yahoo 'Mike Conley' player_id=4246 to espn 'Mike Conley' player_id=406
+31:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4246, 'mem', 82, 0.0, 2.8, 0.0, 0.0, 6.1, 1.8, 0.2, 16.0, 0.0, 1.4, 11.74141581055727, 5.236671451508542, 3.096191162088845, 2.5481653263991193, 0.0, 0.0);
+32:  Mapping yahoo 'Michael Carter-Williams' player_id=5162 to espn 'Michael Carter-Williams' player_id=1120
+32:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5162, 'phi', 82, 0.0, 6.3, 0.0, 0.0, 6.7, 2.0, 0.6, 18.0, 0.0, 1.0, 15.057142857142855, 6.308942857142856, 5.242857142857143, 3.7329142857142856, 0.0, 0.0);
+33:  Mapping yahoo 'Kemba Walker' player_id=4890 to espn 'Kemba Walker' player_id=889
+33:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4890, 'cha', 82, 0.0, 4.0, 0.0, 0.0, 5.6, 1.5, 0.4, 17.4, 0.0, 1.3, 14.82254637926205, 6.181001840152275, 4.354228047261793, 3.5704669987546698, 0.0, 0.0);
+34:  Mapping yahoo 'Rudy Gay' player_id=4136 to espn 'Rudy Gay' player_id=362
+34:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4136, 'sac', 82, 0.0, 6.1, 0.0, 0.0, 2.8, 1.4, 0.8, 19.5, 0.0, 0.9, 16.127976553220147, 7.176949566182966, 4.4467021551030825, 3.6329556607192184, 0.0, 0.0);
+35:  Mapping yahoo 'Paul Millsap' player_id=4175 to espn 'Paul Millsap' player_id=369
+35:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4175, 'atl', 82, 0.0, 8.4, 0.0, 0.0, 3.2, 1.8, 1.2, 18.1, 0.0, 1.0, 11.639548887011578, 5.493867074669465, 4.284180593802304, 3.170293639413705, 0.0, 0.0);
+36:  Mapping yahoo 'Pau Gasol' player_id=3513 to espn 'Pau Gasol' player_id=162
+36:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3513, 'chi', 82, 0.0, 8.4, 0.0, 0.0, 3.1, 0.4, 1.2, 15.6, 0.0, 0.1, 13.536754112446975, 6.9714283679101925, 5.184776100893547, 4.007831925990712, 0.0, 0.0);
+37:  Mapping yahoo 'Al Horford' player_id=4245 to espn 'Al Horford' player_id=419
+37:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4245, 'atl', 82, 0.0, 9.1, 0.0, 0.0, 2.9, 1.0, 1.4, 18.7, 0.0, 0.1, 12.119150756689663, 6.798843574502902, 2.840049663659447, 1.9624743175886776, 0.0, 0.0);
+38:  Mapping yahoo 'Chris Bosh' player_id=3707 to espn 'Chris Bosh' player_id=220
+38:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3707, 'mia', 82, 0.0, 7.7, 0.0, 0.0, 1.5, 1.1, 1.2, 22.5, 0.0, 0.8, 14.054100548399594, 6.9146174698126, 6.0119981762851396, 4.875730520967249, 0.0, 0.0);
+39:  Mapping yahoo 'Dwight Howard' player_id=3818 to espn 'Dwight Howard' player_id=264
+39:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3818, 'hou', 82, 0.0, 12.5, 0.0, 0.0, 1.7, 1.0, 2.0, 18.1, 0.0, 0.0, 11.679668597944413, 6.8442857983954255, 9.879490900912726, 5.176853232078269, 0.0, 0.0);
+40:  Mapping yahoo 'David Lee' player_id=3956 to espn 'David Lee' player_id=317
+40:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3956, 'gsw', 82, 0.0, 9.8, 0.0, 0.0, 2.6, 0.8, 0.3, 18.4, 0.0, 0.0, 13.417080446610266, 6.963464751790728, 4.013126931475379, 3.1422783873452222, 0.0, 0.0);
+41:  Mapping yahoo 'Andre Drummond' player_id=5015 to espn 'Andre Drummond' player_id=970
+41:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5015, 'det', 82, 0.0, 14.1, 0.0, 0.0, 0.6, 1.4, 2.0, 17.5, 0.0, 0.0, 8.229218106995885, 5.102115226337449, 3.5829218106995886, 1.6051489711934157, 0.0, 0.0);
+42:  Mapping yahoo 'Tony Parker' player_id=3527 to espn 'Tony Parker' player_id=170
+42:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3527, 'sas', 82, 0.0, 2.5, 0.0, 0.0, 6.5, 0.7, 0.1, 17.9, 0.0, 0.4, 14.296252889493296, 7.176718950525634, 4.376587572724072, 3.584425222061015, 0.0, 0.0);
+43:  Mapping yahoo 'Brook Lopez' player_id=4472 to espn 'Brook Lopez' player_id=507
+43:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4472, 'bro', 82, 0.0, 6.6, 0.0, 0.0, 1.0, 0.5, 1.9, 20.0, 0.0, 0.0, 14.383902882181216, 7.709771944849132, 5.982187680609489, 4.660124203194792, 0.0, 0.0);
+44:  Mapping yahoo 'Dwyane Wade' player_id=3708 to espn 'Dwyane Wade' player_id=227
+44:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3708, 'mia', 82, 0.0, 4.4, 0.0, 0.0, 4.8, 1.4, 0.7, 18.5, 0.0, 0.2, 17.476246434721766, 8.755599463795605, 7.6436297209533395, 5.648642363784518, 0.0, 0.0);
+45:  Mapping yahoo 'Thaddeus Young' player_id=4290 to espn 'Thaddeus Young' player_id=440
+45:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4290, 'min', 82, 0.0, 6.3, 0.0, 0.0, 2.0, 1.9, 0.6, 16.4, 0.0, 0.7, 12.635021880069843, 6.014270414913245, 2.459627585845317, 1.6823852687181968, 0.0, 0.0);
+46:  Mapping yahoo 'Klay Thompson' player_id=4892 to espn 'Klay Thompson' player_id=885
+46:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4892, 'gsw', 82, 0.0, 3.2, 0.0, 0.0, 2.2, 0.9, 0.5, 17.1, 0.0, 2.6, 14.483110235142755, 6.343602282992527, 2.009984670553776, 1.6300975678191123, 0.0, 0.0);
+47:  Mapping yahoo 'Victor Oladipo' player_id=5153 to espn 'Victor Oladipo' player_id=1099
+47:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5153, 'orl', 82, 0.0, 4.6, 0.0, 0.0, 4.5, 1.8, 0.5, 17.1, 0.0, 1.1, 11.7, 5.253299999999999, 3.975, 3.1323000000000003, 0.0, 0.0);
+48:  Mapping yahoo 'Nikola Vucevic' player_id=4897 to espn 'Nikola Vucevic' player_id=888
+48:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4897, 'orl', 82, 0.0, 11.3, 0.0, 0.0, 2.0, 1.0, 0.9, 15.1, 0.0, 0.0, 10.904728398536449, 5.550506754855053, 1.858320042530569, 1.358431951089846, 0.0, 0.0);
+49:  Mapping yahoo 'Ricky Rubio' player_id=4610 to espn 'Ricky Rubio' player_id=705
+49:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4610, 'min', 82, 0.0, 4.1, 0.0, 0.0, 8.3, 2.3, 0.1, 9.8, 0.0, 0.5, 8.67251461988304, 3.243520467836257, 3.9076807873341886, 3.1378676722293535, 0.0, 0.0);
+50:  Mapping yahoo 'DeAndre Jordan' player_id=4497 to espn 'DeAndre Jordan' player_id=502
+50:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4497, 'lac', 82, 0.0, 11.2, 0.0, 0.0, 0.7, 0.8, 2.1, 9.6, 0.0, 0.0, 5.217032621594288, 3.458892628117013, 3.0926419839993895, 1.3143728431997406, 0.0, 0.0);
+51:  Mapping yahoo 'Deron Williams' player_id=3929 to espn 'Deron Williams' player_id=332
+51:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3929, 'bro', 82, 0.0, 3.2, 0.0, 0.0, 7.8, 1.2, 0.3, 18.3, 0.0, 1.7, 14.0764592128962, 6.2217949721001204, 4.872942790112805, 4.034796630213402, 0.0, 0.0);
+52:  Mapping yahoo 'Wesley Matthews' player_id=4694 to espn 'Wesley Matthews' player_id=676
+52:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4694, 'por', 82, 0.0, 3.4, 0.0, 0.0, 2.4, 1.1, 0.2, 15.7, 0.0, 2.4, 11.58767205458616, 5.052225015799565, 3.1335700590207485, 2.613397429223304, 0.0, 0.0);
+53:  Mapping yahoo 'Chandler Parsons' player_id=4920 to espn 'Chandler Parsons' player_id=876
+53:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4920, 'dal', 82, 0.0, 5.4, 0.0, 0.0, 3.6, 1.1, 0.4, 15.3, 0.0, 1.7, 12.239720923931452, 5.801627717943508, 2.3794170109959585, 1.7298361669940618, 0.0, 0.0);
+54:  Mapping yahoo 'Kevin Martin' player_id=3843 to espn 'Kevin Martin' player_id=269
+54:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3843, 'min', 82, 0.0, 2.8, 0.0, 0.0, 1.8, 0.9, 0.1, 17.4, 0.0, 1.8, 13.586426228567689, 5.882922556969809, 6.1049230498185665, 5.457801206537798, 0.0, 0.0);
+55:  Mapping yahoo 'Jeff Teague' player_id=4624 to espn 'Jeff Teague' player_id=646
+55:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4624, 'atl', 82, 0.0, 2.5, 0.0, 0.0, 6.9, 1.3, 0.3, 17.5, 0.0, 1.1, 10.46037881296216, 4.738551602271858, 3.131208578668019, 2.674052126182488, 0.0, 0.0);
+56:  Mapping yahoo 'Jrue Holiday' player_id=4622 to espn 'Jrue Holiday*' player_id=636
+56:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4622, 'nor', 82, 0.0, 4.0, 0.0, 0.0, 7.2, 1.6, 0.4, 15.4, 0.0, 1.0, 13.51982913038081, 5.9216851591067945, 2.232604466564098, 1.7325010660537399, 0.0, 0.0);
+57:  Mapping yahoo 'Bradley Beal' player_id=5009 to espn 'Bradley Beal' player_id=965
+57:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5009, 'was', 82, 0.0, 4.3, 0.0, 0.0, 3.4, 1.1, 0.4, 20.1, 0.0, 2.5, 14.58243639921722, 6.212117906066536, 2.6724559686888454, 2.0978779354207435, 0.0, 0.0);
+58:  Mapping yahoo 'DeMar DeRozan' player_id=4614 to espn 'DeMar DeRozan' player_id=624
+58:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4614, 'tor', 82, 0.0, 3.9, 0.0, 0.0, 3.7, 1.0, 0.3, 22.1, 0.0, 0.8, 15.126340367464172, 6.549705379111987, 5.919263289624513, 4.895230740519472, 0.0, 0.0);
+59:  Mapping yahoo 'Derrick Rose' player_id=4387 to espn 'Derrick Rose' player_id=515
+59:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4387, 'chi', 82, 0.0, 3.4, 0.0, 0.0, 7.1, 0.8, 0.5, 21.7, 0.0, 1.4, 17.503260525482748, 7.858963975941754, 4.854764165875277, 3.9663423235201014, 0.0, 0.0);
+60:  Mapping yahoo 'Josh Smith' player_id=3834 to espn 'Josh Smith' player_id=271
+60:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3834, 'det', 82, 0.0, 7.6, 0.0, 0.0, 3.4, 1.5, 2.0, 17.2, 0.0, 0.6, 14.33685372692411, 6.566279006931243, 4.580428932472134, 2.4917533392648408, 0.0, 0.0);
+61:  Mapping yahoo 'Brandon Knight' player_id=4889 to espn 'Brandon Knight' player_id=858
+61:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4889, 'mil', 82, 0.0, 3.4, 0.0, 0.0, 4.5, 0.9, 0.2, 15.3, 0.0, 1.5, 13.427474747474747, 5.706676767676767, 3.589015151515151, 2.806609848484848, 0.0, 0.0);
+62:  Mapping yahoo 'Arron Afflalo' player_id=4305 to espn 'Arron Afflalo' player_id=400
+62:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4305, 'den', 82, 0.0, 3.6, 0.0, 0.0, 3.2, 0.5, 0.1, 17.5, 0.0, 1.6, 10.972558206220564, 4.9925139838303565, 3.1842265377070627, 2.6206184405329123, 0.0, 0.0);
+63:  Mapping yahoo 'Derrick Favors' player_id=4718 to espn 'Derrick Favors' player_id=739
+63:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4718, 'uth', 82, 0.0, 8.0, 0.0, 0.0, 1.1, 0.9, 1.5, 11.6, 0.0, 0.0, 8.208701800482622, 4.19464662004662, 3.3878693452666058, 2.2766482000191592, 0.0, 0.0);
+64:  Mapping yahoo 'Gordon Hayward' player_id=4724 to espn 'Gordon Hayward' player_id=731
+64:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4724, 'uth', 82, 0.0, 4.4, 0.0, 0.0, 4.4, 1.2, 0.5, 15.2, 0.0, 1.1, 10.764574314574315, 4.54265036075036, 4.041973304473305, 3.3103761363636366, 0.0, 0.0);
+65:  Mapping yahoo 'Kenneth Faried' player_id=4904 to espn 'Kenneth Faried' player_id=843
+65:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4904, 'den', 82, 0.0, 8.6, 0.0, 0.0, 1.1, 0.9, 0.9, 12.8, 0.0, 0.0, 9.115398550724638, 5.004353804347827, 3.6462862318840585, 2.3336231884057974, 0.0, 0.0);
+66:  Mapping yahoo 'Ryan Anderson' player_id=4483 to espn 'Ryan Anderson' player_id=472
+66:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4483, 'nor', 82, 0.0, 6.7, 0.0, 0.0, 1.0, 0.6, 0.4, 17.1, 0.0, 2.7, 12.29073625170018, 5.2973073244827775, 2.337068673097654, 2.0776540503838143, 0.0, 0.0);
+67:  Mapping yahoo 'Tim Duncan' player_id=3173 to espn 'Tim Duncan' player_id=38
+67:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3173, 'sas', 82, 0.0, 9.7, 0.0, 0.0, 2.8, 0.6, 2.0, 15.9, 0.0, 0.0, 14.298080873684823, 7.048953870726618, 5.694224877262803, 4.2592802081925765, 0.0, 0.0);
+68:  Mapping yahoo 'Marcin Gortat' player_id=3983 to espn 'Marcin Gortat' player_id=308
+68:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3983, 'was', 82, 0.0, 9.7, 0.0, 0.0, 1.5, 0.6, 1.5, 13.9, 0.0, 0.0, 8.351769577677073, 4.5099555719456195, 2.3834069525033614, 2.075947455630428, 0.0, 0.0);
+69:  Mapping yahoo 'Greg Monroe' player_id=4722 to espn 'Greg Monroe' player_id=742
+69:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4722, 'det', 82, 0.0, 9.0, 0.0, 0.0, 2.4, 1.1, 0.6, 14.7, 0.0, 0.0, 11.923904697380307, 5.914256729900632, 4.357588178533301, 2.937014432331445, 0.0, 0.0);
+70:  Mapping yahoo 'Luol Deng' player_id=3824 to espn 'Luol Deng' player_id=280
+70:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3824, 'mia', 82, 0.0, 6.6, 0.0, 0.0, 3.0, 1.0, 0.3, 17.4, 0.0, 1.1, 13.85132601728455, 6.191542729726193, 3.944995781203241, 3.1047116798069507, 0.0, 0.0);
+71:  Mapping yahoo 'Nikola Pekovic' player_id=4493 to espn 'Nikola Pekovic' player_id=512
+71:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4493, 'min', 82, 0.0, 8.5, 0.0, 0.0, 0.9, 0.6, 0.6, 16.6, 0.0, 0.0, 11.107199334385333, 5.953458843230539, 4.383315676163994, 3.2787201257706675, 0.0, 0.0);
+72:  Mapping yahoo 'Jimmy Butler' player_id=4912 to espn 'Jimmy Butler' player_id=840
+72:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4912, 'chi', 82, 0.0, 5.0, 0.0, 0.0, 2.3, 2.2, 0.5, 13.5, 0.0, 1.0, 7.566434667544969, 3.412462035062781, 3.69176475346843, 2.8685012134449703, 0.0, 0.0);
+73:  Mapping yahoo 'Lance Stephenson' player_id=4771 to espn 'Lance Stephenson' player_id=726
+73:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4771, 'cha', 82, 0.0, 6.7, 0.0, 0.0, 4.3, 1.0, 0.1, 15.0, 0.0, 1.4, 7.681776556776555, 3.694934523809523, 1.6501831501831503, 1.1881318681318682, 0.0, 0.0);
+74:  Mapping yahoo 'Trevor Ariza' player_id=3860 to espn 'Trevor Ariza' player_id=278
+74:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3860, 'hou', 82, 0.0, 5.8, 0.0, 0.0, 2.5, 1.6, 0.3, 13.1, 0.0, 2.0, 9.099426743385374, 4.067443754293262, 2.402351724907916, 1.8762366971530824, 0.0, 0.0);
+75:  Mapping yahoo 'Jeff Green' player_id=4247 to espn 'Jeff Green' player_id=417
+75:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4247, 'bos', 82, 0.0, 4.7, 0.0, 0.0, 1.8, 0.7, 0.6, 17.4, 0.0, 1.7, 12.145847782399272, 5.210568698649288, 3.544069998555094, 2.8388000688426307, 0.0, 0.0);
+76:  Mapping yahoo 'Tyreke Evans' player_id=4564 to espn 'Tyreke Evans' player_id=627
+76:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4564, 'nor', 82, 0.0, 4.6, 0.0, 0.0, 4.6, 1.2, 0.3, 14.8, 0.0, 0.4, 13.409542017436756, 6.007474823811667, 4.4188054538054535, 3.420155421245421, 0.0, 0.0);
+77:  Mapping yahoo 'Zach Randolph' player_id=3531 to espn 'Zach Randolph' player_id=172
+77:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3531, 'mem', 82, 0.0, 10.2, 0.0, 0.0, 2.2, 0.7, 0.3, 16.4, 0.0, 0.0, 14.859829363187801, 6.924680483245516, 4.585942550150672, 3.398183429661648, 0.0, 0.0);
+78:  Mapping yahoo 'Taj Gibson' player_id=4631 to espn 'Taj Gibson' player_id=629
+78:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4631, 'chi', 82, 0.0, 6.7, 0.0, 0.0, 1.1, 0.5, 1.4, 12.5, 0.0, 0.0, 8.082095655022485, 3.8955701057208376, 2.4972268382024483, 1.810489457696775, 0.0, 0.0);
+79:  Mapping yahoo 'Brandon Jennings' player_id=4615 to espn 'Brandon Jennings' player_id=637
+79:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4615, 'det', 82, 0.0, 3.1, 0.0, 0.0, 8.0, 1.5, 0.1, 15.4, 0.0, 2.0, 15.231209276270251, 6.122946129060641, 3.7409952310562065, 3.004019170538134, 0.0, 0.0);
+80:  Mapping yahoo 'J.R. Smith' player_id=3835 to espn 'J.R. Smith' player_id=284
+80:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3835, 'nyk', 82, 0.0, 4.2, 0.0, 0.0, 2.7, 1.2, 0.3, 14.9, 0.0, 2.2, 12.057065593379132, 5.100138745999373, 2.5467772564520086, 1.792931188542214, 0.0, 0.0);
+81:  Mapping yahoo 'Nene Hilario' player_id=3605 to espn 'Nene Hilario' player_id=193
+81:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3605, 'was', 82, 0.0, 5.9, 0.0, 0.0, 2.8, 1.1, 0.8, 13.0, 0.0, 0.0, 8.607096124233971, 4.3035480621169855, 4.353138650093227, 2.746830488208826, 0.0, 0.0);
+82:  Mapping yahoo 'Wilson Chandler' player_id=4301 to espn 'Wilson Chandler' player_id=405
+82:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4301, 'den', 82, 0.0, 4.8, 0.0, 0.0, 1.7, 0.8, 0.5, 13.5, 0.0, 1.8, 11.480153845085468, 4.867585230316238, 2.2594814938051884, 1.6810542313910601, 0.0, 0.0);
+83:  Mapping yahoo 'Spencer Hawes' player_id=4288 to espn 'Spencer Hawes' player_id=418
+83:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4288, 'lac', 82, 0.0, 7.9, 0.0, 0.0, 2.8, 0.5, 1.2, 12.3, 0.0, 1.1, 9.313198152051752, 4.284071149943807, 1.6189982832289924, 1.2579616660689272, 0.0, 0.0);
+84:  Mapping yahoo 'David West' player_id=3721 to espn 'David West' player_id=249
+84:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3721, 'ind', 82, 0.0, 7.5, 0.0, 0.0, 3.0, 0.9, 0.8, 17.2, 0.0, 0.0, 13.564122366862442, 6.551471103194559, 3.8797910771147537, 3.045635995535082, 0.0, 0.0);
+85:  Mapping yahoo 'Trey Burke' player_id=5160 to espn 'Trey Burke' player_id=1114
+85:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5160, 'uth', 82, 0.0, 3.0, 0.0, 0.0, 5.7, 0.6, 0.1, 12.8, 0.0, 1.6, 12.814285714285717, 4.869428571428572, 1.6142857142857143, 1.4577, 0.0, 0.0);
+86:  Mapping yahoo 'Paul Pierce' player_id=3253 to espn 'Paul Pierce' player_id=119
+86:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3253, 'was', 82, 0.0, 4.5, 0.0, 0.0, 2.7, 1.0, 0.4, 12.6, 0.0, 1.4, 14.589047685805749, 6.492126220183558, 6.58328988831661, 5.391714418531303, 0.0, 0.0);
+87:  Mapping yahoo 'Eric Gordon' player_id=4469 to espn 'Eric Gordon' player_id=491
+87:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4469, 'nor', 82, 0.0, 2.4, 0.0, 0.0, 3.3, 1.2, 0.2, 16.0, 0.0, 1.5, 14.09622248058308, 6.047279444170141, 5.19042420180093, 4.147148937238943, 0.0, 0.0);
+88:  Mapping yahoo 'Robin Lopez' player_id=4477 to espn 'Robin Lopez' player_id=506
+88:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4477, 'por', 82, 0.0, 7.2, 0.0, 0.0, 0.8, 0.3, 1.6, 10.5, 0.0, 0.0, 6.5455279666775095, 3.534585102005855, 2.3615321119346904, 1.884502625323883, 0.0, 0.0);
+89:  Mapping yahoo 'Randy Foye' player_id=4135 to espn 'Randy Foye' player_id=361
+89:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4135, 'den', 82, 0.0, 2.4, 0.0, 0.0, 3.0, 0.8, 0.4, 12.2, 0.0, 2.2, 10.015060743064357, 4.076129722427193, 2.1070414563187825, 1.7783429891330524, 0.0, 0.0);
+90:  Mapping yahoo 'Jameer Nelson' player_id=3837 to espn 'Jameer Nelson' player_id=283
+90:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3837, 'dal', 82, 0.0, 3.5, 0.0, 0.0, 7.0, 0.9, 0.1, 12.8, 0.0, 2.0, 11.382196162329764, 4.530114072607247, 1.9445061711633747, 1.6683862948581754, 0.0, 0.0);
+91:  Mapping yahoo 'J.J. Redick' player_id=4139 to espn 'J.J. Redick' player_id=375
+91:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4139, 'lac', 82, 0.0, 2.2, 0.0, 0.0, 2.9, 0.6, 0.1, 14.1, 0.0, 2.0, 8.714496357253017, 3.8430928935485804, 2.3676898200148377, 2.1403915972934136, 0.0, 0.0);
+92:  Mapping yahoo 'Tobias Harris' player_id=4901 to espn 'Tobias Harris' player_id=850
+92:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4901, 'orl', 82, 0.0, 7.4, 0.0, 0.0, 1.5, 0.8, 0.5, 15.3, 0.0, 0.6, 9.642517682681618, 4.483770722446953, 3.044588744588745, 2.4508939393939397, 0.0, 0.0);
+93:  Mapping yahoo 'Jose Calderon' player_id=3989 to espn 'Jose Calderon' player_id=336
+93:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3989, 'nyk', 82, 0.0, 2.5, 0.0, 0.0, 8.7, 0.8, 0.1, 11.5, 0.0, 2.1, 8.706515180001517, 4.126888195320719, 1.335208947265033, 1.138933232017073, 0.0, 0.0);
+94:  Mapping yahoo 'Joe Johnson' player_id=3520 to espn 'Joe Johnson' player_id=167
+94:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3520, 'bro', 82, 0.0, 3.4, 0.0, 0.0, 3.1, 0.7, 0.1, 16.4, 0.0, 2.1, 15.905377826286186, 7.093798510523639, 3.316424921807164, 2.7261012857254885, 0.0, 0.0);
+95:  Mapping yahoo 'Jodie Meeks' player_id=4646 to espn 'Jodie Meeks' player_id=642
+95:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4646, 'det', 82, 0.0, 2.3, 0.0, 0.0, 1.4, 1.2, 0.1, 13.3, 0.0, 1.8, 8.413393993393992, 3.7355469330669324, 2.0523036423036425, 1.7752426505926506, 0.0, 0.0);
+96:  Mapping yahoo 'Jonas Valanciunas' player_id=4886 to espn 'Jonas Valanciunas' player_id=887
+96:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4886, 'tor', 82, 0.0, 9.4, 0.0, 0.0, 0.8, 0.3, 1.2, 14.2, 0.0, 0.0, 7.531527943714323, 4.112214257268021, 3.1345413513872296, 2.4135968405681667, 0.0, 0.0);
+97:  Mapping yahoo 'Kyle Korver' player_id=3754 to espn 'Kyle Korver' player_id=238
+97:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3754, 'atl', 82, 0.0, 3.7, 0.0, 0.0, 2.6, 1.0, 0.4, 11.6, 0.0, 2.6, 7.613738839194009, 3.5860709932603783, 1.304227001418688, 1.1672831662697258, 0.0, 0.0);
+98:  Mapping yahoo 'Jamal Crawford' player_id=3407 to espn 'Jamal Crawford' player_id=29
+98:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3407, 'lac', 82, 0.0, 2.1, 0.0, 0.0, 3.1, 0.9, 0.2, 17.5, 0.0, 2.1, 13.723626430613816, 5.736475847996575, 3.8621823392022883, 3.3755473644628, 0.0, 0.0);
+99:  Mapping yahoo 'Terrence Ross' player_id=5014 to espn 'Terrence Ross' player_id=1004
+99:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5014, 'tor', 82, 0.0, 3.4, 0.0, 0.0, 1.1, 0.9, 0.4, 11.8, 0.0, 2.2, 8.267827949715317, 3.4642199109307175, 0.998365184057726, 0.801687242798354, 0.0, 0.0);
+100:  Mapping yahoo 'Andrew Bogut' player_id=3927 to espn 'Andrew Bogut' player_id=298
+100:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3927, 'gsw', 82, 0.0, 9.6, 0.0, 0.0, 1.8, 0.7, 1.8, 7.2, 0.0, 0.0, 9.040308367217197, 5.315701319923711, 2.2274779928248005, 0.8731713731873219, 0.0, 0.0);
+101:  Mapping yahoo 'Amir Johnson' player_id=3982 to espn 'Amir Johnson' player_id=315
+101:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3982, 'tor', 82, 0.0, 6.8, 0.0, 0.0, 1.5, 0.8, 1.2, 9.9, 0.0, 0.2, 5.783800141693096, 3.244711879489827, 1.7009401972397717, 1.1379289919534075, 0.0, 0.0);
+102:  Mapping yahoo 'J.J. Hickson' player_id=4481 to espn 'J.J. Hickson*' player_id=497
+102:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4481, 'den', 82, 0.0, 9.1, 0.0, 0.0, 1.2, 0.6, 0.7, 11.6, 0.0, 0.0, 8.739263019113414, 4.544416769938976, 3.3695787499804175, 1.9105511512388966, 0.0, 0.0);
+103:  Mapping yahoo 'Dion Waiters' player_id=5010 to espn 'Dion Waiters' player_id=1013
+103:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5010, 'cle', 82, 0.0, 2.3, 0.0, 0.0, 2.9, 1.0, 0.3, 11.0, 0.0, 1.2, 13.910694769711162, 6.078973614363778, 3.4020296643247465, 2.4086370023419206, 0.0, 0.0);
+104:  Mapping yahoo 'Reggie Jackson' player_id=4906 to espn 'Reggie Jackson' player_id=853
+104:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4906, 'okc', 82, 0.0, 3.3, 0.0, 0.0, 3.3, 0.9, 0.1, 10.4, 0.0, 0.8, 7.8615079365079366, 3.443340476190476, 1.5088955026455027, 1.3414081018518518, 0.0, 0.0);
+105:  Mapping yahoo 'Gerald Green' player_id=3944 to espn 'Gerald Green' player_id=311
+105:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3944, 'pho', 82, 0.0, 3.1, 0.0, 0.0, 1.3, 0.7, 0.5, 13.7, 0.0, 2.1, 8.44634764312835, 3.691053920047089, 1.7560219388486733, 1.4662783189386421, 0.0, 0.0);
+106:  Mapping yahoo 'Danilo Gallinari' player_id=4468 to espn 'Danilo Gallinari' player_id=488
+106:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4468, 'den', 82, 0.0, 5.0, 0.0, 0.0, 2.5, 0.9, 0.5, 15.7, 0.0, 1.7, 10.867185461131658, 4.531616337291902, 4.760852679014203, 3.9800728396558736, 0.0, 0.0);
+107:  Mapping yahoo 'Nerlens Noel' player_id=5157 to espn 'Nerlens Noel' player_id=1129
+107:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5157, 'phi', 82, 0.0, 8.3, 0.0, 0.0, 1.0, 1.1, 2.4, 15.3, 0.0, 0.0, 11.52125367, 5.89888187904, 3.404121105, 2.04928090521, 0.0, 0.0);
+108:  Mapping yahoo 'Terrence Jones' player_id=5024 to espn 'Terrence Jones' player_id=982
+108:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5024, 'hou', 82, 0.0, 6.5, 0.0, 0.0, 1.1, 0.7, 1.3, 11.2, 0.0, 0.4, 7.894736842105265, 4.223684210526317, 2.008771929824561, 1.231377192982456, 0.0, 0.0);
+109:  Mapping yahoo 'John Henson' player_id=5020 to espn 'John Henson' player_id=977
+109:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5020, 'mil', 82, 0.0, 6.5, 0.0, 0.0, 1.4, 0.5, 1.5, 10.2, 0.0, 0.0, 7.863492063492063, 4.11260634920635, 2.2412698412698413, 1.1654603174603175, 0.0, 0.0);
+110:  Mapping yahoo 'Nick Young' player_id=4294 to espn 'Nick Young' player_id=439
+110:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4294, 'lal', 82, 0.0, 2.5, 0.0, 0.0, 1.4, 0.7, 0.2, 15.8, 0.0, 1.9, 11.48036803087887, 4.902117149185277, 2.9892420388350436, 2.478081650194251, 0.0, 0.0);
+111:  Mapping yahoo 'Tyson Chandler' player_id=3512 to espn 'Tyson Chandler' player_id=156
+111:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3512, 'dal', 82, 0.0, 9.9, 0.0, 0.0, 1.0, 0.7, 1.2, 9.6, 0.0, 0.0, 5.629963870293639, 3.4962075634523497, 3.553008434994691, 2.35564459240148, 0.0, 0.0);
+112:  Mapping yahoo 'Markieff Morris' player_id=4894 to espn 'Markieff Morris' player_id=871
+112:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4894, 'pho', 82, 0.0, 5.5, 0.0, 0.0, 1.6, 0.8, 0.7, 11.5, 0.0, 0.5, 9.02396008087065, 4.1600455972813695, 2.815201961543425, 2.193042328042328, 0.0, 0.0);
+113:  Mapping yahoo 'Anderson Varejao' player_id=3847 to espn 'Anderson Varejao' player_id=274
+113:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3847, 'cle', 82, 0.0, 8.8, 0.0, 0.0, 1.8, 1.0, 0.5, 6.9, 0.0, 0.0, 7.485606719759521, 3.7802313934785583, 2.7195797460624855, 1.8982666627516147, 0.0, 0.0);
+114:  Mapping yahoo 'Jordan Hill' player_id=4613 to espn 'Jordan Hill' player_id=635
+114:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4613, 'lal', 82, 0.0, 7.0, 0.0, 0.0, 0.7, 0.4, 0.8, 8.8, 0.0, 0.0, 5.620436474343298, 3.035035696145381, 1.8937694523351165, 1.285869458135544, 0.0, 0.0);
+115:  Mapping yahoo 'DeMarre Carroll' player_id=4632 to espn 'DeMarre Carroll' player_id=619
+115:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4632, 'atl', 82, 0.0, 5.2, 0.0, 0.0, 1.7, 1.6, 0.3, 10.5, 0.0, 1.3, 5.457381795964663, 2.5485972987154977, 1.24511602616947, 0.956249108098153, 0.0, 0.0);
+116:  Mapping yahoo 'Patrick Beverley' player_id=4647 to espn 'Patrick Beverley' player_id=702
+116:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4647, 'hou', 82, 0.0, 3.2, 0.0, 0.0, 2.7, 1.2, 0.4, 8.7, 0.0, 1.4, 7.262775842044134, 3.0140519744483156, 1.5476190476190474, 1.2504761904761905, 0.0, 0.0);
+117:  Mapping yahoo 'Jeremy Lin' player_id=4795 to espn 'Jeremy Lin' player_id=783
+117:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4795, 'lal', 82, 0.0, 2.8, 0.0, 0.0, 4.9, 1.2, 0.4, 13.1, 0.0, 1.1, 9.448132072502299, 4.204418772263523, 3.630976489720493, 2.9483529096530408, 0.0, 0.0);
+118:  Mapping yahoo 'Gorgui Dieng' player_id=5191 to espn 'Gorgui Dieng' player_id=1110
+118:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5191, 'min', 82, 0.0, 5.0, 0.0, 0.0, 0.6, 0.5, 0.8, 4.7, 0.0, 0.0, 3.783333333333333, 1.8840999999999999, 1.55, 0.9827, 0.0, 0.0);
+119:  Mapping yahoo 'Jared Sullinger' player_id=5055 to espn 'Jared Sullinger' player_id=1009
+119:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5055, 'bos', 82, 0.0, 9.4, 0.0, 0.0, 1.7, 0.6, 0.8, 15.8, 0.0, 0.8, 9.765765765765765, 4.4922522522522526, 2.2954954954954956, 1.7721225225225226, 0.0, 0.0);
+120:  Mapping yahoo 'Shawn Marion' player_id=3332 to espn 'Shawn Marion' player_id=86
+120:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3332, 'cle', 82, 0.0, 5.8, 0.0, 0.0, 1.7, 1.0, 0.5, 8.8, 0.0, 0.6, 12.092813698472437, 5.877107457457604, 2.172086359721243, 1.6985715333020122, 0.0, 0.0);
+121:  Mapping yahoo 'Avery Bradley' player_id=4750 to espn 'Avery Bradley' player_id=722
+121:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4750, 'bos', 82, 0.0, 3.8, 0.0, 0.0, 2.2, 1.1, 0.2, 14.4, 0.0, 1.4, 9.840379032258065, 4.339607153225807, 1.3231263440860215, 1.0545316962365592, 0.0, 0.0);
+122:  Mapping yahoo 'Alec Burks' player_id=4893 to espn 'Alec Burks' player_id=839
+122:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4893, 'uth', 82, 0.0, 2.9, 0.0, 0.0, 2.2, 0.8, 0.2, 11.6, 0.0, 0.6, 8.356230986527594, 3.7603039439374175, 3.466855443285528, 2.5689398834745765, 0.0, 0.0);
+123:  Mapping yahoo 'Andre Iguodala' player_id=3826 to espn 'Andre Iguodala' player_id=265
+123:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3826, 'gsw', 82, 0.0, 5.1, 0.0, 0.0, 4.7, 1.6, 0.4, 10.9, 0.0, 1.1, 11.07587599145486, 5.1502823360265095, 4.1581598544211715, 2.5739009498867054, 0.0, 0.0);
+124:  Mapping yahoo 'Khris Middleton' player_id=5073 to espn 'Khris Middleton' player_id=994
+124:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5073, 'mil', 82, 0.0, 4.0, 0.0, 0.0, 2.2, 1.0, 0.3, 12.8, 0.0, 1.5, 8.68383017163505, 3.8990397470641374, 1.508882866606444, 1.226721770551039, 0.0, 0.0);
+125:  Mapping yahoo 'Amar'e Stoudemire' player_id=3607 to espn 'Amar'e Stoudemire' player_id=204
+125:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3607, 'nyk', 82, 0.0, 5.1, 0.0, 0.0, 0.6, 0.4, 0.6, 12.3, 0.0, 0.0, 13.085413241515715, 7.144635629867581, 6.049110516530151, 4.561029329463734, 0.0, 0.0);
+126:  Mapping yahoo 'D.J. Augustin' player_id=4471 to espn 'D.J. Augustin' player_id=475
+126:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4471, 'det', 82, 0.0, 1.4, 0.0, 0.0, 3.2, 0.5, 0.0, 8.5, 0.0, 1.2, 8.340489305824965, 3.352876700941636, 2.5272962502825638, 2.2164388114978086, 0.0, 0.0);
+127:  Mapping yahoo 'Mario Chalmers' player_id=4496 to espn 'Mario Chalmers' player_id=479
+127:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4496, 'mia', 82, 0.0, 2.7, 0.0, 0.0, 4.3, 1.6, 0.2, 9.4, 0.0, 1.3, 7.078244996932648, 3.1710537586258263, 1.666999408122147, 1.2652525507647097, 0.0, 0.0);
+128:  Mapping yahoo 'Manu Ginobili' player_id=3380 to espn 'Manu Ginobili' player_id=49
+128:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3380, 'sas', 82, 0.0, 3.1, 0.0, 0.0, 4.4, 1.1, 0.2, 12.2, 0.0, 1.4, 10.487192185326652, 4.845082789620913, 4.176885673361672, 3.500230194277081, 0.0, 0.0);
+129:  Mapping yahoo 'Roy Hibbert' player_id=4479 to espn 'Roy Hibbert' player_id=496
+129:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4479, 'ind', 82, 0.0, 8.1, 0.0, 0.0, 1.3, 0.5, 2.4, 12.7, 0.0, 0.0, 9.980868462162414, 4.491390807973087, 3.17270870505751, 2.39539507231842, 0.0, 0.0);
+130:  Mapping yahoo 'Lou Williams' player_id=3971 to espn 'Lou Williams' player_id=333
+130:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3971, 'tor', 82, 0.0, 2.1, 0.0, 0.0, 3.3, 0.8, 0.1, 11.2, 0.0, 1.4, 9.897201074170944, 4.018263636113404, 3.6361824505662543, 3.0725741707284846, 0.0, 0.0);
+131:  Mapping yahoo 'George Hill' player_id=4488 to espn 'George Hill' player_id=498
+131:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4488, 'ind', 82, 0.0, 4.0, 0.0, 0.0, 5.0, 1.1, 0.3, 15.3, 0.0, 1.8, 8.813109446944033, 3.8777681566553746, 2.661848402224342, 2.1534353573994927, 0.0, 0.0);
+132:  Mapping yahoo 'Ben McLemore' player_id=5158 to espn 'Ben McLemore' player_id=1112
+132:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5158, 'sac', 82, 0.0, 2.9, 0.0, 0.0, 1.0, 0.5, 0.2, 8.8, 0.0, 1.1, 8.28048780487805, 3.1134634146341464, 1.7439024390243902, 1.40209756097561, 0.0, 0.0);
+133:  Mapping yahoo 'Ramon Sessions' player_id=4333 to espn 'Ramon Sessions' player_id=429
+133:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4333, 'sac', 82, 0.0, 2.6, 0.0, 0.0, 4.2, 0.6, 0.1, 12.5, 0.0, 0.5, 9.307725777652516, 3.946475729724667, 4.584482351883553, 3.7180151873775618, 0.0, 0.0);
+134:  Mapping yahoo 'Darren Collison' player_id=4626 to espn 'Darren Collison' player_id=621
+134:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4626, 'sac', 82, 0.0, 2.5, 0.0, 0.0, 4.2, 1.1, 0.2, 11.4, 0.0, 0.8, 9.178998788187846, 4.2590554377191605, 2.8928758879539838, 2.496551891304288, 0.0, 0.0);
+135:  Mapping yahoo 'Danny Green' player_id=4651 to espn 'Danny Green' player_id=652
+135:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4651, 'sas', 82, 0.0, 3.3, 0.0, 0.0, 1.6, 1.0, 0.8, 9.4, 0.0, 1.9, 6.84427807486631, 3.00463807486631, 0.895187165775401, 0.7233112299465241, 0.0, 0.0);
+136:  Mapping yahoo 'Giannis Antetokounmpo' player_id=5185 to espn 'Giannis Antetokounmpo' player_id=1136
+136:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5185, 'mil', 82, 0.0, 5.3, 0.0, 0.0, 3.3, 1.0, 1.0, 10.6, 0.0, 1.0, 5.428571428571429, 2.3071428571428574, 2.6233766233766236, 1.875714285714286, 0.0, 0.0);
+137:  Mapping yahoo 'Ersan Ilyasova' player_id=3962 to espn 'Ersan Ilyasova' player_id=651
+137:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3962, 'mil', 82, 0.0, 7.2, 0.0, 0.0, 1.4, 0.9, 0.4, 12.2, 0.0, 0.9, 9.848268398268397, 4.500658658008658, 2.265950583606596, 1.8286221209705231, 0.0, 0.0);
+138:  Mapping yahoo 'Tristan Thompson' player_id=4884 to espn 'Tristan Thompson' player_id=884
+138:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4884, 'cle', 82, 0.0, 7.4, 0.0, 0.0, 0.9, 0.5, 0.6, 9.1, 0.0, 0.0, 9.1159891598916, 4.430370731707317, 3.783333333333333, 2.4932166666666666, 0.0, 0.0);
+139:  Mapping yahoo 'Tim Hardaway Jr.' player_id=5194 to espn 'Tim Hardaway Jr.' player_id=1100
+139:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5194, 'nyk', 82, 0.0, 1.9, 0.0, 0.0, 1.9, 0.7, 0.1, 13.1, 0.0, 2.0, 8.481481481481481, 3.7064074074074074, 1.5802469135802468, 1.2926419753086418, 0.0, 0.0);
+140:  Mapping yahoo 'Patty Mills' player_id=4660 to espn 'Patty Mills*' player_id=706
+140:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4660, 'sas', 82, 0.0, 1.8, 0.0, 0.0, 1.7, 0.7, 0.1, 9.1, 0.0, 1.5, 6.317120051085568, 2.9437779438058747, 0.7568882148431957, 0.6759011758549738, 0.0, 0.0);
+141:  Mapping yahoo 'Iman Shumpert' player_id=4898 to espn 'Iman Shumpert' player_id=878
+141:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4898, 'nyk', 82, 0.0, 3.9, 0.0, 0.0, 1.9, 1.5, 0.2, 8.2, 0.0, 1.1, 6.815781883578494, 2.814917917917918, 1.135787482397652, 0.8643342741046132, 0.0, 0.0);
+142:  Mapping yahoo 'Corey Brewer' player_id=4285 to espn 'Corey Brewer' player_id=403
+142:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4285, 'min', 82, 0.0, 2.6, 0.0, 0.0, 1.6, 1.7, 0.3, 11.8, 0.0, 0.8, 9.098180391987782, 4.194261160706367, 2.5307549282039252, 1.7968359990247869, 0.0, 0.0);
+143:  Mapping yahoo 'Rodney Stuckey' player_id=4293 to espn 'Rodney Stuckey' player_id=432
+143:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4293, 'ind', 82, 0.0, 2.7, 0.0, 0.0, 2.9, 0.8, 0.2, 14.6, 0.0, 0.5, 11.34885868425407, 4.845962658176488, 4.470287885270005, 3.6879875053477535, 0.0, 0.0);
+144:  Mapping yahoo 'Timofey Mozgov' player_id=4794 to espn 'Timofey Mozgov' player_id=782
+144:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4794, 'den', 82, 0.0, 5.6, 0.0, 0.0, 0.6, 0.3, 1.1, 7.9, 0.0, 0.0, 4.454313870411431, 2.3296061542251785, 1.8331830500123183, 1.3730541044592264, 0.0, 0.0);
+145:  Mapping yahoo 'Enes Kanter' player_id=4899 to espn 'Enes Kanter' player_id=857
+145:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4899, 'uth', 82, 0.0, 6.3, 0.0, 0.0, 0.7, 0.4, 0.5, 10.1, 0.0, 0.0, 7.7319715007215, 3.850521807359307, 2.0972943722943724, 1.5457059523809524, 0.0, 0.0);
+146:  Mapping yahoo 'Michael Kidd-Gilchrist' player_id=5008 to espn 'Michael Kidd-Gilchrist' player_id=986
+146:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5008, 'cha', 82, 0.0, 5.4, 0.0, 0.0, 1.1, 0.7, 0.7, 7.5, 0.0, 0.0, 6.415357044389302, 2.989556382685415, 2.7776399228012134, 1.861018748276813, 0.0, 0.0);
+147:  Mapping yahoo 'Shaun Livingston' player_id=3821 to espn 'Shaun Livingston*' player_id=596
+147:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3821, 'gsw', 82, 0.0, 2.9, 0.0, 0.0, 3.1, 1.0, 0.4, 7.4, 0.0, 0.0, 5.698175129724351, 2.746520412527137, 1.6720303459516754, 1.3844411264479872, 0.0, 0.0);
+148:  Mapping yahoo 'Gerald Henderson' player_id=4617 to espn 'Gerald Henderson' player_id=634
+148:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4617, 'cha', 82, 0.0, 3.6, 0.0, 0.0, 2.3, 0.7, 0.4, 13.4, 0.0, 0.5, 11.286893480436573, 4.966233131392093, 3.699407560064195, 2.8818384892900077, 0.0, 0.0);
+149:  Mapping yahoo 'Vince Carter' player_id=3248 to espn 'Vince Carter' player_id=26
+149:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3248, 'mem', 82, 0.0, 3.6, 0.0, 0.0, 2.5, 0.8, 0.5, 12.0, 0.0, 1.8, 14.747518541277216, 6.105472676088767, 4.2435231193420115, 3.466958388502423, 0.0, 0.0);
+150:  Mapping yahoo 'Carlos Boozer' player_id=3632 to espn 'Carlos Boozer' player_id=185
+150:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3632, 'lal', 82, 0.0, 8.8, 0.0, 0.0, 1.8, 0.8, 0.3, 14.5, 0.0, 0.0, 13.772183979280411, 6.486698654241073, 3.6856460052433566, 2.7568632119220307, 0.0, 0.0);
+151:  Mapping yahoo 'Raymond Felton' player_id=3931 to espn 'Raymond Felton*' player_id=303
+151:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3931, 'dal', 82, 0.0, 2.9, 0.0, 0.0, 5.7, 1.3, 0.3, 11.0, 0.0, 1.1, 11.646850206882942, 4.728621183994474, 2.476877006384761, 1.8576577547885709, 0.0, 0.0);
+152:  Mapping yahoo 'Larry Sanders' player_id=4730 to espn 'Larry Sanders' player_id=747
+152:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4730, 'mil', 82, 0.0, 9.7, 0.0, 0.0, 1.2, 1.0, 2.9, 10.3, 0.0, 0.0, 6.528088306875814, 3.192235182062273, 1.760656805941558, 0.940190734372792, 0.0, 0.0);
+153:  Mapping yahoo 'Marco Belinelli' player_id=4296 to espn 'Marco Belinelli' player_id=402
+153:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4296, 'sas', 82, 0.0, 2.6, 0.0, 0.0, 2.1, 0.6, 0.1, 11.0, 0.0, 1.5, 8.307495568277124, 3.7716029879978143, 1.7693701499902574, 1.4791934453918552, 0.0, 0.0);
+154:  Mapping yahoo 'Boris Diaw' player_id=3724 to espn 'Boris Diaw' player_id=245
+154:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3724, 'sas', 82, 0.0, 4.0, 0.0, 0.0, 2.8, 0.6, 0.4, 7.8, 0.0, 0.5, 7.615410986350729, 3.9143212469842745, 1.3523304075466225, 0.9831442062863945, 0.0, 0.0);
+155:  Mapping yahoo 'Courtney Lee' player_id=4484 to espn 'Courtney Lee' player_id=504
+155:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4484, 'mem', 82, 0.0, 2.4, 0.0, 0.0, 1.6, 0.9, 0.3, 9.3, 0.0, 0.9, 8.13259888707511, 3.8141888780382263, 1.3822776682009776, 1.2136397926804583, 0.0, 0.0);
+156:  Mapping yahoo 'Channing Frye' player_id=3934 to espn 'Channing Frye' player_id=304
+156:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3934, 'orl', 82, 0.0, 5.3, 0.0, 0.0, 1.3, 0.7, 0.9, 10.8, 0.0, 1.7, 8.730618860019126, 3.7279742532281666, 1.306803881226589, 1.102942475755241, 0.0, 0.0);
+157:  Mapping yahoo 'Kendall Marshall' player_id=5019 to espn 'Kendall Marshall' player_id=992
+157:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5019, 'mil', 82, 0.0, 2.6, 0.0, 0.0, 8.0, 0.9, 0.1, 7.4, 0.0, 1.2, 6.22145061728395, 2.501023148148148, 0.5416666666666666, 0.3011666666666667, 0.0, 0.0);
+158:  Mapping yahoo 'Chris Andersen' player_id=3598 to espn 'Chris Andersen' player_id=184
+158:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3598, 'mia', 82, 0.0, 5.5, 0.0, 0.0, 0.3, 0.5, 1.4, 6.6, 0.0, 0.0, 3.3437801727325724, 1.9962367631213456, 2.442391986290854, 1.6925776464995617, 0.0, 0.0);
+159:  Mapping yahoo 'Mike Dunleavy' player_id=3601 to espn 'Mike Dunleavy' player_id=189
+159:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3601, 'chi', 82, 0.0, 3.8, 0.0, 0.0, 2.0, 0.6, 0.5, 10.3, 0.0, 1.5, 9.775702334049617, 4.281757622313732, 2.594597245495908, 2.1846508807075544, 0.0, 0.0);
+160:  Mapping yahoo 'Evan Turner' player_id=4717 to espn 'Evan Turner' player_id=721
+160:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4717, 'bos', 82, 0.0, 5.3, 0.0, 0.0, 3.2, 0.8, 0.1, 12.4, 0.0, 0.6, 11.388004076621963, 4.839901732564334, 2.5473668728140275, 2.0047777289046396, 0.0, 0.0);
+161:  Mapping yahoo 'Matt Barnes' player_id=3643 to espn 'Matt Barnes' player_id=206
+161:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3643, 'lac', 82, 0.0, 4.7, 0.0, 0.0, 1.9, 0.9, 0.6, 9.8, 0.0, 1.4, 6.9079775269754915, 3.0947739320850203, 1.5479964529007013, 1.1532573574110225, 0.0, 0.0);
+162:  Mapping yahoo 'Kyle O'Quinn' player_id=5083 to espn 'Kyle O'Quinn' player_id=1000
+162:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5083, 'orl', 82, 0.0, 6.4, 0.0, 0.0, 1.4, 0.6, 1.3, 7.4, 0.0, 0.0, 4.736587846427663, 2.39197686244597, 1.0650902618866007, 0.7200010170353421, 0.0, 0.0);
+163:  Mapping yahoo 'Jarrett Jack' player_id=3948 to espn 'Jarrett Jack' player_id=314
+163:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3948, 'bro', 82, 0.0, 3.0, 0.0, 0.0, 5.4, 0.8, 0.2, 12.8, 0.0, 0.9, 9.56711181432303, 4.314767428259686, 2.6886978493829643, 2.271949682728605, 0.0, 0.0);
+164:  Mapping yahoo 'Andrea Bargnani' player_id=4129 to espn 'Andrea Bargnani' player_id=350
+164:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4129, 'nyk', 82, 0.0, 5.5, 0.0, 0.0, 1.9, 0.4, 1.0, 15.1, 0.0, 1.0, 13.487816260800132, 6.015566052316859, 3.4243419961161896, 2.8764472767375993, 0.0, 0.0);
+165:  Mapping yahoo 'Henry Sims' player_id=5111 to espn 'Henry Sims' player_id=1039
+165:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5111, 'phi', 82, 0.0, 7.5, 0.0, 0.0, 1.6, 0.9, 0.6, 12.1, 0.0, 0.0, 4.471014492753623, 2.217623188405797, 1.7536231884057971, 1.3257391304347825, 0.0, 0.0);
+166:  Mapping yahoo 'Samuel Dalembert' player_id=3534 to espn 'Samuel Dalembert' player_id=160
+166:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3534, 'nyk', 82, 0.0, 7.5, 0.0, 0.0, 0.5, 0.6, 1.4, 7.6, 0.0, 0.0, 6.061031136444631, 3.3517502184538817, 1.8315429655729565, 1.3608364234207067, 0.0, 0.0);
+167:  Mapping yahoo 'Miles Plumlee' player_id=5060 to espn 'Miles Plumlee' player_id=1001
+167:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5060, 'pho', 82, 0.0, 7.1, 0.0, 0.0, 0.5, 0.6, 1.0, 7.3, 0.0, 0.0, 5.108333333333333, 2.615466666666667, 1.1952380952380952, 0.678895238095238, 0.0, 0.0);
+168:  Mapping yahoo 'Tony Allen' player_id=3842 to espn 'Tony Allen' player_id=258
+168:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3842, 'mem', 82, 0.0, 4.1, 0.0, 0.0, 1.5, 1.6, 0.4, 9.2, 0.0, 0.1, 6.844450177856894, 3.2442693843041677, 2.5321872855713123, 1.7345482906163492, 0.0, 0.0);
+169:  Mapping yahoo 'Caron Butler' player_id=3608 to espn 'Caron Butler' player_id=186
+169:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3608, 'det', 82, 0.0, 3.6, 0.0, 0.0, 1.3, 0.8, 0.2, 10.1, 0.0, 1.7, 12.521799275017884, 5.071328706382244, 3.107267402926632, 2.588353746637884, 0.0, 0.0);
+170:  Mapping yahoo 'Omer Asik' player_id=4499 to espn 'Omer Asik' player_id=474
+170:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4499, 'nor', 82, 0.0, 8.8, 0.0, 0.0, 0.7, 0.4, 0.9, 6.8, 0.0, 0.0, 4.474353288987436, 2.384830303030303, 2.6328529194382853, 1.5217889874353288, 0.0, 0.0);
+171:  Mapping yahoo 'James Johnson' player_id=4621 to espn 'James Johnson' player_id=639
+171:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4621, 'tor', 82, 0.0, 3.3, 0.0, 0.0, 1.8, 0.9, 1.1, 7.1, 0.0, 0.3, 6.089821143245026, 2.7404195144602617, 1.5996726952018405, 1.2365469933910227, 0.0, 0.0);
+172:  Mapping yahoo 'Brandan Wright' player_id=4286 to espn 'Brandan Wright' player_id=438
+172:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4286, 'dal', 82, 0.0, 4.1, 0.0, 0.0, 0.5, 0.5, 1.0, 8.7, 0.0, 0.0, 5.23207271412066, 3.3746869006078257, 1.5754530592302363, 1.087062610868863, 0.0, 0.0);
+173:  Mapping yahoo 'Steve Nash' player_id=3103 to espn 'Steve Nash' player_id=106
+173:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3103, 'lal', 82, 0.0, 2.6, 0.0, 0.0, 7.6, 0.5, 0.1, 10.8, 0.0, 0.9, 10.552785443247455, 5.107548154531768, 2.7690532506843972, 2.514300351621433, 0.0, 0.0);
+174:  Unable to find 'James Anderson' espn id=724
+174:  - SQL: SELECT * FROM PLAYERS where first like '%James%' and last like '%Anderson%';
+175:  Mapping yahoo 'JaVale McGee' player_id=4480 to espn 'JaVale McGee' player_id=511
+175:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4480, 'den', 82, 0.0, 5.5, 0.0, 0.0, 0.4, 0.4, 2.0, 9.5, 0.0, 0.0, 7.308628280253099, 4.0709059521009765, 1.842086450129613, 1.024200066272065, 0.0, 0.0);
+176:  Mapping yahoo 'Harrison Barnes' player_id=5013 to espn 'Harrison Barnes' player_id=963
+176:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5013, 'gsw', 82, 0.0, 4.1, 0.0, 0.0, 1.4, 0.8, 0.2, 9.4, 0.0, 0.8, 8.387780943336498, 3.47254131054131, 2.328901551123774, 1.7117426400759737, 0.0, 0.0);
+177:  Mapping yahoo 'O.J. Mayo' player_id=4389 to espn 'O.J. Mayo' player_id=509
+177:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4389, 'mil', 82, 0.0, 2.4, 0.0, 0.0, 2.4, 0.7, 0.2, 12.2, 0.0, 1.4, 11.74723595043073, 4.910344627280045, 2.387509051885555, 1.9696949678055828, 0.0, 0.0);
+178:  Unable to find 'Andray Blatche' espn id=297
+178:  - SQL: SELECT * FROM PLAYERS where first like '%Andray%' and last like '%Blatche%';
+179:  Mapping yahoo 'Josh McRoberts' player_id=4314 to espn 'Josh McRoberts' player_id=424
+179:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4314, 'mia', 82, 0.0, 7.6, 0.0, 0.0, 3.1, 0.7, 0.6, 11.9, 0.0, 1.5, 4.695164593165659, 2.342887131989664, 1.03405075142815, 0.7631294545539747, 0.0, 0.0);
+180:  Mapping yahoo 'Drew Gooden' player_id=3602 to espn 'Drew Gooden' player_id=192
+180:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3602, 'was', 82, 0.0, 5.0, 0.0, 0.0, 1.2, 0.5, 0.4, 9.2, 0.0, 0.3, 8.737736529952002, 4.106736169077441, 2.5691739722956677, 2.2171971380911613, 0.0, 0.0);
+181:  Unable to find 'Ray Allen' espn id=2
+181:  - SQL: SELECT * FROM PLAYERS where first like '%Ray%' and last like '%Allen%';
+182:  Mapping yahoo 'Tiago Splitter' player_id=4306 to espn 'Tiago Splitter' player_id=781
+182:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4306, 'sas', 82, 0.0, 6.0, 0.0, 0.0, 1.5, 0.6, 0.6, 9.0, 0.0, 0.0, 5.911993094789705, 3.2397722159447584, 3.0753295668549905, 2.1773333333333333, 0.0, 0.0);
+183:  Mapping yahoo 'Greivis Vasquez' player_id=4759 to espn 'Greivis Vasquez' player_id=773
+183:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4759, 'tor', 82, 0.0, 2.3, 0.0, 0.0, 3.9, 0.5, 0.1, 9.8, 0.0, 1.5, 9.141658889633572, 3.949196640321703, 1.5565457327482644, 1.3121680527067867, 0.0, 0.0);
+184:  Mapping yahoo 'Jordan Farmar' player_id=4154 to espn 'Jordan Farmar' player_id=360
+184:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4154, 'lac', 82, 0.0, 2.2, 0.0, 0.0, 4.3, 0.8, 0.2, 10.3, 0.0, 1.6, 7.814565503268311, 3.3837068629151785, 1.3123284968548918, 1.0537997829744783, 0.0, 0.0);
+185:  Mapping yahoo 'Anthony Bennett' player_id=5152 to espn 'Anthony Bennett' player_id=1131
+185:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5152, 'min', 82, 0.0, 3.0, 0.0, 0.0, 0.3, 0.4, 0.2, 4.1, 0.0, 0.3, 4.326923076923077, 1.5403846153846152, 1.3269230769230769, 0.846576923076923, 0.0, 0.0);
+186:  Mapping yahoo 'Kevin Garnett' player_id=3007 to espn 'Kevin Garnett' player_id=45
+186:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3007, 'bro', 82, 0.0, 5.7, 0.0, 0.0, 1.5, 0.7, 0.6, 6.7, 0.0, 0.0, 13.915600776688436, 6.303767151839861, 4.038967894036297, 3.283680897851509, 0.0, 0.0);
+187:  Mapping yahoo 'Gerald Wallace' player_id=3533 to espn 'Gerald Wallace' player_id=177
+187:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3533, 'bos', 82, 0.0, 3.3, 0.0, 0.0, 2.3, 1.2, 0.4, 6.1, 0.0, 0.3, 9.494676529432363, 4.737843588186749, 4.422611470122714, 2.6491442706035055, 0.0, 0.0);
+188:  Mapping yahoo 'Brian Roberts' player_id=5105 to espn 'Brian Roberts' player_id=1032
+188:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5105, 'cha', 82, 0.0, 1.6, 0.0, 0.0, 3.1, 0.6, 0.1, 8.5, 0.0, 0.9, 7.563390313390314, 3.1766239316239315, 1.5605413105413106, 1.4481823361823363, 0.0, 0.0);
+189:  Mapping yahoo 'Norris Cole' player_id=4910 to espn 'Norris Cole' player_id=841
+189:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4910, 'mia', 82, 0.0, 1.8, 0.0, 0.0, 2.7, 0.8, 0.1, 6.3, 0.0, 0.6, 5.973459974984365, 2.473012429643527, 0.9659161976235145, 0.7176757348342713, 0.0, 0.0);
+190:  Mapping yahoo 'Steve Blake' player_id=3741 to espn 'Steve Blake' player_id=228
+190:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3741, 'por', 82, 0.0, 2.7, 0.0, 0.0, 4.9, 0.9, 0.1, 6.8, 0.0, 1.4, 6.18158473743457, 2.3737285391748753, 0.7358582020442375, 0.5658749573720186, 0.0, 0.0);
+191:  Mapping yahoo 'Kent Bazemore' player_id=5102 to espn 'Kent Bazemore' player_id=1025
+191:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5102, 'atl', 82, 0.0, 2.9, 0.0, 0.0, 2.3, 1.1, 0.3, 10.4, 0.0, 1.2, 4.04681510480385, 1.6875218987032052, 1.325014272897806, 0.7976585922844792, 0.0, 0.0);
+192:  Mapping yahoo 'Wesley Johnson' player_id=4719 to espn 'Wesley Johnson' player_id=729
+192:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4719, 'lal', 82, 0.0, 3.8, 0.0, 0.0, 1.3, 0.9, 0.8, 8.4, 0.0, 1.1, 7.757032132424537, 3.2501964634858806, 0.8209444985394352, 0.6427995423563778, 0.0, 0.0);
+193:  Unable to find 'Andrew Bynum' espn id=299
+193:  - SQL: SELECT * FROM PLAYERS where first like '%Andrew%' and last like '%Bynum%';
+194:  Mapping yahoo 'Kris Humphries' player_id=3831 to espn 'Kris Humphries' player_id=281
+194:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3831, 'was', 82, 0.0, 6.5, 0.0, 0.0, 0.9, 0.4, 0.8, 8.5, 0.0, 0.0, 6.210363778176143, 3.030657523749958, 2.3868440385980674, 1.8903804785696694, 0.0, 0.0);
+195:  Mapping yahoo 'Steven Adams' player_id=5163 to espn 'Steven Adams' player_id=1128
+195:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5163, 'okc', 82, 0.0, 4.1, 0.0, 0.0, 0.5, 0.5, 0.7, 3.3, 0.0, 0.0, 2.2839506172839505, 1.1488271604938272, 1.6790123456790125, 0.9755061728395061, 0.0, 0.0);
+196:  Mapping yahoo 'Martell Webster' player_id=3932 to espn 'Martell Webster*' player_id=330
+196:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3932, 'was', 82, 0.0, 3.1, 0.0, 0.0, 1.3, 0.6, 0.2, 9.5, 0.0, 1.7, 6.809887437857421, 2.9623010354679784, 1.8305843567413649, 1.5450131970897119, 0.0, 0.0);
+197:  Mapping yahoo 'Patrick Patterson' player_id=4729 to espn 'Patrick Patterson' player_id=746
+197:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4729, 'tor', 82, 0.0, 5.0, 0.0, 0.0, 1.1, 0.7, 0.6, 9.0, 0.0, 0.7, 7.751961673889491, 3.6666778717497293, 0.9620144907908991, 0.6888023754062838, 0.0, 0.0);
+198:  Mapping yahoo 'Marvin Williams' player_id=3928 to espn 'Marvin Williams' player_id=331
+198:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3928, 'cha', 82, 0.0, 4.8, 0.0, 0.0, 1.1, 0.7, 0.5, 8.6, 0.0, 1.1, 8.34458243580927, 3.6298933595770326, 2.506438877201869, 1.9775802741122748, 0.0, 0.0);
+199:  Mapping yahoo 'Aaron Brooks' player_id=4304 to espn 'Aaron Brooks' player_id=404
+199:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4304, 'chi', 82, 0.0, 1.6, 0.0, 0.0, 2.6, 0.6, 0.2, 7.2, 0.0, 1.1, 9.081261154665572, 3.7687233791862123, 1.8322417050414144, 1.5500764824650366, 0.0, 0.0);
+200:  Mapping yahoo 'Nate Robinson' player_id=3947 to espn 'Nate Robinson' player_id=324
+200:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3947, 'den', 82, 0.0, 2.0, 0.0, 0.0, 3.5, 0.9, 0.1, 11.4, 0.0, 1.5, 9.538287968401947, 4.101463826412838, 2.0257036397007235, 1.6570255772751918, 0.0, 0.0);
+201:  Mapping yahoo 'Al-Farouq Aminu' player_id=4723 to espn 'Al-Farouq Aminu' player_id=730
+201:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4723, 'dal', 82, 0.0, 6.4, 0.0, 0.0, 1.3, 1.1, 0.5, 7.0, 0.0, 0.1, 5.948347805540789, 2.7719300773820077, 1.7181575993856697, 1.1924013739736548, 0.0, 0.0);
+202:  Mapping yahoo 'Ray McCallum' player_id=5206 to espn 'Ray McCallum' player_id=1104
+202:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5206, 'sac', 82, 0.0, 1.8, 0.0, 0.0, 2.7, 0.5, 0.2, 6.3, 0.0, 0.5, 6.666666666666667, 2.5133333333333336, 0.9555555555555556, 0.7109333333333334, 0.0, 0.0);
+203:  Mapping yahoo 'Chris Kaman' player_id=3709 to espn 'Chris Kaman' player_id=225
+203:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3709, 'por', 82, 0.0, 6.1, 0.0, 0.0, 1.3, 0.4, 1.0, 10.9, 0.0, 0.0, 10.827013161232024, 5.381025541132316, 2.431253748260093, 1.9012404311393927, 0.0, 0.0);
+204:  Mapping yahoo 'Jeremy Lamb' player_id=5018 to espn 'Jeremy Lamb' player_id=988
+204:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5018, 'okc', 82, 0.0, 2.2, 0.0, 0.0, 1.3, 0.6, 0.3, 7.6, 0.0, 1.0, 6.190635451505017, 2.631020066889632, 0.7499070977331846, 0.613424005945745, 0.0, 0.0);
+205:  Mapping yahoo 'Glen Davis' player_id=4313 to espn 'Glen Davis' player_id=410
+205:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4313, 'lac', 82, 0.0, 6.2, 0.0, 0.0, 1.4, 0.8, 0.4, 11.8, 0.0, 0.0, 9.313909911343346, 4.060864721345699, 2.7340378005845802, 1.9165604982097906, 0.0, 0.0);
+206:  Unable to find 'Jordan Crawford' espn id=725
+206:  - SQL: SELECT * FROM PLAYERS where first like '%Jordan%' and last like '%Crawford%';
+207:  Mapping yahoo 'Danny Granger' player_id=3943 to espn 'Danny Granger' player_id=310
+207:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3943, 'mia', 82, 0.0, 3.6, 0.0, 0.0, 1.2, 0.5, 0.4, 10.7, 0.0, 1.3, 12.575201626431156, 4.929479037561014, 4.021700978895877, 3.5994223761118103, 0.0, 0.0);
+208:  Mapping yahoo 'Brandon Bass' player_id=3959 to espn 'Brandon Bass' player_id=296
+208:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3959, 'bos', 82, 0.0, 5.4, 0.0, 0.0, 1.0, 0.5, 0.8, 10.1, 0.0, 0.0, 7.496940483361542, 3.6285191939469863, 2.33579126646759, 1.994765741563322, 0.0, 0.0);
+209:  Mapping yahoo 'Ryan Kelly' player_id=5218 to espn 'Ryan Kelly*' player_id=1084
+209:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5218, 'lal', 82, 0.0, 3.7, 0.0, 0.0, 1.6, 0.5, 0.8, 8.0, 0.0, 0.8, 6.288135593220339, 2.659881355932203, 2.288135593220339, 1.8648305084745762, 0.0, 0.0);
+210:  Mapping yahoo 'Kosta Koufos' player_id=4485 to espn 'Kosta Koufos' player_id=503
+210:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4485, 'mem', 82, 0.0, 5.7, 0.0, 0.0, 0.5, 0.5, 1.0, 6.7, 0.0, 0.0, 4.630871546149324, 2.440469304820694, 1.069234273956496, 0.653302141387419, 0.0, 0.0);
+211:  Unable to find 'MarShon Brooks' espn id=838
+211:  - SQL: SELECT * FROM PLAYERS where first like '%MarShon%' and last like '%Brooks%';
+212:  Mapping yahoo 'Mo Williams' player_id=3750 to espn 'Mo Williams' player_id=250
+212:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3750, 'min', 82, 0.0, 2.1, 0.0, 0.0, 4.5, 0.8, 0.1, 10.7, 0.0, 1.3, 11.817424497429473, 4.963318288920378, 2.1728668614188, 1.899085636880031, 0.0, 0.0);
+213:  Mapping yahoo 'Kirk Hinrich' player_id=3710 to espn 'Kirk Hinrich' player_id=224
+213:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3710, 'chi', 82, 0.0, 2.5, 0.0, 0.0, 3.7, 1.0, 0.4, 7.5, 0.0, 1.1, 9.011317262206383, 3.532436366784902, 1.8044393673057213, 1.353329525479291, 0.0, 0.0);
+214:  Mapping yahoo 'Derrick Williams' player_id=4883 to espn 'Derrick Williams' player_id=890
+214:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4883, 'sac', 82, 0.0, 4.6, 0.0, 0.0, 0.7, 0.6, 0.3, 9.1, 0.0, 0.5, 7.706293706293707, 3.2905874125874126, 3.315073815073815, 2.3570174825174823, 0.0, 0.0);
+215:  Mapping yahoo 'Kelly Olynyk' player_id=5164 to espn 'Kelly Olynyk' player_id=1093
+215:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5164, 'bos', 82, 0.0, 7.2, 0.0, 0.0, 2.0, 0.7, 0.6, 11.7, 0.0, 0.8, 7.171428571428572, 3.4207714285714284, 1.7428571428571429, 1.3925428571428573, 0.0, 0.0);
+216:  Mapping yahoo 'Bismack Biyombo' player_id=4888 to espn 'Bismack Biyombo' player_id=837
+216:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4888, 'cha', 82, 0.0, 4.3, 0.0, 0.0, 0.2, 0.1, 1.1, 2.8, 0.0, 0.0, 3.112181337181337, 1.60588556998557, 1.5478956228956229, 0.7878788720538721, 0.0, 0.0);
+217:  Mapping yahoo 'Alex Len' player_id=5156 to espn 'Alex Len' player_id=1119
+217:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5156, 'pho', 82, 0.0, 2.4, 0.0, 0.0, 0.1, 0.1, 0.4, 2.1, 0.0, 0.0, 1.8571428571428572, 0.7855714285714286, 0.7380952380952381, 0.4760714285714286, 0.0, 0.0);
+218:  Mapping yahoo 'Tony Wroten' player_id=5059 to espn 'Tony Wroten' player_id=1015
+218:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5059, 'phi', 82, 0.0, 3.4, 0.0, 0.0, 3.4, 1.2, 0.3, 14.0, 0.0, 0.6, 8.300529100529099, 3.519424338624338, 3.2947089947089947, 2.1909814814814816, 0.0, 0.0);
+219:  Mapping yahoo 'Maurice Harkless' player_id=5021 to espn 'Maurice Harkless' player_id=976
+219:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5021, 'orl', 82, 0.0, 4.2, 0.0, 0.0, 1.0, 1.3, 0.8, 8.8, 0.0, 0.7, 6.498684210526316, 3.002392105263158, 1.7530701754385964, 1.0588543859649122, 0.0, 0.0);
+220:  Mapping yahoo 'Cody Zeller' player_id=5155 to espn 'Cody Zeller' player_id=1113
+220:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5155, 'cha', 82, 0.0, 4.8, 0.0, 0.0, 1.3, 0.5, 0.6, 7.1, 0.0, 0.0, 4.926829268292683, 2.1875121951219514, 2.4390243902439024, 1.7804878048780488, 0.0, 0.0);
+221:  Mapping yahoo 'Andrei Kirilenko' player_id=3347 to espn 'Andrei Kirilenko' player_id=77
+221:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3347, 'bro', 82, 0.0, 4.4, 0.0, 0.0, 2.2, 1.2, 0.7, 8.5, 0.0, 0.3, 7.802894832160123, 3.971673469569503, 4.22814427098843, 2.769434497497422, 0.0, 0.0);
+222:  Mapping yahoo 'Otto Porter Jr.' player_id=5154 to espn 'Otto Porter Jr.' player_id=1118
+222:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5154, 'was', 82, 0.0, 4.6, 0.0, 0.0, 0.8, 0.9, 0.1, 9.9, 0.0, 1.1, 2.4594594594594597, 0.9690270270270271, 0.32432432432432434, 0.24875675675675676, 0.0, 0.0);
+223:  Mapping yahoo 'Jerryd Bayless' player_id=4473 to espn 'Jerryd Bayless' player_id=477
+223:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4473, 'mil', 82, 0.0, 2.0, 0.0, 0.0, 2.8, 0.8, 0.1, 8.8, 0.0, 1.0, 7.824153909757688, 3.1844306412713785, 2.190539722003765, 1.772146635101046, 0.0, 0.0);
+224:  Unable to find 'Metta World Peace' espn id=7
+224:  - SQL: SELECT * FROM PLAYERS where first like '%Metta%' and last like '%Peace%';
+225:  Unable to find 'Carlos Delfino' espn id=232
+225:  - SQL: SELECT * FROM PLAYERS where first like '%Carlos%' and last like '%Delfino%';
+226:  Mapping yahoo 'Jared Dudley' player_id=4300 to espn 'Jared Dudley' player_id=411
+226:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4300, 'mil', 82, 0.0, 2.7, 0.0, 0.0, 1.8, 0.7, 0.1, 8.7, 0.0, 1.2, 7.296952898357479, 3.334707474549368, 1.81404532320628, 1.3242530859405843, 0.0, 0.0);
+227:  Mapping yahoo 'Luis Scola' player_id=3653 to espn 'Luis Scola' player_id=210
+227:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3653, 'ind', 82, 0.0, 5.4, 0.0, 0.0, 1.4, 0.5, 0.3, 9.9, 0.0, 0.0, 11.089973803388437, 5.256647582806119, 2.7871974762218663, 2.109908489499953, 0.0, 0.0);
+228:  Mapping yahoo 'Luke Ridnour' player_id=3717 to espn 'Luke Ridnour' player_id=226
+228:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3717, 'orl', 82, 0.0, 2.0, 0.0, 0.0, 3.4, 0.7, 0.2, 7.9, 0.0, 0.7, 8.501011192390962, 3.6044287455737676, 1.7516075525155148, 1.443324623272784, 0.0, 0.0);
+229:  Unable to find 'Emeka Okafor' espn id=270
+229:  - SQL: SELECT * FROM PLAYERS where first like '%Emeka%' and last like '%Okafor%';
+230:  Mapping yahoo 'Mike Miller' player_id=3404 to espn 'Mike Miller' player_id=99
+230:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3404, 'cle', 82, 0.0, 1.9, 0.0, 0.0, 1.2, 0.2, 0.1, 5.0, 0.0, 1.1, 7.745608794324021, 3.624944915743642, 1.4547455834408085, 1.1797986681704957, 0.0, 0.0);
+231:  Mapping yahoo 'Andre Miller' player_id=3331 to espn 'Andre Miller' player_id=98
+231:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3331, 'was', 82, 0.0, 2.3, 0.0, 0.0, 3.9, 0.6, 0.1, 6.1, 0.0, 0.2, 9.866033557705832, 4.577839570775506, 3.590757307917036, 2.9013319047969652, 0.0, 0.0);
+232:  Mapping yahoo 'Jason Richardson' player_id=3515 to espn 'Jason Richardson' player_id=173
+232:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3515, 'phi', 82, 0.0, 3.8, 0.0, 0.0, 1.8, 1.1, 0.4, 11.1, 0.0, 1.8, 13.748346409132173, 5.568080295698531, 2.5892965881660652, 1.5432207665469748, 0.0, 0.0);
+233:  Mapping yahoo 'Kentavious Caldwell-Pope' player_id=5159 to espn 'Kentavious Caldwell-Pope' player_id=1116
+233:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5159, 'det', 82, 0.0, 2.5, 0.0, 0.0, 0.9, 1.3, 0.2, 9.5, 0.0, 1.2, 5.75, 2.42075, 0.7625, 0.6039, 0.0, 0.0);
+234:  Mapping yahoo 'Dorell Wright' player_id=3836 to espn 'Dorell Wright' player_id=277
+234:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3836, 'por', 82, 0.0, 3.3, 0.0, 0.0, 1.3, 0.5, 0.3, 6.9, 0.0, 1.3, 6.93566672634959, 2.7118456900026895, 1.481661365972022, 1.1882924155095616, 0.0, 0.0);
+235:  Mapping yahoo 'Kevin Seraphin' player_id=4748 to espn 'Kevin Seraphin' player_id=771
+235:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4748, 'was', 82, 0.0, 3.4, 0.0, 0.0, 0.5, 0.2, 0.7, 6.7, 0.0, 0.0, 5.97316385331777, 2.920877124272389, 0.8672017902906048, 0.6634093695723127, 0.0, 0.0);
+236:  Mapping yahoo 'Shane Larkin' player_id=5188 to espn 'Shane Larkin' player_id=1121
+236:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5188, 'nyk', 82, 0.0, 1.3, 0.0, 0.0, 2.2, 0.8, 0.0, 4.3, 0.0, 0.4, 2.8541666666666665, 1.13025, 0.5208333333333334, 0.3453125, 0.0, 0.0);
+237:  Mapping yahoo 'Chase Budinger' player_id=4649 to espn 'Chase Budinger' player_id=618
+237:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4649, 'min', 82, 0.0, 2.9, 0.0, 0.0, 0.9, 0.5, 0.1, 7.8, 0.0, 1.2, 7.534047865440706, 3.0889596248306894, 1.3596848170914797, 1.0809494295877264, 0.0, 0.0);
+238:  Mapping yahoo 'Jason Terry' player_id=3333 to espn 'Jason Terry' player_id=137
+238:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3333, 'hou', 82, 0.0, 1.7, 0.0, 0.0, 2.3, 0.7, 0.1, 8.8, 0.0, 1.5, 11.689786899695362, 4.8512615633735745, 2.350356733921234, 1.9860514401634428, 0.0, 0.0);
+239:  Mapping yahoo 'Shabazz Muhammad' player_id=5165 to espn 'Shabazz Muhammad' player_id=1132
+239:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5165, 'min', 82, 0.0, 1.4, 0.0, 0.0, 0.2, 0.2, 0.0, 3.8, 0.0, 0.1, 3.3513513513513513, 1.5416216216216216, 1.0810810810810811, 0.7027027027027027, 0.0, 0.0);
+240:  Mapping yahoo 'Devin Harris' player_id=3822 to espn 'Devin Harris' player_id=262
+240:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3822, 'dal', 82, 0.0, 2.0, 0.0, 0.0, 4.2, 0.9, 0.1, 9.2, 0.0, 1.0, 9.531211563157093, 3.9363903755838794, 4.313308206860599, 3.3212473192826613, 0.0, 0.0);
+241:  Mapping yahoo 'Reggie Evans' player_id=3663 to espn 'Reggie Evans' player_id=214
+241:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3663, 'sac', 82, 0.0, 7.6, 0.0, 0.0, 0.4, 0.7, 0.1, 3.8, 0.0, 0.0, 2.8630065696730003, 1.362791127164348, 2.4631896658234904, 1.3178064712155675, 0.0, 0.0);
+242:  Mapping yahoo 'C.J. Miles' player_id=3960 to espn 'C.J. Miles' player_id=321
+242:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3960, 'ind', 82, 0.0, 2.4, 0.0, 0.0, 1.1, 0.9, 0.3, 10.9, 0.0, 1.8, 8.271656942957028, 3.474095916041952, 1.6856065878231266, 1.4293943864740113, 0.0, 0.0);
+243:  Mapping yahoo 'C.J. McCollum' player_id=5161 to espn 'C.J. McCollum' player_id=1095
+243:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5161, 'por', 82, 0.0, 1.3, 0.0, 0.0, 0.7, 0.4, 0.1, 5.3, 0.0, 0.8, 4.684210526315789, 1.9486315789473683, 0.8947368421052632, 0.604842105263158, 0.0, 0.0);
+244:  Mapping yahoo 'Carl Landry' player_id=4309 to espn 'Carl Landry' player_id=421
+244:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4309, 'sac', 82, 0.0, 5.1, 0.0, 0.0, 0.7, 0.4, 0.3, 9.2, 0.0, 0.0, 7.1597460667662105, 3.773186177185793, 3.1654354805074343, 2.5671681746915294, 0.0, 0.0);
+245:  Unable to find 'Byron Mullens' espn id=643
+245:  - SQL: SELECT * FROM PLAYERS where first like '%Byron%' and last like '%Mullens%';
+246:  Mapping yahoo 'Marcus Thornton' player_id=4648 to espn 'Marcus Thornton' player_id=648
+246:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4648, 'bos', 82, 0.0, 2.9, 0.0, 0.0, 1.3, 0.9, 0.1, 12.1, 0.0, 1.8, 11.25438490464679, 4.7831135844748855, 2.122117766436864, 1.776212570507655, 0.0, 0.0);
+247:  Unable to find 'Alonzo Gee' espn id=714
+247:  - SQL: SELECT * FROM PLAYERS where first like '%Alonzo%' and last like '%Gee%';
+248:  Mapping yahoo 'Jason Thompson' player_id=4474 to espn 'Jason Thompson' player_id=521
+248:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4474, 'sac', 82, 0.0, 6.6, 0.0, 0.0, 0.8, 0.5, 0.7, 8.4, 0.0, 0.0, 7.638932442895857, 3.8882166134339915, 2.540843012001549, 1.5753226674409602, 0.0, 0.0);
+249:  Mapping yahoo 'Thabo Sefolosha' player_id=4141 to espn 'Thabo Sefolosha' player_id=379
+249:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4141, 'atl', 82, 0.0, 3.6, 0.0, 0.0, 1.4, 1.2, 0.3, 6.6, 0.0, 1.0, 5.045238210705808, 2.2148595744998496, 1.0406372565841533, 0.8325098052673227, 0.0, 0.0);
+250:  Mapping yahoo 'Beno Udrih' player_id=3845 to espn 'Beno Udrih' player_id=286
+250:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3845, 'mem', 82, 0.0, 1.7, 0.0, 0.0, 3.6, 0.6, 0.1, 6.1, 0.0, 0.4, 7.437223477686291, 3.2575038832265952, 1.536032344823574, 1.241114134617448, 0.0, 0.0);
+251:  Mapping yahoo 'Thomas Robinson' player_id=5011 to espn 'Thomas Robinson' player_id=1003
+251:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5011, 'por', 82, 0.0, 4.4, 0.0, 0.0, 0.6, 0.4, 0.3, 4.8, 0.0, 0.0, 4.319047619047619, 1.9910809523809523, 1.480952380952381, 0.8115619047619048, 0.0, 0.0);
+252:  Mapping yahoo 'Earl Clark' player_id=4619 to espn 'Earl Clark' player_id=620
+252:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4619, 'mem', 82, 0.0, 4.6, 0.0, 0.0, 0.9, 0.5, 0.7, 5.8, 0.0, 0.4, 4.672494579752805, 1.9858101963949422, 0.8785334296932835, 0.616730467644685, 0.0, 0.0);
+253:  Mapping yahoo 'Michael Beasley' player_id=4388 to espn 'Michael Beasley' player_id=478
+253:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4388, 'mem', 82, 0.0, 3.9, 0.0, 0.0, 1.3, 0.4, 0.4, 10.5, 0.0, 0.7, 10.560893936566723, 4.3933318776117565, 2.199587957455764, 1.5639070377510482, 0.0, 0.0);
+254:  Mapping yahoo 'Alexey Shved' player_id=5099 to espn 'Alexey Shved' player_id=1024
+254:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5099, 'phi', 82, 0.0, 1.7, 0.0, 0.0, 2.2, 0.5, 0.3, 5.9, 0.0, 0.7, 5.256854256854257, 1.8609264069264069, 1.6017316017316017, 1.1804761904761905, 0.0, 0.0);
+255:  Unable to find 'Jermaine O'Neal' espn id=111
+255:  - SQL: SELECT * FROM PLAYERS where first like '%Jermaine%' and last like '%Neal%';
+256:  Mapping yahoo 'Ed Davis' player_id=4728 to espn 'Ed Davis' player_id=741
+256:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4728, 'lal', 82, 0.0, 5.0, 0.0, 0.0, 0.6, 0.4, 0.8, 6.4, 0.0, 0.0, 5.215452695452695, 2.7798362866762867, 1.7017330817330816, 0.9972155858955858, 0.0, 0.0);
+257:  Mapping yahoo 'Tyler Zeller' player_id=5023 to espn 'Tyler Zeller' player_id=1016
+257:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5023, 'bos', 82, 0.0, 4.7, 0.0, 0.0, 0.8, 0.3, 0.7, 6.7, 0.0, 0.0, 5.1818181818181825, 2.497636363636364, 1.8320346320346321, 1.3575376623376625, 0.0, 0.0);
+258:  Mapping yahoo 'Alan Anderson' player_id=3995 to espn 'Alan Anderson' player_id=957
+258:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3995, 'bro', 82, 0.0, 2.2, 0.0, 0.0, 1.1, 0.6, 0.1, 7.2, 0.0, 1.2, 7.240896597955421, 2.8601541561923916, 1.763668510139098, 1.419753150661974, 0.0, 0.0);
+259:  Unable to find 'Chauncey Billups' espn id=13
+259:  - SQL: SELECT * FROM PLAYERS where first like '%Chauncey%' and last like '%Billups%';
+260:  Mapping yahoo 'Shannon Brown' player_id=4153 to espn 'Shannon Brown' player_id=353
+260:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4153, 'mia', 82, 0.0, 1.9, 0.0, 0.0, 1.0, 0.7, 0.1, 7.0, 0.0, 0.5, 6.6772632151008, 2.7510324446215297, 1.3489023488015668, 1.052143832065222, 0.0, 0.0);
+261:  Unable to find 'Damien Wilkins' espn id=291
+261:  - SQL: SELECT * FROM PLAYERS where first like '%Damien%' and last like '%Wilkins%';
+262:  Unable to find 'Shane Battier' espn id=154
+262:  - SQL: SELECT * FROM PLAYERS where first like '%Shane%' and last like '%Battier%';
+263:  Mapping yahoo 'Ben Gordon' player_id=3820 to espn 'Ben Gordon' player_id=261
+263:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3820, 'orl', 82, 0.0, 1.8, 0.0, 0.0, 1.9, 0.5, 0.2, 10.0, 0.0, 1.3, 10.78470035308828, 4.5187894479439885, 2.7053275311011857, 2.2914124188427043, 0.0, 0.0);
+264:  Unable to find 'Antawn Jamison' espn id=70
+264:  - SQL: SELECT * FROM PLAYERS where first like '%Antawn%' and last like '%Jamison%';
+265:  Mapping yahoo 'John Salmons' player_id=3624 to espn 'John Salmons' player_id=203
+265:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3624, 'nor', 82, 0.0, 2.3, 0.0, 0.0, 2.2, 0.6, 0.3, 6.4, 0.0, 0.9, 8.63276261845238, 3.2804497950119047, 2.198833178101041, 1.6909027139597006, 0.0, 0.0);
+266:  Mapping yahoo 'Elton Brand' player_id=3324 to espn 'Elton Brand' player_id=19
+266:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3324, 'atl', 82, 0.0, 5.5, 0.0, 0.0, 1.1, 0.6, 1.3, 6.8, 0.0, 0.0, 11.39659040836497, 5.812261108266135, 3.8303309681797875, 2.604625058362256, 0.0, 0.0);
+267:  Mapping yahoo 'Tayshaun Prince' player_id=3621 to espn 'Tayshaun Prince' player_id=201
+267:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3621, 'mem', 82, 0.0, 3.6, 0.0, 0.0, 1.9, 0.5, 0.3, 8.0, 0.0, 0.4, 10.84100232041732, 4.5423799722548575, 2.0264847466881633, 1.3658507192678222, 0.0, 0.0);
+268:  Unable to find 'Al Harrington' espn id=56
+268:  - SQL: SELECT * FROM PLAYERS where first like '%Al%' and last like '%Harrington%';
+269:  Mapping yahoo 'J.J. Barea' player_id=4203 to espn 'J.J. Barea' player_id=394
+269:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4203, 'min', 82, 0.0, 2.2, 0.0, 0.0, 4.0, 0.4, 0.0, 9.4, 0.0, 1.1, 8.267610872295675, 3.2739739054290875, 1.59167476101858, 1.2526480369216224, 0.0, 0.0);
+270:  Unable to find 'Gustavo Ayon' espn id=950
+270:  - SQL: SELECT * FROM PLAYERS where first like '%Gustavo%' and last like '%Ayon%';
+271:  Mapping yahoo 'Jason Smith' player_id=4298 to espn 'Jason Smith' player_id=430
+271:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4298, 'nyk', 82, 0.0, 5.5, 0.0, 0.0, 0.9, 0.4, 1.1, 10.0, 0.0, 0.0, 6.907918559716937, 3.3641563385821485, 1.413506640501547, 1.1223242725582285, 0.0, 0.0);
+272:  Unable to find 'Brandon Roy' espn id=378
+272:  - SQL: SELECT * FROM PLAYERS where first like '%Brandon%' and last like '%Roy%';
+273:  Mapping yahoo 'Steve Novak' player_id=4160 to espn 'Steve Novak' player_id=370
+273:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4160, 'uth', 82, 0.0, 1.4, 0.0, 0.0, 0.3, 0.3, 0.1, 5.1, 0.0, 1.4, 3.871965883090035, 1.653329432079445, 0.2746437472572058, 0.24031327885005507, 0.0, 0.0);
+274:  Unable to find 'Royce White' espn id=1014
+274:  - SQL: SELECT * FROM PLAYERS where first like '%Royce%' and last like '%White%';
+275:  Mapping yahoo 'Anthony Morrow' player_id=4527 to espn 'Anthony Morrow' player_id=533
+275:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4527, 'okc', 82, 0.0, 1.7, 0.0, 0.0, 0.7, 0.5, 0.1, 8.2, 0.0, 1.1, 7.695385603648433, 3.43983736483085, 1.2606185816343127, 1.087913835950412, 0.0, 0.0);
+276:  Mapping yahoo 'Mirza Teletovic' player_id=5095 to espn 'Mirza Teletovic' player_id=1020
+276:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5095, 'bro', 82, 0.0, 5.2, 0.0, 0.0, 1.2, 0.7, 0.5, 12.7, 0.0, 2.1, 6.061670160726764, 2.6307648497554155, 0.643256464011181, 0.4785828092243186, 0.0, 0.0);
+277:  Mapping yahoo 'Hedo Turkoglu' player_id=3415 to espn 'Hedo Turkoglu' player_id=141
+277:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3415, 'lac', 82, 0.0, 2.6, 0.0, 0.0, 1.8, 0.6, 0.3, 4.8, 0.0, 0.8, 8.77111427752884, 3.4207345682362478, 2.3940065128610146, 1.4196458621265815, 0.0, 0.0);
+278:  Mapping yahoo 'Zaza Pachulia' player_id=3745 to espn 'Zaza Pachulia' player_id=240
+278:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3745, 'mil', 82, 0.0, 6.5, 0.0, 0.0, 2.1, 0.8, 0.3, 7.1, 0.0, 0.0, 5.06794508888275, 2.255235564552824, 2.65625570398914, 2.1542233759351928, 0.0, 0.0);
+279:  Mapping yahoo 'Austin Rivers' player_id=5016 to espn 'Austin Rivers' player_id=1002
+279:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5016, 'nor', 82, 0.0, 1.8, 0.0, 0.0, 2.2, 0.6, 0.1, 7.1, 0.0, 0.5, 6.710857685911144, 2.6373670705630796, 2.2616615189672924, 1.3841368496079829, 0.0, 0.0);
+280:  Unable to find 'Lamar Odom' espn id=112
+280:  - SQL: SELECT * FROM PLAYERS where first like '%Lamar%' and last like '%Odom%';
+281:  Mapping yahoo 'Brandon Rush' player_id=4475 to espn 'Brandon Rush' player_id=516
+281:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4475, 'gsw', 82, 0.0, 1.9, 0.0, 0.0, 0.8, 0.2, 0.4, 4.4, 0.0, 0.7, 5.400970674097339, 2.3386203018841476, 1.006315614018946, 0.7547367105142095, 0.0, 0.0);
+282:  Unable to find 'Marcus Camby' espn id=24
+282:  - SQL: SELECT * FROM PLAYERS where first like '%Marcus%' and last like '%Camby%';
+283:  Unable to find 'Stephen Jackson' espn id=68
+283:  - SQL: SELECT * FROM PLAYERS where first like '%Stephen%' and last like '%Jackson%';
+284:  Mapping yahoo 'Trevor Booker' player_id=4754 to espn 'Trevor Booker' player_id=752
+284:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4754, 'uth', 82, 0.0, 5.3, 0.0, 0.0, 0.9, 0.6, 0.6, 6.6, 0.0, 0.0, 5.367119658119658, 2.8821432564102567, 1.3996068376068376, 0.843962923076923, 0.0, 0.0);
+285:  Mapping yahoo 'Leandro Barbosa' player_id=3731 to espn 'Leandro Barbosa' player_id=244
+285:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3731, 'gsw', 82, 0.0, 1.7, 0.0, 0.0, 1.5, 0.5, 0.2, 7.8, 0.0, 0.6, 8.901457116678603, 3.809823645938442, 1.9911032009327638, 1.6088113863536733, 0.0, 0.0);
+286:  Unable to find 'Corey Maggette' espn id=83
+286:  - SQL: SELECT * FROM PLAYERS where first like '%Corey%' and last like '%Maggette%';
+287:  Unable to find 'Delonte West' espn id=276
+287:  - SQL: SELECT * FROM PLAYERS where first like '%Delonte%' and last like '%West%';
+288:  Unable to find 'Anthony Randolph' espn id=514
+288:  - SQL: SELECT * FROM PLAYERS where first like '%Anthony%' and last like '%Randolph%';
+289:  Mapping yahoo 'Brendan Haywood' player_id=3532 to espn 'Brendan Haywood' player_id=164
+289:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3532, 'cle', 82, 0.0, 4.9, 0.0, 0.0, 0.4, 0.3, 0.8, 3.8, 0.0, 0.0, 5.173727865268948, 2.4109571852153295, 2.604161061626061, 1.2031224104712404, 0.0, 0.0);
+290:  Unable to find 'Rodrigue Beaubois' espn id=615
+290:  - SQL: SELECT * FROM PLAYERS where first like '%Rodrigue%' and last like '%Beaubois%';
+291:  Unable to find 'Jan Vesely' espn id=833
+291:  - SQL: SELECT * FROM PLAYERS where first like '%Jan%' and last like '%Vesely%';
+292:  Mapping yahoo 'Landry Fields' player_id=4770 to espn 'Landry Fields' player_id=756
+292:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4770, 'tor', 82, 0.0, 2.8, 0.0, 0.0, 1.1, 0.6, 0.1, 4.0, 0.0, 0.1, 4.493789835224556, 1.9997364766749273, 1.1995178470501284, 0.7149126368418766, 0.0, 0.0);
+293:  Unable to find 'Kwame Brown' espn id=155
+293:  - SQL: SELECT * FROM PLAYERS where first like '%Kwame%' and last like '%Brown%';
+294:  Mapping yahoo 'Donald Sloan' player_id=4836 to espn 'Donald Sloan' player_id=789
+294:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4836, 'ind', 82, 0.0, 2.0, 0.0, 0.0, 2.6, 0.4, 0.0, 5.5, 0.0, 0.4, 3.3491847826086953, 1.2659918478260868, 0.722167325428195, 0.5026284584980236, 0.0, 0.0);
+295:  Mapping yahoo 'Ian Mahinmi' player_id=3954 to espn 'Ian Mahinmi*' player_id=318
+295:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3954, 'ind', 82, 0.0, 3.8, 0.0, 0.0, 0.3, 0.6, 0.9, 4.4, 0.0, 0.0, 2.9703380635757686, 1.4287326085799446, 1.958751777106578, 1.2105085982518653, 0.0, 0.0);
+296:  Unable to find 'Rashard Lewis' espn id=80
+296:  - SQL: SELECT * FROM PLAYERS where first like '%Rashard%' and last like '%Lewis%';
+297:  Unable to find 'Nando de Colo' espn id=1026
+297:  - SQL: SELECT * FROM PLAYERS where first like '%Nando%' and last like '%Colo%';
+298:  Mapping yahoo 'Richard Jefferson' player_id=3523 to espn 'Richard Jefferson' player_id=166
+298:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3523, 'dal', 82, 0.0, 2.5, 0.0, 0.0, 1.4, 0.6, 0.2, 8.6, 0.0, 1.3, 9.806249811205806, 4.353974916175378, 3.87988866196799, 2.8400785005605687, 0.0, 0.0);
+299:  Mapping yahoo 'Ekpe Udoh' player_id=4721 to espn 'Ekpe Udoh' player_id=743
+299:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4721, 'lac', 82, 0.0, 3.6, 0.0, 0.0, 0.7, 0.5, 1.2, 4.1, 0.0, 0.0, 3.773718602611673, 1.5887355316995144, 1.4014712091137964, 0.9908401448434541, 0.0, 0.0);
+300:  Mapping yahoo 'Paul George' player_id=4725 to espn 'Paul George*' player_id=733
+300:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4725, 'ind', 82, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 13.859727404780319, 0.0, 4.077595251120878, 0.0, 0.0, 0.0);
+301:  Unable to find 'Grant Hill' espn id=58
+301:  - SQL: SELECT * FROM PLAYERS where first like '%Grant%' and last like '%Hill%';
+302:  Unable to find 'Tyrus Thomas' espn id=383
+302:  - SQL: SELECT * FROM PLAYERS where first like '%Tyrus%' and last like '%Thomas%';
+303:  Mapping yahoo 'Kendrick Perkins' player_id=3730 to espn 'Kendrick Perkins*' player_id=241
+303:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3730, 'okc', 82, 0.0, 5.5, 0.0, 0.0, 1.2, 0.5, 0.8, 3.9, 0.0, 0.0, 4.3264579718543015, 1.9858442090811244, 1.8197327816825917, 1.0681831428476813, 0.0, 0.0);
+304:  Unable to find 'Richard Hamilton' espn id=52
+304:  - SQL: SELECT * FROM PLAYERS where first like '%Richard%' and last like '%Hamilton%';
+305:  Mapping yahoo 'Marreese Speights' player_id=4478 to espn 'Marreese Speights' player_id=519
+305:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4478, 'gsw', 82, 0.0, 4.3, 0.0, 0.0, 0.5, 0.2, 0.5, 7.3, 0.0, 0.1, 6.542029282279129, 2.9046610013319336, 1.8233338883055603, 1.447727107314615, 0.0, 0.0);
+306:  Mapping yahoo 'Greg Stiemsma' player_id=4714 to espn 'Greg Stiemsma' player_id=717
+306:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4714, 'tor', 82, 0.0, 3.3, 0.0, 0.0, 0.4, 0.6, 1.3, 3.7, 0.0, 0.0, 2.6950558213716107, 1.2909317384370014, 0.7177830940988835, 0.5318772727272727, 0.0, 0.0);
+307:  Mapping yahoo 'Tyler Hansbrough' player_id=4618 to espn 'Tyler Hansbrough' player_id=632
+307:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4618, 'tor', 82, 0.0, 4.5, 0.0, 0.0, 0.3, 0.5, 0.2, 6.1, 0.0, 0.0, 5.497126607251128, 2.4352270870122497, 3.535295106925854, 2.541877181879689, 0.0, 0.0);
+308:  Unable to find 'DeShawn Stevenson' espn id=132
+308:  - SQL: SELECT * FROM PLAYERS where first like '%DeShawn%' and last like '%Stevenson%';
+309:  Mapping yahoo 'Chuck Hayes' player_id=4023 to espn 'Chuck Hayes' player_id=342
+309:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4023, 'tor', 82, 0.0, 3.7, 0.0, 0.0, 1.0, 0.5, 0.2, 2.4, 0.0, 0.0, 3.2296170540635556, 1.4113426526257737, 0.7746675403255661, 0.5399432756069195, 0.0, 0.0);
+310:  Mapping yahoo 'Omri Casspi' player_id=4628 to espn 'Omri Casspi' player_id=614
+310:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4628, 'sac', 82, 0.0, 3.5, 0.0, 0.0, 1.1, 0.6, 0.2, 6.4, 0.0, 0.8, 5.791993293310031, 2.397885223430353, 1.4996619234025064, 0.9897768694456542, 0.0, 0.0);
+311:  Mapping yahoo 'Charlie Villanueva' player_id=3933 to espn 'Charlie Villanueva' player_id=327
+311:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3933, 'dal', 82, 0.0, 2.8, 0.0, 0.0, 0.6, 0.4, 0.5, 6.0, 0.0, 1.1, 8.273963455785644, 3.1275581862869735, 1.2952464487670858, 0.7059093145780618, 0.0, 0.0);
+312:  Unable to find 'Andris Biedrins' espn id=279
+312:  - SQL: SELECT * FROM PLAYERS where first like '%Andris%' and last like '%Biedrins%';
+313:  Mapping yahoo 'C.J. Watson' player_id=4354 to espn 'C.J. Watson' player_id=447
+313:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4354, 'ind', 82, 0.0, 1.9, 0.0, 0.0, 2.4, 1.1, 0.2, 8.1, 0.0, 1.1, 6.338226550270011, 2.6620551511134045, 1.619013697004146, 1.2806398343302796, 0.0, 0.0);
+314:  Unable to find 'Jerry Stackhouse' espn id=131
+314:  - SQL: SELECT * FROM PLAYERS where first like '%Jerry%' and last like '%Stackhouse%';
+315:  Unable to find 'Chris Wilcox' espn id=205
+315:  - SQL: SELECT * FROM PLAYERS where first like '%Chris%' and last like '%Wilcox%';
+316:  Unable to find 'Samardo Samuels' espn id=790
+316:  - SQL: SELECT * FROM PLAYERS where first like '%Samardo%' and last like '%Samuels%';
+317:  Unable to find 'Charles Jenkins' espn id=854
+317:  - SQL: SELECT * FROM PLAYERS where first like '%Charles%' and last like '%Jenkins%';
+318:  Unable to find 'Daniel Gibson' espn id=363
+318:  - SQL: SELECT * FROM PLAYERS where first like '%Daniel%' and last like '%Gibson%';
+319:  Mapping yahoo 'Nick Collison' player_id=3715 to espn 'Nick Collison' player_id=221
+319:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3715, 'okc', 82, 0.0, 3.8, 0.0, 0.0, 1.3, 0.5, 0.4, 4.4, 0.0, 0.0, 4.350587990859979, 2.479835154790188, 1.346612165308271, 0.9668675346913386, 0.0, 0.0);
+320:  Mapping yahoo 'Luc Richard Mbah a Moute' player_id=4498 to espn 'Luc Richard Mbah a Moute' player_id=510
+320:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4498, 'phi', 82, 0.0, 3.2, 0.0, 0.0, 0.7, 0.6, 0.3, 4.8, 0.0, 0.1, 5.105875154454693, 2.2567968182689744, 1.8975835167502886, 1.222043784787186, 0.0, 0.0);
+321:  Mapping yahoo 'Jeremy Tyler' player_id=4921 to espn 'Jeremy Tyler' player_id=886
+321:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4921, 'lal', 82, 0.0, 2.5, 0.0, 0.0, 0.2, 0.2, 0.4, 3.5, 0.0, 0.0, 2.624951606658924, 1.2521019163763065, 0.8869531552458381, 0.4904850948509485, 0.0, 0.0);
+322:  Unable to find 'Kelenna Azubuike' espn id=340
+322:  - SQL: SELECT * FROM PLAYERS where first like '%Kelenna%' and last like '%Azubuike%';
+323:  Unable to find 'Hakim Warrick' espn id=329
+323:  - SQL: SELECT * FROM PLAYERS where first like '%Hakim%' and last like '%Warrick%';
+324:  Mapping yahoo 'Udonis Haslem' player_id=3765 to espn 'Udonis Haslem' player_id=251
+324:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3765, 'mia', 82, 0.0, 5.0, 0.0, 0.0, 0.4, 0.3, 0.3, 4.1, 0.0, 0.0, 6.236003651829507, 3.024461771137311, 1.7317779024247857, 1.1429734156003586, 0.0, 0.0);
+325:  Unable to find 'Daequan Cook' espn id=407
+325:  - SQL: SELECT * FROM PLAYERS where first like '%Daequan%' and last like '%Cook%';
+326:  Unable to find 'Baron Davis' espn id=34
+326:  - SQL: SELECT * FROM PLAYERS where first like '%Baron%' and last like '%Davis%';
+327:  Unable to find 'Eric Maynor' espn id=641
+327:  - SQL: SELECT * FROM PLAYERS where first like '%Eric%' and last like '%Maynor%';
+328:  Unable to find 'Toney Douglas' espn id=625
+328:  - SQL: SELECT * FROM PLAYERS where first like '%Toney%' and last like '%Douglas%';
+329:  Mapping yahoo 'James Jones' player_id=3752 to espn 'James Jones' player_id=236
+329:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3752, 'cle', 82, 0.0, 0.9, 0.0, 0.0, 0.4, 0.2, 0.2, 3.4, 0.0, 1.0, 3.6992802745236233, 1.4982085111820675, 0.7445515940156701, 0.49661591320845194, 0.0, 0.0);
+330:  Mapping yahoo 'Austin Daye' player_id=4620 to espn 'Austin Daye' player_id=623
+330:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4620, 'sas', 82, 0.0, 1.8, 0.0, 0.0, 0.6, 0.3, 0.3, 3.8, 0.0, 0.6, 4.303351328770204, 1.6266668022751372, 0.7802260141178488, 0.557081374080144, 0.0, 0.0);
+331:  Mapping yahoo 'DeJuan Blair' player_id=4642 to espn 'DeJuan Blair' player_id=616
+331:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4642, 'was', 82, 0.0, 4.6, 0.0, 0.0, 0.9, 0.7, 0.2, 6.6, 0.0, 0.0, 5.80129643932234, 3.0920910021588073, 1.5513886582910361, 0.9773748547233527, 0.0, 0.0);
+332:  Mapping yahoo 'Jimmer Fredette' player_id=4891 to espn 'Jimmer Fredette' player_id=844
+332:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4891, 'nor', 82, 0.0, 1.1, 0.0, 0.0, 1.4, 0.4, 0.1, 6.3, 0.0, 0.9, 5.510751176212942, 2.4026875128288427, 0.8236941248345383, 0.7141428062315447, 0.0, 0.0);
+333:  Mapping yahoo 'Darrell Arthur' player_id=4489 to espn 'Darrell Arthur' player_id=473
+333:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4489, 'den', 82, 0.0, 3.0, 0.0, 0.0, 0.8, 0.5, 0.6, 6.0, 0.0, 0.3, 6.1831922653093345, 2.566024790103374, 1.0244627520945935, 0.8236680526840532, 0.0, 0.0);
+334:  Unable to find 'Ronnie Brewer' espn id=352
+334:  - SQL: SELECT * FROM PLAYERS where first like '%Ronnie%' and last like '%Brewer%';
+335:  Mapping yahoo 'Marquis Teague' player_id=5063 to espn 'Marquis Teague' player_id=1011
+335:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5063, 'bro', 82, 0.0, 2.0, 0.0, 0.0, 2.8, 0.5, 0.3, 6.5, 0.0, 0.2, 2.7680555555555557, 1.140438888888889, 0.6944444444444445, 0.5097222222222223, 0.0, 0.0);
+336:  Mapping yahoo 'Jonas Jerebko' player_id=4644 to espn 'Jonas Jerebko' player_id=638
+336:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4644, 'det', 82, 0.0, 4.5, 0.0, 0.0, 0.9, 0.6, 0.2, 7.7, 0.0, 0.7, 5.404068877551021, 2.502083890306123, 1.5150255102040817, 1.1559644642857143, 0.0, 0.0);
+337:  Mapping yahoo 'Ronny Turiaf' player_id=3963 to espn 'Ronny Turiaf' player_id=326
+337:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3963, 'min', 82, 0.0, 4.1, 0.0, 0.0, 0.6, 0.3, 1.1, 3.5, 0.0, 0.0, 2.928957421154361, 1.7017242616906838, 1.5140105651874476, 0.6177163105964786, 0.0, 0.0);
+338:  Unable to find 'Jared Jeffries' espn id=195
+338:  - SQL: SELECT * FROM PLAYERS where first like '%Jared%' and last like '%Jeffries%';
+339:  Mapping yahoo 'Meyers Leonard' player_id=5017 to espn 'Meyers Leonard' player_id=990
+339:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5017, 'por', 82, 0.0, 3.3, 0.0, 0.0, 0.5, 0.2, 0.3, 4.0, 0.0, 0.0, 2.8548309178743962, 1.4702379227053142, 0.7799516908212561, 0.6177217391304349, 0.0, 0.0);
+340:  Mapping yahoo 'Francisco Garcia' player_id=3949 to espn 'Francisco Garcia' player_id=305
+340:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3949, 'hou', 82, 0.0, 2.0, 0.0, 0.0, 1.1, 0.6, 0.6, 5.6, 0.0, 1.2, 6.45621402372974, 2.5502045393732473, 0.9955454411434657, 0.6640288092426916, 0.0, 0.0);
+341:  Mapping yahoo 'Chris Singleton' player_id=4900 to espn 'Chris Singleton' player_id=880
+341:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4900, 'ind', 82, 0.0, 2.9, 0.0, 0.0, 0.5, 0.6, 0.3, 3.8, 0.0, 0.3, 3.5372355130249873, 1.3229260818713453, 1.0204678362573099, 0.6541198830409356, 0.0, 0.0);
+342:  Unable to find 'Ben Wallace' espn id=147
+342:  - SQL: SELECT * FROM PLAYERS where first like '%Ben%' and last like '%Wallace%';
+343:  Mapping yahoo 'Anthony Tolliver' player_id=4371 to espn 'Anthony Tolliver' player_id=469
+343:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4371, 'pho', 82, 0.0, 2.6, 0.0, 0.0, 0.6, 0.3, 0.2, 5.3, 0.0, 1.2, 4.660193345276134, 1.910679271563215, 1.1747112051500856, 0.944467808940669, 0.0, 0.0);
+344:  Mapping yahoo 'Festus Ezeli' player_id=5064 to espn 'Festus Ezeli' player_id=972
+344:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5064, 'gsw', 82, 0.0, 4.0, 0.0, 0.0, 0.3, 0.3, 1.0, 2.5, 0.0, 0.0, 2.1666666666666665, 0.949, 1.0384615384615383, 0.5514230769230769, 0.0, 0.0);
+345:  Unable to find 'Fab Melo' espn id=993
+345:  - SQL: SELECT * FROM PLAYERS where first like '%Fab%' and last like '%Melo%';
+346:  Mapping yahoo 'Hasheem Thabeet' player_id=4562 to espn 'Hasheem Thabeet' player_id=647
+346:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4562, 'det', 82, 0.0, 2.4, 0.0, 0.0, 0.1, 0.3, 0.7, 1.8, 0.0, 0.0, 1.2135227114701457, 0.7050566953641546, 0.6770724329874354, 0.39202493869972505, 0.0, 0.0);
+347:  Mapping yahoo 'Jason Maxiell' player_id=3952 to espn 'Jason Maxiell' player_id=319
+347:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3952, 'cha', 82, 0.0, 4.3, 0.0, 0.0, 0.5, 0.4, 0.9, 5.3, 0.0, 0.0, 4.658679241607607, 2.1196990549314614, 1.7785855304291327, 1.0013436536316016, 0.0, 0.0);
+348:  Unable to find 'Linas Kleiza' espn id=316
+348:  - SQL: SELECT * FROM PLAYERS where first like '%Linas%' and last like '%Kleiza%';
+349:  Mapping yahoo 'Ryan Hollins' player_id=4179 to espn 'Ryan Hollins' player_id=364
+349:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4179, 'sac', 82, 0.0, 1.8, 0.0, 0.0, 0.2, 0.1, 0.5, 2.8, 0.0, 0.0, 2.184573057669846, 1.4571102294657874, 1.624016575123819, 1.0426186412294918, 0.0, 0.0);
+350:  Mapping yahoo 'Cartier Martin' player_id=4559 to espn 'Cartier Martin' player_id=608
+350:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4559, 'det', 82, 0.0, 2.1, 0.0, 0.0, 0.5, 0.5, 0.1, 5.9, 0.0, 1.1, 5.573953388254388, 2.2797469357960445, 0.9949520605601145, 0.7103957712399217, 0.0, 0.0);
+351:  Unable to find 'Greg Oden' espn id=468
+351:  - SQL: SELECT * FROM PLAYERS where first like '%Greg%' and last like '%Oden%';
+352:  Unable to find 'Nolan Smith' espn id=881
+352:  - SQL: SELECT * FROM PLAYERS where first like '%Nolan%' and last like '%Smith%';
+353:  Mapping yahoo 'Jeremy Evans' player_id=4786 to espn 'Jeremy Evans' player_id=778
+353:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4786, 'uth', 82, 0.0, 3.9, 0.0, 0.0, 0.6, 0.5, 0.6, 5.1, 0.0, 0.0, 2.893227018842782, 1.5478764550808886, 0.9079680537808617, 0.6001668835491496, 0.0, 0.0);
+354:  Mapping yahoo 'Elliot Williams' player_id=4753 to espn 'Elliot Williams' player_id=776
+354:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4753, 'phi', 82, 0.0, 1.7, 0.0, 0.0, 0.9, 0.5, 0.1, 5.5, 0.0, 0.5, 4.381011608623549, 1.8706919568822553, 1.4340796019900497, 0.9981194029850745, 0.0, 0.0);
+355:  Unable to find 'Lester Hudson' espn id=699
+355:  - SQL: SELECT * FROM PLAYERS where first like '%Lester%' and last like '%Hudson%';
+356:  Unable to find 'Troy Murphy' espn id=168
+356:  - SQL: SELECT * FROM PLAYERS where first like '%Troy%' and last like '%Murphy%';
+357:  Unable to find 'Darko Milicic' espn id=246
+357:  - SQL: SELECT * FROM PLAYERS where first like '%Darko%' and last like '%Milicic%';
+358:  Unable to find 'Gilbert Arenas' espn id=153
+358:  - SQL: SELECT * FROM PLAYERS where first like '%Gilbert%' and last like '%Arenas%';
+359:  Unable to find 'Sam Young' espn id=650
+359:  - SQL: SELECT * FROM PLAYERS where first like '%Sam%' and last like '%Young%';
+360:  Unable to find 'Tracy McGrady' espn id=94
+360:  - SQL: SELECT * FROM PLAYERS where first like '%Tracy%' and last like '%McGrady%';
+361:  Mapping yahoo 'Shawne Williams' player_id=4145 to espn 'Shawne Williams' player_id=385
+361:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4145, 'mia', 82, 0.0, 2.7, 0.0, 0.0, 0.6, 0.4, 0.4, 5.4, 0.0, 0.8, 5.313662605510432, 2.051073765727027, 0.690102590646069, 0.5017045833996922, 0.0, 0.0);
+362:  Unable to find 'Josh Childress' espn id=259
+362:  - SQL: SELECT * FROM PLAYERS where first like '%Josh%' and last like '%Childress%';
+363:  Unable to find 'Derek Fisher' espn id=41
+363:  - SQL: SELECT * FROM PLAYERS where first like '%Derek%' and last like '%Fisher%';
+364:  Mapping yahoo 'Reggie Williams' player_id=4710 to espn 'Reggie Williams' player_id=712
+364:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4710, 'mia', 82, 0.0, 2.3, 0.0, 0.0, 1.6, 0.5, 0.1, 6.9, 0.0, 0.9, 5.16489898989899, 2.1950820707070706, 0.777979797979798, 0.4831254545454545, 0.0, 0.0);
+365:  Unable to find 'Donte Greene' espn id=492
+365:  - SQL: SELECT * FROM PLAYERS where first like '%Donte%' and last like '%Greene%';
+366:  Unable to find 'Terrence Williams' espn id=649
+366:  - SQL: SELECT * FROM PLAYERS where first like '%Terrence%' and last like '%Williams%';
+367:  Unable to find 'Jonny Flynn' espn id=628
+367:  - SQL: SELECT * FROM PLAYERS where first like '%Jonny%' and last like '%Flynn%';
+368:  Mapping yahoo 'Gary Neal' player_id=4796 to espn 'Gary Neal' player_id=784
+368:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4796, 'cha', 82, 0.0, 1.9, 0.0, 0.0, 1.8, 0.4, 0.0, 9.8, 0.0, 1.1, 8.782614738202975, 3.723828648998061, 1.4927343244990303, 1.3121134712346476, 0.0, 0.0);
+369:  Unable to find 'Bill Walker' espn id=523
+369:  - SQL: SELECT * FROM PLAYERS where first like '%Bill%' and last like '%Walker%';
+370:  Unable to find 'Jason Kidd' espn id=76
+370:  - SQL: SELECT * FROM PLAYERS where first like '%Jason%' and last like '%Kidd%';
+371:  Unable to find 'Mickael Pietrus' espn id=248
+371:  - SQL: SELECT * FROM PLAYERS where first like '%Mickael%' and last like '%Pietrus%';
+372:  Mapping yahoo 'Rasual Butler' player_id=3650 to espn 'Rasual Butler' player_id=207
+372:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3650, 'was', 82, 0.0, 1.2, 0.0, 0.0, 0.4, 0.2, 0.2, 2.9, 0.0, 0.6, 6.232436018138654, 2.4618122271647684, 0.8287720209441415, 0.509694792880647, 0.0, 0.0);
+373:  Unable to find 'Kenyon Martin' espn id=90
+373:  - SQL: SELECT * FROM PLAYERS where first like '%Kenyon%' and last like '%Martin%';
+374:  Unable to find 'Mike Bibby' espn id=12
+374:  - SQL: SELECT * FROM PLAYERS where first like '%Mike%' and last like '%Bibby%';
+375:  Unable to find 'Quentin Richardson' espn id=125
+375:  - SQL: SELECT * FROM PLAYERS where first like '%Quentin%' and last like '%Richardson%';
+376:  Mapping yahoo 'Joel Anthony' player_id=4339 to espn 'Joel Anthony' player_id=442
+376:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4339, 'bos', 82, 0.0, 2.0, 0.0, 0.0, 0.1, 0.2, 0.7, 1.6, 0.0, 0.0, 1.5220283278549407, 0.7488379373046308, 0.7412109547038982, 0.4714101671916793, 0.0, 0.0);
+377:  Unable to find 'Earl Watson' espn id=178
+377:  - SQL: SELECT * FROM PLAYERS where first like '%Earl%' and last like '%Watson%';
+378:  Unable to find 'Raja Bell' espn id=11
+378:  - SQL: SELECT * FROM PLAYERS where first like '%Raja%' and last like '%Bell%';
+379:  Mapping yahoo 'Will Bynum' player_id=3999 to espn 'Will Bynum' player_id=459
+379:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3999, 'det', 82, 0.0, 1.7, 0.0, 0.0, 3.6, 0.7, 0.1, 8.8, 0.0, 0.3, 7.073528114482447, 3.098205314143312, 2.0651604400194623, 1.6521283520155698, 0.0, 0.0);
+380:  Unable to find 'Rudy Fernandez' espn id=465
+380:  - SQL: SELECT * FROM PLAYERS where first like '%Rudy%' and last like '%Fernandez%';
+381:  Unable to find 'Josh Howard' espn id=234
+381:  - SQL: SELECT * FROM PLAYERS where first like '%Josh%' and last like '%Howard%';
+382:  Mapping yahoo 'Travis Outlaw' player_id=3726 to espn 'Travis Outlaw' player_id=239
+382:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3726, 'nyk', 82, 0.0, 2.4, 0.0, 0.0, 0.7, 0.3, 0.3, 5.3, 0.0, 0.6, 6.887488735075735, 2.7412205165601424, 1.7542365047891328, 1.3419909261636866, 0.0, 0.0);
+383:  Mapping yahoo 'Marcus Morris' player_id=4895 to espn 'Marcus Morris' player_id=872
+383:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4895, 'pho', 82, 0.0, 3.7, 0.0, 0.0, 1.0, 0.8, 0.2, 8.9, 0.0, 1.1, 6.775980236884112, 2.954327383281473, 1.5544370741644773, 1.1098680709534368, 0.0, 0.0);
+384:  Unable to find 'Andres Nocioni' espn id=288
+384:  - SQL: SELECT * FROM PLAYERS where first like '%Andres%' and last like '%Nocioni%';
+385:  Mapping yahoo 'Damion James' player_id=4755 to espn 'Damion James' player_id=734
+385:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4755, 'was', 82, 0.0, 2.4, 0.0, 0.0, 0.4, 0.2, 0.4, 1.6, 0.0, 0.0, 2.132, 0.5820360000000001, 0.6148571428571428, 0.41010971428571424, 0.0, 0.0);
+386:  Unable to find 'Peja Stojakovic' espn id=133
+386:  - SQL: SELECT * FROM PLAYERS where first like '%Peja%' and last like '%Stojakovic%';
+387:  Unable to find 'Ryan Gomes' espn id=307
+387:  - SQL: SELECT * FROM PLAYERS where first like '%Ryan%' and last like '%Gomes%';
+388:  Unable to find 'Antonio McDyess' espn id=93
+388:  - SQL: SELECT * FROM PLAYERS where first like '%Antonio%' and last like '%McDyess%';
+389:  Unable to find 'Christian Eyenga' espn id=786
+389:  - SQL: SELECT * FROM PLAYERS where first like '%Christian%' and last like '%Eyenga%';
+390:  Unable to find 'Al Thornton' espn id=433
+390:  - SQL: SELECT * FROM PLAYERS where first like '%Al%' and last like '%Thornton%';
+391:  Unable to find 'Yi Jianlian' espn id=420
+391:  - SQL: SELECT * FROM PLAYERS where first like '%Yi%' and last like '%Jianlian%';
+392:  Mapping yahoo 'Matt Bonner' player_id=3748 to espn 'Matt Bonner' player_id=230
+392:  - INSERT INTO averages VALUES ('2014-15_ESPN', 3748, 'sas', 82, 0.0, 2.2, 0.0, 0.0, 0.6, 0.3, 0.2, 4.0, 0.0, 0.9, 4.62929977558562, 2.1155899974426284, 0.44339585785269187, 0.3485091442722158, 0.0, 0.0);
+393:  Unable to find 'Brad Miller' espn id=97
+393:  - SQL: SELECT * FROM PLAYERS where first like '%Brad%' and last like '%Miller%';
+394:  Unable to find 'Mehmet Okur' espn id=169
+394:  - SQL: SELECT * FROM PLAYERS where first like '%Mehmet%' and last like '%Okur%';
+395:  Unable to find 'Jamario Moon' espn id=443
+395:  - SQL: SELECT * FROM PLAYERS where first like '%Jamario%' and last like '%Moon%';
+396:  Unable to find 'Joel Przybilla' espn id=122
+396:  - SQL: SELECT * FROM PLAYERS where first like '%Joel%' and last like '%Przybilla%';
+397:  Unable to find 'Sasha Vujacic' espn id=275
+397:  - SQL: SELECT * FROM PLAYERS where first like '%Sasha%' and last like '%Vujacic%';
+398:  Mapping yahoo 'Chris Douglas-Roberts' player_id=4502 to espn 'Chris Douglas-Roberts' player_id=482
+398:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4502, 'lac', 82, 0.0, 2.3, 0.0, 0.0, 1.0, 0.6, 0.3, 6.6, 0.0, 1.0, 4.984382201546381, 2.188143786478861, 1.8131902331262675, 1.436046664636004, 0.0, 0.0);
+399:  Unable to find 'Craig Smith' espn id=382
+399:  - SQL: SELECT * FROM PLAYERS where first like '%Craig%' and last like '%Smith%';
+400:  Unable to find 'Anthony Parker' espn id=115
+400:  - SQL: SELECT * FROM PLAYERS where first like '%Anthony%' and last like '%Parker%';
+401:  Unable to find 'Kurt Thomas' espn id=138
+401:  - SQL: SELECT * FROM PLAYERS where first like '%Kurt%' and last like '%Thomas%';
+402:  Unable to find 'Manny Harris' espn id=829
+402:  - SQL: SELECT * FROM PLAYERS where first like '%Manny%' and last like '%Harris%';
+403:  Mapping yahoo 'Xavier Henry' player_id=4727 to espn 'Xavier Henry*' player_id=723
+403:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4727, 'lal', 82, 0.0, 2.4, 0.0, 0.0, 0.9, 0.8, 0.2, 7.6, 0.0, 0.4, 5.6096882904936765, 2.3168012639738884, 2.7131315109479126, 1.7581092190942473, 0.0, 0.0);
+404:  Mapping yahoo 'Perry Jones' player_id=5062 to espn 'Perry Jones' player_id=983
+404:  - INSERT INTO averages VALUES ('2014-15_ESPN', 5062, 'okc', 82, 0.0, 1.8, 0.0, 0.0, 0.4, 0.2, 0.3, 3.2, 0.0, 0.3, 2.814657611771364, 1.2356346915676288, 0.5831918505942275, 0.39482088285229205, 0.0, 0.0);
+405:  Mapping yahoo 'Donatas Motiejunas' player_id=4902 to espn 'Donatas Motiejunas' player_id=874
+405:  - INSERT INTO averages VALUES ('2014-15_ESPN', 4902, 'hou', 82, 0.0, 3.1, 0.0, 0.0, 0.6, 0.3, 0.3, 5.5, 0.0, 0.4, 4.796432062561095, 2.1344122678396875, 1.4186217008797655, 0.8724523460410557, 0.0, 0.0);
