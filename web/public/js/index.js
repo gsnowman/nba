@@ -120,6 +120,7 @@ function redraw(data) {
 
 function on_response(data) {
     $.last_response = data;
+    submit_request("/get_num_owned", on_num_owned_response);
     redraw(data);
 }
 
@@ -146,6 +147,18 @@ function on_seasons_response(seasons) {
         $("#select_season").append('<option value="' + seasons[i] + '">' + seasons[i] + '</option>');
     }
     $("#select_season").val(seasons[seasons.length - 1]);
+}
+
+function on_num_owned_response(response) {
+    var num_owned = response[0].num;
+    console.log('Received response, num_owned=' + num_owned);
+
+    var round = Math.floor((num_owned / 12) + 1);
+    var pick = (num_owned + 1) % 12;
+
+    var buf = ['<table class="picks"><tr><td>Round ' + round + ', Pick ' + pick + '</td></tr></table>'];
+    buf.push('<table class="picks"><tr><td>' + 'Overall Pick ' + (num_owned + 1) + '</td></tr></table>');
+    $("#picks").html(buf.join(''));
 }
 
 $(document).ready(function() {

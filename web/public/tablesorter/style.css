@@ -26,6 +26,15 @@ button.draft {
     font-size: 80%
 }
 
+table.picks {
+    font-family:arial;
+    background-color: #D0D0D0;
+    border: 1px solid #909090;
+    font-size: 11pt;
+    padding: 4px;
+    text-align: center;
+}
+
 /*
 table.tablesorter thead tr .headerSortUp {
     background-image: url(asc.gif);

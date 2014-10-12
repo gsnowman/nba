@@ -159,6 +159,17 @@ WHERE SV.player_id = %d ORDER BY season ASC;
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
+    def get_num_owned(self):
+        query = "SELECT COUNT(*) as num FROM owned WHERE owner_id != 0;"
+
+        with sqlite3.connect(DB_STRING) as con:
+            con.row_factory = sqlite3.Row
+            cur = con.cursor()
+            cur.execute(query)
+            return results(cur)
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
     def get_team(self, owner_id, season):
         owner_id = int(owner_id)
         pts, tpm, reb, ast, stl, blk, fg, ft = 8 * [1.0]
