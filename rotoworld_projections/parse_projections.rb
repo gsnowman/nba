@@ -12,17 +12,25 @@ file = File.open('rotoworld_projections.csv')
 db.execute("DELETE from averages WHERE season = '#{season_name}';")
 
 file.read().split("\n").each_with_index do |line, rank|
-  next if rank == 0
+  next if line =~ /ROTOWORLD/ or line =~ /8C,9C/
+  rank = rank + 1
 
-  # 8C,Player,Tm,G,MIN,PTS,FGM,FGA,FG%,3PT,FTM,FTA,FT%,AST,REB,STL,BLK,TO,ID
+  # Pos,8C,9C,Player,Pos,Tm,G,MIN,PTS,FGM,FGA,FG%,3PT,FTM,FTA,FT%,AST,REB,STL,BLK,TO,8CA,Rotoworld_ID
+  # 1,1,1,LeBron James,SF,CLE,77,36,26.2,9.3,16.4,57,1.6,5.9,7.9,75,6.8,7.3,1.7,0.6,2.8,184.54,Rotoworld_ID
 
   words = line.split(',')
   rw_id = words.last.to_i
-  name = words[1]
-  team = words[2]
-  games = words[3].to_i
-  min = words[4].to_f
-  pts, fgm, fga, fgp, tpm, ftm, fta, ftp, ast, reb, stl, blk, to = words[(5..17)].collect {|x| x.to_f}
+  name = words[3]
+  team = words[5]
+  games = words[6].to_i
+  min = words[7].to_f
+  pts, fgm, fga, fgp, tpm, ftm, fta, ftp, ast, reb, stl, blk, to = words[(8..20)].collect {|x| x.to_f}
+
+  fgp = fgp / 100.0
+  ftp = ftp / 100.0
+
+  fgm = fga * fgp
+  ftm = fta * ftp
 
   last = name.split(' ').last.split("'").last.gsub('*', '')
   first = name.split(' ').first.split("'").first
