@@ -18,6 +18,42 @@ $( "#dialog" ).dialog({ autoOpen: false });
 $( "#opener" ).click(function() {
   $( "#dialog" ).dialog( "open" );
 });
+
+/*
+    try {
+        if (id != null && status != null && sport != null) {
+            //we dont want to make duplicate requests for the same outlook.
+            if ($('#ol_' + id).html().toString().length < 135) {
+                jQuery.ajax({
+                    type: "GET",
+                    url: "/services/PremiumUti" + "lity.asmx/GetPlayerOutlook",
+                    data: "pid=" + id + "&status=" + s + "&sport=" + sport,
+                    success: function (msg) {
+                        $('#ol_' + id).html($(msg).find('string').text());
+                    },
+                    error: function () {
+                        $('#ol_' + id).html("<b>Sorry, we're having trouble retrieving the outlook for this player.</b> <br />Please wait a moment and try again. If this continues to happen, please contact us.");
+                    }
+                });
+            }
+        }
+
+    }
+*/
+
+function on_response(response) {
+
+}
+
+function test(player_id) {
+    $.ajax({
+        type: "GET",
+        url: "http://www.rotoworld.com/services/PremiumUtility.asmx/GetPlayerOutlook",
+        data: "pid=" + player_id + "&status=" + "G" + "&sport=NBA",
+        success: on_response,
+    });
+}
+
 </script>
 
 </body>

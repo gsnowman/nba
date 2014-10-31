@@ -55,7 +55,7 @@ function owner_dialog(player_id, player_name, owner_id) {
     buf.push('<input id="radio_owner_0" type="radio" name="radio_owner" value="0"');
     buf.push((owner_id == 0 ? ' checked' : '') + '>');
     buf.push('<label for="radio_owner_0"><strong>None</strong></label><br></form>');
-    buf.push('<div align="center"><button id="btn_set_owner" onClick="set_owner(' + player_id + ');">Submit</button></div>');
+    buf.push('<div><button id="btn_set_owner" onClick="set_owner(' + player_id + ');">Submit</button></div>');
 
     $("#dialog").html(buf.join(''));
     $("#dialog").dialog('option', 'title', player_name);
@@ -75,7 +75,7 @@ function set_watch(player_id) {
 function create_table(data) {
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Team Pos Age Owner Own/Watch Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Team Pos Age Owner Own/Watch Z gZ Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT Dyn 14-15'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
@@ -87,24 +87,79 @@ function create_table(data) {
             buf.push('<tr>' + format_name(p.name, p.player_id, p.rotoworld_id));
         }
         // add owner
-        buf.push('<td align="center">' + p.team + '</td>');
-        buf.push('<td align="center">' + p.pos + '</td>');
-        buf.push('<td align="center">' + p.age + '</td>');
-        buf.push('<td align="center">' + linked_owner_name(p.owner_id) + '</td>');
+        buf.push('<td>' + p.team + '</td>');
+        buf.push('<td>' + p.pos + '</td>');
+        buf.push('<td>' + p.age + '</td>');
+        buf.push('<td>' + linked_owner_name(p.owner_id) + '</td>');
 
         // 'Set Owner' button, calls owner_dialog method above
-        buf.push('<td align="center"><button id="btn_owner" class="draft" onClick="owner_dialog(');
+        buf.push('<td><button class="draft" onClick="owner_dialog(');
         buf.push(p.player_id + ',\'' + p.name + '\',' + p.owner_id + ');">Owners</button>');
 
         // Add a WatchList checkbox
         buf.push('<input id="chk_watch_' + p.player_id + '" type="checkbox" name="Watch" onChange="set_watch(' + p.player_id + ')"');
         buf.push((watching ? ' checked' : '') + '></td>');
 
-        buf.push(format_season_player(p) + '</tr>');
+        buf.push(format_season_player(p));
+        if (p.dynasty_rank == 0) {
+            buf.push('<td><label style="display:none">999</label></td>');
+        } else {
+            buf.push('<td>' + (p.dynasty_rank == 0 ? 999 : p.dynasty_rank) + '</td>');
+        }
+        if (p.season_rank == 0) {
+            buf.push('<td><label style="display:none">999</label></td>');
+        } else {
+            buf.push('<td>' + (p.season_rank == 0 ? 999 : p.season_rank) + '</td>');
+        }
+
+        /*
+        buf.push('<td><textarea id="note_' + p.player_id + '" rows="1" class="expanding"></textarea></td>');
+        */
+        buf.push('</tr>');
     }
 
-    buf.push('</tbody></table>')
+    buf.push('</tbody></table>');
     return buf.join("");
+}
+
+/*
+function populate_notes() {
+    var data = $.last_response;
+    for (var i = 0; i < data.length; i=i+1) {
+        var note = localStorage["note_" + data[i].player_id];
+        if (note !== undefined && note.length > 0) {
+            $("#note_" + data[i].player_id).val(note);
+        } else {
+            $("#note_" + data[i].player_id).val("");
+        }
+    }
+}
+
+function save_notes() {
+    var data = $.last_response;
+
+    for (var i = 0; i < data.length; i=i+1) {
+        var note = $("#note_" + data[i].player_id).val();
+        if (note.length) {
+            localStorage["note_" + data[i].player_id] = note;
+            console.log("Saved note for " + data[i].player_id + ": " + note);
+        } else {
+            localStorage.removeItem("note_" + data[i].player_id);
+        }
+    }
+}
+*/
+
+function enable_tooltips() {
+    var data = $.last_response;
+
+    for (var i = 0; i < data.length; i=i+1) {
+        var note = localStorage["note_" + data[i].player_id];
+        if (note !== undefined && note.length) {
+            $("#player_name_" + data[i].player_id).prop('title', note);
+            $("#player_name_" + data[i].player_id).tooltip();
+        }
+    }
 }
 
 function redraw(data) {
@@ -112,9 +167,12 @@ function redraw(data) {
 
     $("#datatable").tablesorter({
         widgets: ['zebra'],
-        sortInitialOrder: 'desc'
+        sortInitialOrder: 'desc',
+        stringTo: 'min'
     });
 
+    //populate_notes();
+    enable_tooltips();
     save_local_storage();
 }
 

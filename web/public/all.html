@@ -9,6 +9,7 @@
     <script src="/public/js/color.js" type="text/javascript"></script>
     <script src="/public/js/index.js" type="text/javascript"></script>
     <script src="/public/js/common.js" type="text/javascript"></script>
+    <script src="/public/js/expanding.js" type="text/javascript"></script>
     <script src="/public/tablesorter/jquery.tablesorter.js" type="text/javascript"></script>
     <link href="/public/tablesorter/style.css" rel="stylesheet" type="text/css" media="print, projection, screen" />
   </head>
@@ -41,7 +42,8 @@
            <td><input id="button_submit" type="button" value="Submit" onClick="submit_request(get_request_url(), on_response);"></td>
            <td><input id="button_clear" type="button" value="Reset" onClick="reset_settings()"></td>
            <td><input id="chk_remove_owned" type="checkbox" name="Remove Owned" value="Remove">
-           <label for="chk_remove_owned">Remove Owned</label>
+           <label for="chk_remove_owned">Remove Owned</label></td>
+           <!-- <td><button id="button_save_notes" type="button" value="Save" onClick="save_notes()"></td> -->
          </tr>
        </table>
     </form>

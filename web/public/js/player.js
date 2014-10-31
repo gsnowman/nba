@@ -20,13 +20,14 @@ function create_table(data) {
 
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Season Games Min Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Season Team Games Min Z gZ Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
         var s = data[i];
         buf.push('<tr>' + format_name(s.name, undefined)); // name
         buf.push('<td align="center">' + s.season + '</td>');
+        buf.push('<td align="center">' + s.team + '</td>');
         buf.push('<td align="center">' + s.games + '</td>');
         buf.push('<td align="center">' + s.min.toFixed(places) + '</td>');
         buf.push(format_season_player(s) + '</tr>');

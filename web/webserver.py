@@ -47,6 +47,9 @@ SELECT
     SV.player_id,
     CASE WHEN IDS.rotoworld IS NULL THEN 0 ELSE IDS.rotoworld END as rotoworld_id,
     CASE WHEN O.owner_id IS NULL THEN 0 ELSE O.owner_id END as owner_id,
+    CASE WHEN RWD.rank IS NULL THEN 0 ELSE RWD.rank END as dynasty_rank,
+    CASE WHEN RWS.rank IS NULL THEN 0 ELSE RWS.rank END as season_rank,
+    SV.games as games,
     pts, zpts * %f as zpts,
     tpm, ztpm * %f as ztpm,
     reb, zreb * %f as zreb,
@@ -64,6 +67,10 @@ LEFT OUTER JOIN
     owned O ON SV.player_id == O.player_id
 LEFT OUTER JOIN
     player_ids IDS ON SV.player_id = IDS.yahoo
+LEFT OUTER JOIN
+    RW_Dynasty RWD ON IDS.rotoworld = RWD.rotoworld_id
+LEFT OUTER JOIN
+    RW_Season RWS ON IDS.rotoworld = RWS.rotoworld_id
 WHERE
     season like '%s' %s
 ORDER BY z DESC;
@@ -90,6 +97,7 @@ SELECT
     SV.player_id,
     games,
     min,
+    SV.team,
     pts, zpts * %f as zpts,
     tpm, ztpm * %f as ztpm,
     reb, zreb * %f as zreb,
@@ -178,6 +186,8 @@ WHERE SV.player_id = %d ORDER BY season ASC;
 SELECT
     REPLACE(P.first || ' ' || P.last, "'", "") as name,
     SV.player_id,
+    SV.games,
+    SV.min,
     pts, zpts * %f as zpts,
     tpm, ztpm * %f as ztpm,
     reb, zreb * %f as zreb,
@@ -195,7 +205,7 @@ LEFT OUTER JOIN
     owned O ON SV.player_id == O.player_id
 WHERE
     season = '%s' AND O.owner_id = %d
-ORDER BY season ASC;
+ORDER BY season ASC, z DESC;
 """ % (pts, tpm, reb, ast, stl, blk, fg, ft, pts, tpm, reb, ast, stl, blk, fg, ft, sum_z, season, owner_id)
 
         cherrypy.log("owner :: query: %s" % query)

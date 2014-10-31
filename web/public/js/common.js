@@ -81,19 +81,22 @@ function format_bgcolor(bgcolor) {
 function format_name(name, player_id, rotoworld_id) {
     var buf = [];
 
-    buf.push('<td align="left">');
-    if (player_id !== undefined)
+    if (player_id !== undefined) {
+        buf.push('<td id="player_name_' + player_id + '">');
         buf.push('<a href="/player?player_id=' + player_id + '" target="_blank">');
+    } else {
+        buf.push('<td>');
+    }
+
     buf.push(name);
     if (player_id !== undefined)
         buf.push('</a>');
 
     // link to rotoworld
-    if (rotoworld_id !== undefined && rotoworld_id !== 0) {
+    if (rotoworld_id !== undefined && rotoworld_id != 0) {
         buf.push(' <a href="http://www.rotoworld.com/premium/draftguide/basketball/playerpage.aspx?pid=');
         buf.push(rotoworld_id + '" target="_blank">');
         buf.push('<img src="/public/rw_fav.ico" style="width:12px;height:12px"></a>');
-        // style="width:42px;height:42px;border:0"
     }
 
     buf.push('</td>');
@@ -105,28 +108,30 @@ function format_name(name, player_id, rotoworld_id) {
 // - Z scores for: pts tpm reb ast stl blk fg ft
 function format_season_player(p) {
     var buf = [];
+    var gZ = p.games == 0 ? p.z : p.z - (1.0 - (p.games / 82.0));
 
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.z, 2.0)) + '>' + p.z.toFixed(places) + '</td>');
-    buf.push('<td align="center">' + p.pts.toFixed(places) + '</td>');
-    buf.push('<td align="center">' + p.tpm.toFixed(places) + '</td>');
-    buf.push('<td align="center"><font color="#0000FF">' + p.reb.toFixed(places) + '</font></td>');
-    buf.push('<td align="center"><font color="#0000FF">' + p.ast.toFixed(places) + '</font></td>');
-    buf.push('<td align="center"><font color="#0000FF">' + p.stl.toFixed(places) + '</font></td>');
-    buf.push('<td align="center"><font color="#0000FF">' + p.blk.toFixed(places) + '</font></td>');
-    buf.push('<td align="center"><font color="#FF0000">' + p.fga.toFixed(places) + '</font></td>');
-    buf.push('<td align="center"><font color="#FF0000">' + format_percent(p.fgp) + '</font></td>');
-    buf.push('<td align="center"><font color="#FF0000">' + p.fta.toFixed(places) + '</font></td>');
-    buf.push('<td align="center"><font color="#FF0000">' + format_percent(p.ftp) + '</font></td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.z, 2.0)) + '>' + p.z.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(gZ, 2.0)) + '>' + gZ.toFixed(places) + '</td>');
+    buf.push('<td>' + p.pts.toFixed(places) + '</td>');
+    buf.push('<td>' + p.tpm.toFixed(places) + '</td>');
+    buf.push('<td><font color="#0000FF">' + p.reb.toFixed(places) + '</font></td>');
+    buf.push('<td><font color="#0000FF">' + p.ast.toFixed(places) + '</font></td>');
+    buf.push('<td><font color="#0000FF">' + p.stl.toFixed(places) + '</font></td>');
+    buf.push('<td><font color="#0000FF">' + p.blk.toFixed(places) + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + p.fga.toFixed(places) + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + format_percent(p.fgp) + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + p.fta.toFixed(places) + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + format_percent(p.ftp) + '</font></td>');
 
     var max = 3.5
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zpts, max)) + '>' + p.zpts.toFixed(places) + '</td>');
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.ztpm, max)) + '>' + p.ztpm.toFixed(places) + '</td>');
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zreb, max)) + '>' + p.zreb.toFixed(places) + '</td>');
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zast, max)) + '>' + p.zast.toFixed(places) + '</td>');
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zstl, max)) + '>' + p.zstl.toFixed(places) + '</td>');
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zblk, max)) + '>' + p.zblk.toFixed(places) + '</td>');
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zfg, max)) + '>' + p.zfg.toFixed(places) + '</td>');
-    buf.push('<td align="center" ' + format_bgcolor(z_color(p.zft, max)) + '>' + p.zft.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zpts, max)) + '>' + p.zpts.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.ztpm, max)) + '>' + p.ztpm.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zreb, max)) + '>' + p.zreb.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zast, max)) + '>' + p.zast.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zstl, max)) + '>' + p.zstl.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zblk, max)) + '>' + p.zblk.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zfg, max)) + '>' + p.zfg.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zft, max)) + '>' + p.zft.toFixed(places) + '</td>');
 
     return buf.join('');
 }

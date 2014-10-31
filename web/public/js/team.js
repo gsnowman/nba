@@ -20,11 +20,16 @@ function get_request_url() {
     return '/get_team?' + buf.join('&');
 }
 
-function create_table(data) {
+function status_percent(current, expected) {
+    return '<font color="#' + (current >= expected ? '098600' : '860000') +
+        '">' + format_percent_plus_minus(current, expected) + '</font>';
+}
+
+function on_response(data) {
 
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Z Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Games Min Z gZ Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     // 0:pts, 1:tpm, 2:reb, 3:ast, 4:stl, 5:blk, 6:fga, 7:fgm, 8:fta, 9:ftm
@@ -37,6 +42,8 @@ function create_table(data) {
     for (var k = 0; k < data.length; k=k+1) {
         var s = data[k];
         buf.push('<tr>' + format_name(s.name, undefined)); // name
+        buf.push('<td align="center">' + s.games + '</td>');
+        buf.push('<td align="center">' + s.min.toFixed(places) + '</td>');
         buf.push(format_season_player(s) + '</tr>');
 
         var vals2 = [s.pts, s.tpm, s.reb, s.ast, s.stl, s.blk, s.fga, s.fga * s.fgp, s.fta, s.fta * s.ftp];
@@ -54,6 +61,7 @@ function create_table(data) {
     }
     var percent_means = [0.465815549, 0.772864612];
 
+    /*
     buf.push('<tfoot>');
     buf.push(
         format_row([
@@ -72,13 +80,17 @@ function create_table(data) {
             '', '', '', '', '', '', '', '' // z-scores
         ], 'th')
     );
-    buf.push('</tfoot>');
+    buf.push('</tfoot></tbody></table>');
+    */
 
     buf.push('<tfoot>');
     buf.push(
         format_row([
             'Total', // name
+            '', // games
+            '', // min
             '', // total z-score
+            '', // gZ-score
             vals[0].toFixed(places), // pts
             vals[1].toFixed(places), // tpm
             vals[2].toFixed(places), // reb
@@ -92,14 +104,46 @@ function create_table(data) {
             '', '', '', '', '', '', '', '' // z-scores
         ], 'th')
     );
-    buf.push('</tfoot>');
-    buf.push('</tbody></table>')
-    return buf.join("");
-}
+    buf.push('</tfoot></tbody></table>')
+    $("#data_div").html(buf.join(''));
+    $("#datatable").tablesorter({widgets: ['zebra'], sortInitialOrder: 'desc'});
 
-function on_response(data) {
-    $("#data_div").html(create_table(data));
-    $("#datatable").tablesorter({widgets: ['zebra']});
+    var buf2 = ['<table id="curent_percentages" class="tablesorterpercentages">'];
+    buf2.push('<thead><tr><th>' + data.length + ' Players</th>');
+    buf2.push('<th>' + format_percent(data.length / 14) + '</th></tr></thead></table>');
+
+    var buf2 = [];
+    buf2.push('<table id="percentages" class="tablesorterpercentages">');
+    buf2.push(format_header('Category Total Current Percent Status'.split(' ')));
+    var cats = ['Points', '3 Pointers', 'Rebounds', 'Assists', 'Steals', 'Blocks'];
+    for (var i = 0; i < cats.length; i=i+1) {
+        var row_vals = [
+            cats[i],
+            means[i].toFixed(places),
+            vals[i].toFixed(places),
+            format_percent(vals[i] / means[i]),
+            status_percent(vals[i] / means[i], data.length / 14.0)
+        ];
+        buf2.push(format_row(row_vals, 'td'));
+    }
+    buf2.push(format_row([
+        'Field Goal %',
+        format_percent(percent_means[0]),
+        format_percent(vals[7] / vals[6]),
+        format_percent_plus_minus(vals[7] / vals[6], percent_means[0]),
+        status_percent(vals[7] / vals[6], percent_means[0])
+    ], 'td'));
+    buf2.push(format_row([
+        'Free Throw %',
+        format_percent(percent_means[1]),
+        format_percent(vals[9] / vals[8]),
+        format_percent_plus_minus(vals[9] / vals[8], percent_means[1]),
+        status_percent(vals[9] / vals[8], percent_means[1])
+    ], 'td'));
+    buf2.push('</tbody></table>');
+
+    $("#percentages_div").html(buf2.join(''));
+    $("#percentages").tablesorter({widgets: ['zebra']});
 }
 
 function submitenter(e) {

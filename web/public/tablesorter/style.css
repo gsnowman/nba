@@ -3,7 +3,6 @@ table.tablesorter {
     margin: 10px 0pt 15px;
     font-size: 8pt;
     width: 100%;
-    text-align: left;
 }
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
     background-color: #D0D0D0;
@@ -16,11 +15,35 @@ table.tablesorter tbody td {
     color: #3D3D3D;
     padding: 4px;
     vertical-align: center;
+    text-align: center;
 }
 
 table.tablesorter .even  { background-color: #ECECEC; }
 table.tablesorter .odd   { background-color: #FFFFFF; }
 table.tablesorter .watch { background-color: #FBFFB5; }
+
+table.tablesorterpercentages {
+    font-family:arial;
+    margin: 10px 0pt 15px;
+    font-size: 8pt;
+}
+table.tablesorterpercentages thead tr th, table.tablesorterpercentages tfoot tr th {
+    background-color: #D0D0D0;
+    border: 1px solid #909090;
+    font-size: 7pt;
+    padding: 4px;
+    text-align: center;
+}
+table.tablesorterpercentages tbody td {
+    color: #3D3D3D;
+    padding: 4px;
+    vertical-align: center;
+    text-align: center;
+}
+
+table.tablesorterpercentages .even  { background-color: #ECECEC; }
+table.tablesorterpercentages .odd   { background-color: #FFFFFF; }
+table.tablesorterpercentages .watch { background-color: #FBFFB5; }
 
 button.draft {
     font-size: 80%
@@ -86,3 +109,16 @@ table.tablesorterstd thead tr .headerSortDown {
 table.tablesorterstd thead tr .headerSortDown, table.tablesorterstd thead tr .headerSortUp {
     background-color: #8dbdd8;
 }
+
+
+.tooltip {
+    position:absoluate;
+    z-index: 2;
+    background-color: #EFEFEF;
+    border: 1px solid #CCCCCC;
+    margin: 8px;
+    padding: 8px
+    -mox-box-shadow: 2px 2px 11px #666;
+    -webkit-box-shadow: 2px 2px 11px #666;
+}
+
