@@ -75,7 +75,7 @@ function set_watch(player_id) {
 function create_table(data) {
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Team Pos Age Owner Own/Watch Z gZ Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT Dyn 14-15'.split(' ')));
+    buf.push(format_header('Name Team Pos Age Owner Own/Watch Z gZ Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
@@ -101,65 +101,12 @@ function create_table(data) {
         buf.push((watching ? ' checked' : '') + '></td>');
 
         buf.push(format_season_player(p));
-        if (p.dynasty_rank == 0) {
-            buf.push('<td><label style="display:none">999</label></td>');
-        } else {
-            buf.push('<td>' + (p.dynasty_rank == 0 ? 999 : p.dynasty_rank) + '</td>');
-        }
-        if (p.season_rank == 0) {
-            buf.push('<td><label style="display:none">999</label></td>');
-        } else {
-            buf.push('<td>' + (p.season_rank == 0 ? 999 : p.season_rank) + '</td>');
-        }
 
-        /*
-        buf.push('<td><textarea id="note_' + p.player_id + '" rows="1" class="expanding"></textarea></td>');
-        */
         buf.push('</tr>');
     }
 
     buf.push('</tbody></table>');
     return buf.join("");
-}
-
-/*
-function populate_notes() {
-    var data = $.last_response;
-    for (var i = 0; i < data.length; i=i+1) {
-        var note = localStorage["note_" + data[i].player_id];
-        if (note !== undefined && note.length > 0) {
-            $("#note_" + data[i].player_id).val(note);
-        } else {
-            $("#note_" + data[i].player_id).val("");
-        }
-    }
-}
-
-function save_notes() {
-    var data = $.last_response;
-
-    for (var i = 0; i < data.length; i=i+1) {
-        var note = $("#note_" + data[i].player_id).val();
-        if (note.length) {
-            localStorage["note_" + data[i].player_id] = note;
-            console.log("Saved note for " + data[i].player_id + ": " + note);
-        } else {
-            localStorage.removeItem("note_" + data[i].player_id);
-        }
-    }
-}
-*/
-
-function enable_tooltips() {
-    var data = $.last_response;
-
-    for (var i = 0; i < data.length; i=i+1) {
-        var note = localStorage["note_" + data[i].player_id];
-        if (note !== undefined && note.length) {
-            $("#player_name_" + data[i].player_id).prop('title', note);
-            $("#player_name_" + data[i].player_id).tooltip();
-        }
-    }
 }
 
 function redraw(data) {
@@ -171,14 +118,12 @@ function redraw(data) {
         stringTo: 'min'
     });
 
-    //populate_notes();
     enable_tooltips();
     save_local_storage();
 }
 
 function on_response(data) {
     $.last_response = data;
-    submit_request("/get_num_owned", on_num_owned_response);
     redraw(data);
 }
 
@@ -207,20 +152,9 @@ function on_seasons_response(seasons) {
     $("#select_season").val(seasons[seasons.length - 1]);
 }
 
-function on_num_owned_response(response) {
-    var num_owned = response[0].num;
-    console.log('Received response, num_owned=' + num_owned);
-
-    var round = Math.floor((num_owned / 12) + 1);
-    var pick = (num_owned + 1) % 12;
-
-    var buf = ['<table class="picks"><tr><td>Round ' + round + ', Pick ' + pick + '</td></tr></table>'];
-    buf.push('<table class="picks"><tr><td>' + 'Overall Pick ' + (num_owned + 1) + '</td></tr></table>');
-    $("#picks").html(buf.join(''));
-}
-
 $(document).ready(function() {
     load_local_storage();
     submit_request("/get_owners", function(data) { owners = data; });
     submit_request("/get_seasons", on_seasons_response);
 })
+

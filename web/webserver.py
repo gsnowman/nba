@@ -47,8 +47,6 @@ SELECT
     SV.player_id,
     CASE WHEN IDS.rotoworld IS NULL THEN 0 ELSE IDS.rotoworld END as rotoworld_id,
     CASE WHEN O.owner_id IS NULL THEN 0 ELSE O.owner_id END as owner_id,
-    CASE WHEN RWD.rank IS NULL THEN 0 ELSE RWD.rank END as dynasty_rank,
-    CASE WHEN RWS.rank IS NULL THEN 0 ELSE RWS.rank END as season_rank,
     SV.games as games,
     pts, zpts * %f as zpts,
     tpm, ztpm * %f as ztpm,
@@ -67,10 +65,6 @@ LEFT OUTER JOIN
     owned O ON SV.player_id == O.player_id
 LEFT OUTER JOIN
     player_ids IDS ON SV.player_id = IDS.yahoo
-LEFT OUTER JOIN
-    RW_Dynasty RWD ON IDS.rotoworld = RWD.rotoworld_id
-LEFT OUTER JOIN
-    RW_Season RWS ON IDS.rotoworld = RWS.rotoworld_id
 WHERE
     season like '%s' %s
 ORDER BY z DESC;
@@ -164,17 +158,6 @@ WHERE SV.player_id = %d ORDER BY season ASC;
             if (owner_id != 0):
                 cur.execute(query2)
         return []
-
-    @cherrypy.expose
-    @cherrypy.tools.json_out()
-    def get_num_owned(self):
-        query = "SELECT COUNT(*) as num FROM owned WHERE owner_id != 0;"
-
-        with sqlite3.connect(DB_STRING) as con:
-            con.row_factory = sqlite3.Row
-            cur = con.cursor()
-            cur.execute(query)
-            return results(cur)
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
