@@ -20,7 +20,7 @@ function create_table(data) {
 
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Season Team Games Min Z gZ Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Season Team Games DNP Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
@@ -29,7 +29,7 @@ function create_table(data) {
         buf.push('<td align="center">' + s.season + '</td>');
         buf.push('<td align="center">' + s.team + '</td>');
         buf.push('<td align="center">' + s.games + '</td>');
-        buf.push('<td align="center">' + s.min.toFixed(places) + '</td>');
+        buf.push('<td align="center">' + (82 - s.games) + '</td>');
         buf.push(format_season_player(s) + '</tr>');
     }
 
@@ -37,7 +37,7 @@ function create_table(data) {
     return buf.join("");
 }
 
-function on_response(data) {
+function on_prev_years_response(data) {
     if (data.length) {
         document.title = data[0].name;
     }
@@ -47,6 +47,10 @@ function on_response(data) {
         widgets: ['zebra'],
         sortInitialOrder: 'desc'
     });
+}
+
+function go() {
+    submit_request(get_request_url(), on_prev_years_response);
 }
 
 function submitenter(e) {
@@ -60,7 +64,7 @@ function submitenter(e) {
 
     if (keycode == 13) {
         // if this was an enter key press
-        submit_request(get_request_url(), on_response);
+        go();
         return false;
     } else {
         return true;
@@ -69,5 +73,5 @@ function submitenter(e) {
 
 $(document).ready(function() {
     load_local_storage();
-    submit_request(get_request_url(), on_response);
+    go();
 })

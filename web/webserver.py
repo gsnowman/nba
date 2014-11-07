@@ -3,6 +3,8 @@ import cherrypy
 import webbrowser
 import sqlite3
 import itertools
+from player_query import PlayerQuery, Factors
+import datetime as dt
 
 DB_STRING = "../nba.sqlite"
 
@@ -30,53 +32,20 @@ class Stats(object):
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def all_players(self, pts, tpm, reb, ast, stl, blk, fg, ft, season, remove_owned):
-        # convert arguments to floats
-        pts, tpm, reb, ast, stl, blk, fg, ft = [float(x) for x in [pts, tpm, reb, ast, stl, blk, fg, ft]]
-        remove_owned = int(remove_owned)
+    def all_players(self, pts, tpm, reb, ast, stl, blk, fg, ft, season, remove_owned, num_days):
 
-        remove_owned_sql = "AND SV.player_id NOT IN (SELECT player_id from owned)" if remove_owned == 1 else ""
-        sum_z = sum([pts, tpm, reb, ast, stl, blk, fg, ft])
-        query = """
-SELECT
-    season,
-    REPLACE(P.first || ' ' || P.last, "'", "") as name,
-    P.team,
-    P.pos,
-    P.age,
-    SV.player_id,
-    CASE WHEN IDS.rotoworld IS NULL THEN 0 ELSE IDS.rotoworld END as rotoworld_id,
-    CASE WHEN O.owner_id IS NULL THEN 0 ELSE O.owner_id END as owner_id,
-    SV.games as games,
-    pts, zpts * %f as zpts,
-    tpm, ztpm * %f as ztpm,
-    reb, zreb * %f as zreb,
-    ast, zast * %f as zast,
-    stl, zstl * %f as zstl,
-    blk, zblk * %f as zblk,
-    fga, fgp, zfg * %f as zfg,
-    fta, ftp, zft * %f as zft,
-    (zpts * %f + ztpm * %f + zreb * %f + zast * %f + zstl * %f + zblk * %f + zfg * %f + zft * %f) / %f as z
-FROM
-    season_values SV
-INNER JOIN
-    players P ON SV.player_id == P.player_id
-LEFT OUTER JOIN
-    owned O ON SV.player_id == O.player_id
-LEFT OUTER JOIN
-    player_ids IDS ON SV.player_id = IDS.yahoo
-WHERE
-    season like '%s' %s
-ORDER BY z DESC;
-""" % (pts, tpm, reb, ast, stl, blk, fg, ft, pts, tpm, reb, ast, stl, blk, fg, ft, sum_z, season, remove_owned_sql)
-
-        cherrypy.log("all_players :: query: %s" % query)
+        query = PlayerQuery()
+        if int(remove_owned) == 1:
+            query.remove_owned()
+        query.factors = Factors([float(x) for x in [pts, tpm, reb, ast, stl, blk, fg, ft]])
+        query.days = int(num_days)
 
         with sqlite3.connect(DB_STRING) as con:
             con.row_factory = sqlite3.Row
             cur = con.cursor()
-            cur.execute(query)
-            return results(cur)
+            query.query1(cur)
+            query.query2(cur)
+            return query.query3(cur)
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
@@ -161,43 +130,18 @@ WHERE SV.player_id = %d ORDER BY season ASC;
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def get_team(self, owner_id, season):
-        owner_id = int(owner_id)
-        pts, tpm, reb, ast, stl, blk, fg, ft = 8 * [1.0]
-        sum_z = sum([pts, tpm, reb, ast, stl, blk, fg, ft])
-        query = """
-SELECT
-    REPLACE(P.first || ' ' || P.last, "'", "") as name,
-    SV.player_id,
-    SV.games,
-    SV.min,
-    pts, zpts * %f as zpts,
-    tpm, ztpm * %f as ztpm,
-    reb, zreb * %f as zreb,
-    ast, zast * %f as zast,
-    stl, zstl * %f as zstl,
-    blk, zblk * %f as zblk,
-    fga, fgp, zfg * %f as zfg,
-    fta, ftp, zft * %f as zft,
-    (zpts * %f + ztpm * %f + zreb * %f + zast * %f + zstl * %f + zblk * %f + zfg * %f + zft * %f) / %f as z
-FROM
-    season_values SV
-INNER JOIN
-    players P ON SV.player_id == P.player_id
-LEFT OUTER JOIN
-    owned O ON SV.player_id == O.player_id
-WHERE
-    season = '%s' AND O.owner_id = %d
-ORDER BY season ASC, z DESC;
-""" % (pts, tpm, reb, ast, stl, blk, fg, ft, pts, tpm, reb, ast, stl, blk, fg, ft, sum_z, season, owner_id)
+    def get_team(self, owner_id, num_days):
 
-        cherrypy.log("owner :: query: %s" % query)
+        query = PlayerQuery()
+        query.owners = [int(owner_id)]
+        query.days = int(num_days)
 
         with sqlite3.connect(DB_STRING) as con:
             con.row_factory = sqlite3.Row
             cur = con.cursor()
-            cur.execute(query)
-            return results(cur)
+            query.query1(cur)
+            query.query2(cur)
+            return query.query3(cur)
 
 if __name__ == '__main__':
     conf = {

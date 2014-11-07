@@ -14,6 +14,7 @@ function get_request_url() {
     buf.push("ft=" + $("#text_ft").val());
     buf.push("season=" + $("#select_season").val());
     buf.push("remove_owned=" + ($("#chk_remove_owned").prop('checked') ? 1 : 0));
+    buf.push("num_days=" + ($("#text_days").val() == "" ? "1000" : $("#text_days").val()));
     return '/all_players?' + buf.join('&');
 }
 
@@ -32,12 +33,12 @@ function set_owner(player_id) {
 }
 
 function linked_owner_name(owner_id) {
-    for (var i = 0; i < owners.length; i=i+1) {
-        if (owners[i].owner_id == owner_id) {
-            return '<a href=/team?owner_id=' + owner_id + ' target="_blank">' + owners[i].name + '</a>';
-        }
+    var owner_name = get_owner_name(owners, owner_id);
+    if (owner_name.length) {
+        return '<a href=/team?owner_id=' + owner_id + ' target="_blank">' + owners[i].name + '</a>';
+    } else {
+        return "";
     }
-    return "";
 }
 
 function owner_dialog(player_id, player_name, owner_id) {
@@ -75,7 +76,7 @@ function set_watch(player_id) {
 function create_table(data) {
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Team Pos Age Owner Own/Watch Z gZ Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Team Pos Age Owner Own/Watch Games DNP Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
@@ -86,7 +87,6 @@ function create_table(data) {
         } else {
             buf.push('<tr>' + format_name(p.name, p.player_id, p.rotoworld_id));
         }
-        // add owner
         buf.push('<td>' + p.team + '</td>');
         buf.push('<td>' + p.pos + '</td>');
         buf.push('<td>' + p.age + '</td>');
@@ -99,6 +99,9 @@ function create_table(data) {
         // Add a WatchList checkbox
         buf.push('<input id="chk_watch_' + p.player_id + '" type="checkbox" name="Watch" onChange="set_watch(' + p.player_id + ')"');
         buf.push((watching ? ' checked' : '') + '></td>');
+
+        buf.push('<td>' + p.games + '</td>');
+        buf.push('<td>' + p.dnp + '</td>');
 
         buf.push(format_season_player(p));
 
@@ -118,7 +121,6 @@ function redraw(data) {
         stringTo: 'min'
     });
 
-    enable_tooltips();
     save_local_storage();
 }
 

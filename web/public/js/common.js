@@ -108,10 +108,9 @@ function format_name(name, player_id, rotoworld_id) {
 // - Z scores for: pts tpm reb ast stl blk fg ft
 function format_season_player(p) {
     var buf = [];
-    var gZ = p.games == 0 ? p.z : p.z - (1.0 - (p.games / 82.0));
 
     buf.push('<td ' + format_bgcolor(z_color(p.z, 2.0)) + '>' + p.z.toFixed(places) + '</td>');
-    buf.push('<td ' + format_bgcolor(z_color(gZ, 2.0)) + '>' + gZ.toFixed(places) + '</td>');
+    buf.push('<td>' + p.min.toFixed(places) + '</td>');
     buf.push('<td>' + p.pts.toFixed(places) + '</td>');
     buf.push('<td>' + p.tpm.toFixed(places) + '</td>');
     buf.push('<td><font color="#0000FF">' + p.reb.toFixed(places) + '</font></td>');
@@ -183,5 +182,14 @@ function load_local_storage() {
     }
 
     $.watch_list = new WatchList(localStorage['watch_list']);
+}
+
+function get_owner_name(owners, owner_id) {
+    for (var i = 0; i < owners.length; i=i+1) {
+        if (owners[i].owner_id == owner_id) {
+            return owners[i].name;
+        }
+    }
+    return "";
 }
 
