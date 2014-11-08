@@ -35,7 +35,7 @@ function set_owner(player_id) {
 function linked_owner_name(owner_id) {
     var owner_name = get_owner_name(owners, owner_id);
     if (owner_name.length) {
-        return '<a href=/team?owner_id=' + owner_id + ' target="_blank">' + owners[i].name + '</a>';
+        return '<a href=/team?owner_id=' + owner_id + ' target="_blank">' + owner_name + '</a>';
     } else {
         return "";
     }
@@ -76,7 +76,7 @@ function set_watch(player_id) {
 function create_table(data) {
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Team Pos Age Owner Own/Watch Games DNP Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Team Pos Age Owner Own/Watch Games DNP Rank Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {

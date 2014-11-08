@@ -9,6 +9,21 @@ class Factors:
     def sum(self):
         return sum(self.as_tuple())
 
+class GameQuery:
+    def __init__(self):
+        self.player_id = None
+        self.days = 1000
+    def query(self, db):
+        return self.query1(db)
+    def query(self, db):
+        as_of_date = (dt.datetime.now() - dt.timedelta(days=int(self.days))).strftime("%Y-%m-%d")
+        query1 = """
+SELECT * FROM games WHERE player_id = %d AND date >= '%s' ORDER BY date DESC;
+""" % (player_id, as_of_date)
+
+        db.execute(query3)
+        return self.results(db)
+
 class PlayerQuery:
     def __init__(self):
         self.owners = None
@@ -22,6 +37,12 @@ class PlayerQuery:
 
     def remove_owned(self):
         self.owners = [0]
+
+    def query(self, db):
+        self.query1(db)
+        self.query2(db)
+        self.query3(db)
+        return self.query4(db)
 
     def query1(self, db):
         as_of_date = (dt.datetime.now() - dt.timedelta(days=int(self.days))).strftime("%Y-%m-%d")
@@ -81,15 +102,12 @@ FROM data1;
 
     def query3(self, db):
 
-        owner_sql = ""
-        if self.owners is not None:
-            owner_sql = " AND owner_id in (%s)" % ",".join([str(x) for x in self.owners])
-
         format_args = tuple(
-            self.factors.as_tuple() + self.factors.as_tuple() + (self.factors.sum(), owner_sql)
+            self.factors.as_tuple() + self.factors.as_tuple() + (self.factors.sum(), )
         )
 
         query3 = """
+CREATE TEMP TABLE data3 AS
 SELECT
     name, team, pos, age, player_id, rotoworld_id, owner_id, games, dnp,
     min, pts, tpm, reb, ast, stl, blk,
@@ -105,14 +123,20 @@ SELECT
     zft * %f as zft,
     (zpts * %f + ztpm * %f + zreb * %f + zast * %f + zstl * %f + zblk * %f + zfg * %f + zft * %f) / %f as z
 FROM data2
-WHERE min > 0.0 %s
-ORDER BY z DESC
-LIMIT 200;
+WHERE min > 0.0
+ORDER BY z DESC;
 """ % format_args
 
+        # TODO: remove the min > 0.0 flag so that players (Durant) who haven't played still show up
+
         db.execute(query3)
-        res = self.results(db)
-        db.execute("DROP TABLE data1;")
-        db.execute("DROP TABLE data2;")
-        return res
+
+    def query4(self, db):
+        owner_sql = ""
+        if self.owners is not None:
+            owner_sql = "WHERE owner_id in (%s)" % ",".join([str(x) for x in self.owners])
+
+        query4 = "SELECT ROWID as rank, * FROM data3 %s;" % owner_sql
+        db.execute(query4)
+        return self.results(db)
 

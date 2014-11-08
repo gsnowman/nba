@@ -23,11 +23,11 @@ function on_response(data) {
 
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Games DNP Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Games DNP Rank Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
-    // 0:pts, 1:tpm, 2:reb, 3:ast, 4:stl, 5:blk, 6:fga, 7:fgm, 8:fta, 9:ftm, 10:min
-    var vals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    // 0:pts, 1:tpm, 2:reb, 3:ast, 4:stl, 5:blk, 6:fga, 7:fgm, 8:fta, 9:ftm, 10:min, 11:games, 12:dnp
+    var vals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
     // TODO: not sure we need these
     // 0:z, 1:pts, 2:tpm, 3:reb, 4:ast, 5:stl, 6:blk, 7:fg, 8:ft
@@ -40,7 +40,8 @@ function on_response(data) {
         buf.push('<td align="center">' + s.dnp + '</td>');
         buf.push(format_season_player(s) + '</tr>');
 
-        var vals2 = [s.pts, s.tpm, s.reb, s.ast, s.stl, s.blk, s.fga, s.fga * s.fgp, s.fta, s.fta * s.ftp, s.min];
+        var vals2 = [s.pts, s.tpm, s.reb, s.ast, s.stl, s.blk,
+            s.fga, s.fga * s.fgp, s.fta, s.fta * s.ftp, s.min, s.games, s.dnp];
         for (var i = 0; i < vals.length; i=i+1)
             vals[i] = vals[i] + vals2[i];
         var zs2 = [s.z, s.zpts, s.ztpm, s.zreb, s.zast, s.zstl, s.zblk, s.zfg, s.zft];
@@ -59,8 +60,9 @@ function on_response(data) {
     buf.push(
         format_row([
             'Total', // name
-            '', // games
-            '', // dnp
+            vals[11], // games
+            vals[12], // dnp
+            '', // rank
             '', // total z-score
             vals[10].toFixed(places), // min
             vals[0].toFixed(places), // pts

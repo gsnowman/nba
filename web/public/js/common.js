@@ -109,6 +109,7 @@ function format_name(name, player_id, rotoworld_id) {
 function format_season_player(p) {
     var buf = [];
 
+    buf.push('<td><font color="#FF6600">' + p.rank + '</td>');
     buf.push('<td ' + format_bgcolor(z_color(p.z, 2.0)) + '>' + p.z.toFixed(places) + '</td>');
     buf.push('<td>' + p.min.toFixed(places) + '</td>');
     buf.push('<td>' + p.pts.toFixed(places) + '</td>');

@@ -1,25 +1,24 @@
 
-function get_request_url() {
+function get_player_id() {
     var chunks = document.URL.split('=');
-    var player_id = chunks[chunks.length - 1]; // from current URL
-
-    var buf = [];
-    buf.push("player_id=" + player_id);
-    buf.push("pts=" + $("#text_pts").val());
-    buf.push("tpm=" + $("#text_tpm").val());
-    buf.push("reb=" + $("#text_reb").val());
-    buf.push("ast=" + $("#text_ast").val());
-    buf.push("stl=" + $("#text_stl").val());
-    buf.push("blk=" + $("#text_blk").val());
-    buf.push("fg=" + $("#text_fg").val());
-    buf.push("ft=" + $("#text_ft").val());
-    return '/get_player?' + buf.join('&');
+    return chunks[chunks.length - 1]; // from current URL
 }
 
-function create_table(data) {
+function get_seasons_request_url() {
+    return '/get_player_seasons?player_id=' + get_player_id();
+}
+
+function get_game_log_request_url() {
+    return '/get_player_game_log?player_id=' + get_player_id();
+}
+
+function on_seasons_response(data) {
+    if (data.length) {
+        document.title = data[0].name;
+    }
 
     var buf = [];
-    buf.push('<table id="datatable" class="tablesorter">');
+    buf.push('<table id="seasons" class="tablesorter">');
     buf.push(format_header('Name Season Team Games DNP Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
@@ -34,23 +33,12 @@ function create_table(data) {
     }
 
     buf.push('</tbody></table>')
-    return buf.join("");
-}
-
-function on_prev_years_response(data) {
-    if (data.length) {
-        document.title = data[0].name;
-    }
-
-    $("#data_div").html(create_table(data));
-    $("#datatable").tablesorter({
-        widgets: ['zebra'],
-        sortInitialOrder: 'desc'
-    });
+    $("#seasons_div").html(buf.join(''));
+    $("#seasons").tablesorter({widgets: ['zebra'], sortInitialOrder: 'desc'});
 }
 
 function go() {
-    submit_request(get_request_url(), on_prev_years_response);
+    submit_request(get_seasons_request_url(), on_seasons_response);
 }
 
 function submitenter(e) {

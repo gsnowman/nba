@@ -33,7 +33,6 @@ class Stats(object):
     @cherrypy.expose
     @cherrypy.tools.json_out()
     def all_players(self, pts, tpm, reb, ast, stl, blk, fg, ft, season, remove_owned, num_days):
-
         query = PlayerQuery()
         if int(remove_owned) == 1:
             query.remove_owned()
@@ -42,16 +41,23 @@ class Stats(object):
 
         with sqlite3.connect(DB_STRING) as con:
             con.row_factory = sqlite3.Row
-            cur = con.cursor()
-            query.query1(cur)
-            query.query2(cur)
-            return query.query3(cur)
+            return query.query(con.cursor())
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def get_player(self, player_id, pts, tpm, reb, ast, stl, blk, fg, ft):
+    def get_player_game_log(self, player_id):
+        query = GameQuery()
+        query.player_id = int(player_id)
+
+        with sqlite3.connect(DB_STRING) as con:
+            con.row_factory = sqlite3.Row
+            return query.query(con.cursor())
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def get_player_seasons(self, player_id):
         player_id = int(player_id)
-        pts, tpm, reb, ast, stl, blk, fg, ft = [float(x) for x in [pts, tpm, reb, ast, stl, blk, fg, ft]]
+        pts, tpm, reb, ast, stl, blk, fg, ft = [float(x) for x in [1] * 8]
         sum_z = sum([pts, tpm, reb, ast, stl, blk, fg, ft])
         query = """
 SELECT
@@ -138,10 +144,7 @@ WHERE SV.player_id = %d ORDER BY season ASC;
 
         with sqlite3.connect(DB_STRING) as con:
             con.row_factory = sqlite3.Row
-            cur = con.cursor()
-            query.query1(cur)
-            query.query2(cur)
-            return query.query3(cur)
+            return query.query(con.cursor())
 
 if __name__ == '__main__':
     conf = {
