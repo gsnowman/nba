@@ -37,8 +37,41 @@ function on_seasons_response(data) {
     $("#seasons").tablesorter({widgets: ['zebra'], sortInitialOrder: 'desc'});
 }
 
+function empty_tds(num) {
+    var buf = [];
+    for (var i = 0; i < num; i=i+1)
+        buf.push('<td></td>');
+    return buf.join('');
+}
+
+function on_game_log_response(data) {
+
+    var buf = [];
+    buf.push('<table id="game_log" class="tablesorter">');
+    buf.push(format_header('Date Team Opp Score Z Min Pts 3pm Reb Ast Stl Blk FG FG% FT FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+
+    for (var i = 0; i < data.length; i=i+1) {
+        var g = data[i];
+        buf.push('<tr><td>' + g.date + '</td>');
+        buf.push('<td>' + g.team + '</td>');
+        buf.push('<td>' + (g.home == 1 ? '' : '@') + g.opp + '</td>');
+        var score_color = (g.teamscore > g.oppscore) ? "#009900" : "#AA0000";
+        buf.push('<td><font color=' + score_color + '>' + g.teamscore + '-' + g.oppscore + '</font></td>');
+        if (g.dnp == 1) {
+            buf.push(empty_tds(18));
+        } else {
+            buf.push(format_game_for_player(g));
+        }
+    }
+
+    buf.push('</tbody></table>')
+    $("#game_log_div").html(buf.join(''));
+    $("#game_log").tablesorter({widgets: ['zebra']});
+}
+
 function go() {
     submit_request(get_seasons_request_url(), on_seasons_response);
+    submit_request(get_game_log_request_url(), on_game_log_response);
 }
 
 function submitenter(e) {

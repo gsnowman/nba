@@ -109,7 +109,9 @@ function format_name(name, player_id, rotoworld_id) {
 function format_season_player(p) {
     var buf = [];
 
-    buf.push('<td><font color="#FF6600">' + p.rank + '</td>');
+    if (p.rank !== undefined) {
+        buf.push('<td><font color="#FF6600">' + p.rank + '</td>');
+    }
     buf.push('<td ' + format_bgcolor(z_color(p.z, 2.0)) + '>' + p.z.toFixed(places) + '</td>');
     buf.push('<td>' + p.min.toFixed(places) + '</td>');
     buf.push('<td>' + p.pts.toFixed(places) + '</td>');
@@ -122,6 +124,34 @@ function format_season_player(p) {
     buf.push('<td><font color="#FF0000">' + format_percent(p.fgp) + '</font></td>');
     buf.push('<td><font color="#FF0000">' + p.fta.toFixed(places) + '</font></td>');
     buf.push('<td><font color="#FF0000">' + format_percent(p.ftp) + '</font></td>');
+
+    var max = 3.5
+    buf.push('<td ' + format_bgcolor(z_color(p.zpts, max)) + '>' + p.zpts.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.ztpm, max)) + '>' + p.ztpm.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zreb, max)) + '>' + p.zreb.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zast, max)) + '>' + p.zast.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zstl, max)) + '>' + p.zstl.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zblk, max)) + '>' + p.zblk.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zfg, max)) + '>' + p.zfg.toFixed(places) + '</td>');
+    buf.push('<td ' + format_bgcolor(z_color(p.zft, max)) + '>' + p.zft.toFixed(places) + '</td>');
+
+    return buf.join('');
+}
+
+function format_game_for_player(p) {
+    var buf = [];
+    buf.push('<td ' + format_bgcolor(z_color(p.z, 2.0)) + '>' + p.z.toFixed(places) + '</td>');
+    buf.push('<td>' + p.min.toFixed(places) + '</td>');
+    buf.push('<td>' + p.pts + '</td>');
+    buf.push('<td>' + p.tpm + '</td>');
+    buf.push('<td><font color="#0000FF">' + p.reb + '</font></td>');
+    buf.push('<td><font color="#0000FF">' + p.ast + '</font></td>');
+    buf.push('<td><font color="#0000FF">' + p.stl + '</font></td>');
+    buf.push('<td><font color="#0000FF">' + p.blk + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + p.fgm + '/' + p.fga + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + format_percent(p.fga == 0 ? 0 : p.fgm / p.fga) + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + p.ftm + '/' + p.fta + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + format_percent(p.fta == 0 ? 0 : p.ftm / p.fta) + '</font></td>');
 
     var max = 3.5
     buf.push('<td ' + format_bgcolor(z_color(p.zpts, max)) + '>' + p.zpts.toFixed(places) + '</td>');

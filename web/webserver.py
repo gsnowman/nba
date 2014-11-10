@@ -3,7 +3,7 @@ import cherrypy
 import webbrowser
 import sqlite3
 import itertools
-from player_query import PlayerQuery, Factors
+from player_query import PlayerQuery, Factors, GameQuery
 import datetime as dt
 
 DB_STRING = "../nba.sqlite"
