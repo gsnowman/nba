@@ -103,6 +103,10 @@ function format_name(name, player_id, rotoworld_id) {
     return buf.join('');
 }
 
+function format_attempts(made, att) {
+    return made.toFixed(1) + '/' + att.toFixed(1);
+}
+
 // generates the following table cells:
 // - z pts tpm reb ast stl blk fga fgp fta ftp
 // - Z scores for: pts tpm reb ast stl blk fg ft
@@ -120,9 +124,9 @@ function format_season_player(p) {
     buf.push('<td><font color="#0000FF">' + p.ast.toFixed(places) + '</font></td>');
     buf.push('<td><font color="#0000FF">' + p.stl.toFixed(places) + '</font></td>');
     buf.push('<td><font color="#0000FF">' + p.blk.toFixed(places) + '</font></td>');
-    buf.push('<td><font color="#FF0000">' + p.fga.toFixed(places) + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + format_attempts(p.fgm, p.fga) + '</font></td>');
     buf.push('<td><font color="#FF0000">' + format_percent(p.fgp) + '</font></td>');
-    buf.push('<td><font color="#FF0000">' + p.fta.toFixed(places) + '</font></td>');
+    buf.push('<td><font color="#FF0000">' + format_attempts(p.ftm, p.fta) + '</font></td>');
     buf.push('<td><font color="#FF0000">' + format_percent(p.ftp) + '</font></td>');
 
     var max = 3.5
