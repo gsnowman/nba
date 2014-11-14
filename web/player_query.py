@@ -28,7 +28,7 @@ class GameQuery:
         query1 = """
 CREATE TEMP TABLE data1 AS
 SELECT
-    date,team,opp, home,teamscore,oppscore,dnp,start,min,
+    date,team,opp,home,teamscore,oppscore,dnp,start,min,
     pts,tpm,reb,ast,stl,blk,fgm,fga,ftm,fta,
     (1.0*pts - 14.35475088) / 4.69424049 AS zpts,
     (1.0*tpm - 1.046000798) / 0.831125077 AS ztpm,
@@ -72,35 +72,37 @@ class PlayerQuery:
         query1 = """
 CREATE TEMP TABLE data1 AS
 SELECT
-    REPLACE(P.first || ' ' || P.last, "'", "") as name,
-    P.team as team,
-    P.pos as pos,
-    P.age as age,
-    P.player_id as player_id,
-    CASE WHEN IDS.rotoworld IS NULL THEN 0 ELSE IDS.rotoworld END as rotoworld_id,
-    CASE WHEN O.owner_id IS NULL THEN 0 ELSE O.owner_id END as owner_id,
-    COUNT(*) - SUM(dnp) as games,
-    SUM(dnp) as dnp,
-    SUM(min)*1.0 / (COUNT(*) - SUM(dnp)) as min,
-    SUM(reb)*1.0 / (COUNT(*) - SUM(dnp)) as reb,
-    SUM(oreb)*1.0 / (COUNT(*) - SUM(dnp)) as off,
-    SUM(dreb)*1.0 / (COUNT(*) - SUM(dnp)) as def,
-    SUM(ast)*1.0 / (COUNT(*) - SUM(dnp)) as ast,
-    SUM(stl)*1.0 / (COUNT(*) - SUM(dnp)) as stl,
-    SUM(blk)*1.0 / (COUNT(*) - SUM(dnp)) as blk,
-    SUM(pts)*1.0 / (COUNT(*) - SUM(dnp)) as pts,
-    SUM(tpa)*1.0 / (COUNT(*) - SUM(dnp)) as tpa,
-    SUM(tpm)*1.0 / (COUNT(*) - SUM(dnp)) as tpm,
-    SUM(fga)*1.0 / (COUNT(*) - SUM(dnp)) as fga,
-    SUM(fgm)*1.0 / (COUNT(*) - SUM(dnp)) as fgm,
-    SUM(fta)*1.0 / (COUNT(*) - SUM(dnp)) as fta,
-    SUM(ftm)*1.0 / (COUNT(*) - SUM(dnp)) as ftm,
-    SUM(turnovers)*1.0 / (COUNT(*) - SUM(dnp)) as turnovers,
-    SUM(pf)*1.0 / (COUNT(*) - SUM(dnp)) as pf
+    REPLACE(P.first || ' ' || P.last, "'", "") AS name,
+    P.team AS team,
+    P.pos AS pos,
+    P.age AS age,
+    P.player_id AS player_id,
+    CASE WHEN IDS.rotoworld IS NULL THEN 0 ELSE IDS.rotoworld END AS rotoworld_id,
+    CASE WHEN O.owner_id IS NULL THEN 0 ELSE O.owner_id END AS owner_id,
+    CASE WHEN D.draft_position IS NULL THEN 0 ELSE D.draft_position END AS draft_position,
+    COUNT(*) - SUM(dnp) AS games,
+    SUM(dnp) AS dnp,
+    SUM(min)*1.0 / (COUNT(*) - SUM(dnp)) AS min,
+    SUM(reb)*1.0 / (COUNT(*) - SUM(dnp)) AS reb,
+    SUM(oreb)*1.0 / (COUNT(*) - SUM(dnp)) AS off,
+    SUM(dreb)*1.0 / (COUNT(*) - SUM(dnp)) AS def,
+    SUM(ast)*1.0 / (COUNT(*) - SUM(dnp)) AS ast,
+    SUM(stl)*1.0 / (COUNT(*) - SUM(dnp)) AS stl,
+    SUM(blk)*1.0 / (COUNT(*) - SUM(dnp)) AS blk,
+    SUM(pts)*1.0 / (COUNT(*) - SUM(dnp)) AS pts,
+    SUM(tpa)*1.0 / (COUNT(*) - SUM(dnp)) AS tpa,
+    SUM(tpm)*1.0 / (COUNT(*) - SUM(dnp)) AS tpm,
+    SUM(fga)*1.0 / (COUNT(*) - SUM(dnp)) AS fga,
+    SUM(fgm)*1.0 / (COUNT(*) - SUM(dnp)) AS fgm,
+    SUM(fta)*1.0 / (COUNT(*) - SUM(dnp)) AS fta,
+    SUM(ftm)*1.0 / (COUNT(*) - SUM(dnp)) AS ftm,
+    SUM(turnovers)*1.0 / (COUNT(*) - SUM(dnp)) AS turnovers,
+    SUM(pf)*1.0 / (COUNT(*) - SUM(dnp)) AS pf
 FROM games G
 INNER JOIN players P ON G.player_id == P.player_id
 LEFT OUTER JOIN owned O ON P.player_id == O.player_id
 LEFT OUTER JOIN player_ids IDS ON P.player_id == IDS.yahoo
+LEFT OUTER JOIN draft D ON P.player_id == D.player_id
 WHERE G.date >= '%s'
 GROUP BY G.player_id;
 """ % (as_of_date)
@@ -110,7 +112,8 @@ GROUP BY G.player_id;
         query2 = """
 CREATE TEMP TABLE data2 AS
 SELECT
-    name, team, pos, age, player_id, rotoworld_id, owner_id, games, dnp, min, pts, tpm, reb, ast, stl, blk, fgm, fga, ftm, fta,
+    name, team, pos, age, player_id, rotoworld_id, owner_id, draft_position,
+    games, dnp, min, pts, tpm, reb, ast, stl, blk, fgm, fga, ftm, fta,
     (pts - 14.35475088) / 4.69424049 AS zpts,
     (tpm - 1.046000798) / 0.831125077 AS ztpm,
     (reb - 5.470573613) / 2.635452221 AS zreb,
@@ -132,8 +135,8 @@ FROM data1;
         query3 = """
 CREATE TEMP TABLE data3 AS
 SELECT
-    name, team, pos, age, player_id, rotoworld_id, owner_id, games, dnp,
-    min, pts, tpm, reb, ast, stl, blk,
+    name, team, pos, age, player_id, rotoworld_id, owner_id, draft_position,
+    games, dnp, min, pts, tpm, reb, ast, stl, blk,
     fgm, fga, CASE WHEN fga == 0.0 THEN 0.0 ELSE fgm*1.0 / fga END as fgp,
     ftm, fta, CASE WHEN fta == 0.0 THEN 0.0 ELSE ftm*1.0 / fta END as ftp,
     zpts * %f as zpts,

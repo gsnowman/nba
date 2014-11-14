@@ -76,7 +76,7 @@ function set_watch(player_id) {
 function create_table(data) {
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Team Pos Age Owner Own/Watch Games DNP Rank Z Min Pts 3pm Reb Ast Stl Blk FG FG% FT FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Team Pos Age Owner Own/Watch Games DNP Draft Rank Z Min Pts 3pm Reb Ast Stl Blk FG FG% FT FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {

@@ -23,7 +23,7 @@ function on_response(data) {
 
     var buf = [];
     buf.push('<table id="datatable" class="tablesorter">');
-    buf.push(format_header('Name Games DNP Rank Z Min Pts 3pm Reb Ast Stl Blk FG FG% FT FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Games DNP Draft Rank Z Min Pts 3pm Reb Ast Stl Blk FG FG% FT FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     // 0:pts, 1:tpm, 2:reb, 3:ast, 4:stl, 5:blk, 6:fga, 7:fgm, 8:fta, 9:ftm, 10:min, 11:games, 12:dnp
