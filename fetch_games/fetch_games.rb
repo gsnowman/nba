@@ -91,6 +91,11 @@ links.each do |link|
   team_tables = html.scan(/scope="col".*?class="totals"/)
   log("Found #{team_tables.size} tables/teams")
 
+  if html.scan(/<h3>Game Leaders<\/h3>/).empty?
+    log("Game in progress, skipping...")
+    next
+  end
+
   # get the total score
   scores = html.scan(/class="totals".*?<\/tr>/).collect do |total|
     total.scan(/<td.*?<\/td>/).last.remove_tags.to_i
