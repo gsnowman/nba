@@ -62,6 +62,7 @@ function on_response(data) {
             'Total', // name
             vals[11], // games
             vals[12], // dnp
+            '', // draft
             '', // rank
             '', // total z-score
             vals[10].toFixed(places), // min

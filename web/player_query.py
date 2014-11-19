@@ -1,5 +1,6 @@
 import itertools
 import datetime as dt
+import cherrypy
 
 def convert_results(db):
     field_names = [d[0].lower() for d in db.description]
@@ -43,13 +44,15 @@ WHERE player_id = %d AND date >= '%s'
 ORDER BY date desc;
 """ % (self.player_id, as_of_date);
 
-        db.execute(query1);
+        cherrypy.log(query1)
+        db.execute(query1)
 
     def query2(self, db):
         query2 = """
 SELECT *, (zpts + ztpm + zreb + zast + zstl + zblk + zfg + zft) / 8.0 as z FROM data1;
 """
-        db.execute(query2);
+        cherrypy.log(query2)
+        db.execute(query2)
         return convert_results(db)
 
 class PlayerQuery:
@@ -63,6 +66,7 @@ class PlayerQuery:
 
     def query(self, db):
         self.query1(db)
+        self.query1b(db)
         self.query2(db)
         self.query3(db)
         return self.query4(db)
@@ -82,22 +86,22 @@ SELECT
     CASE WHEN D.draft_position IS NULL THEN 0 ELSE D.draft_position END AS draft_position,
     COUNT(*) - SUM(dnp) AS games,
     SUM(dnp) AS dnp,
-    SUM(min)*1.0 / (COUNT(*) - SUM(dnp)) AS min,
-    SUM(reb)*1.0 / (COUNT(*) - SUM(dnp)) AS reb,
-    SUM(oreb)*1.0 / (COUNT(*) - SUM(dnp)) AS off,
-    SUM(dreb)*1.0 / (COUNT(*) - SUM(dnp)) AS def,
-    SUM(ast)*1.0 / (COUNT(*) - SUM(dnp)) AS ast,
-    SUM(stl)*1.0 / (COUNT(*) - SUM(dnp)) AS stl,
-    SUM(blk)*1.0 / (COUNT(*) - SUM(dnp)) AS blk,
-    SUM(pts)*1.0 / (COUNT(*) - SUM(dnp)) AS pts,
-    SUM(tpa)*1.0 / (COUNT(*) - SUM(dnp)) AS tpa,
-    SUM(tpm)*1.0 / (COUNT(*) - SUM(dnp)) AS tpm,
-    SUM(fga)*1.0 / (COUNT(*) - SUM(dnp)) AS fga,
-    SUM(fgm)*1.0 / (COUNT(*) - SUM(dnp)) AS fgm,
-    SUM(fta)*1.0 / (COUNT(*) - SUM(dnp)) AS fta,
-    SUM(ftm)*1.0 / (COUNT(*) - SUM(dnp)) AS ftm,
-    SUM(turnovers)*1.0 / (COUNT(*) - SUM(dnp)) AS turnovers,
-    SUM(pf)*1.0 / (COUNT(*) - SUM(dnp)) AS pf
+    SUM(min)*1.0 AS min,
+    SUM(reb)*1.0 AS reb,
+    SUM(oreb)*1.0 AS off,
+    SUM(dreb)*1.0 AS def,
+    SUM(ast)*1.0 AS ast,
+    SUM(stl)*1.0 AS stl,
+    SUM(blk)*1.0 AS blk,
+    SUM(pts)*1.0 AS pts,
+    SUM(tpa)*1.0 AS tpa,
+    SUM(tpm)*1.0 AS tpm,
+    SUM(fga)*1.0 AS fga,
+    SUM(fgm)*1.0 AS fgm,
+    SUM(fta)*1.0 AS fta,
+    SUM(ftm)*1.0 AS ftm,
+    SUM(turnovers)*1.0 AS turnovers,
+    SUM(pf)*1.0 AS pf
 FROM games G
 INNER JOIN players P ON G.player_id == P.player_id
 LEFT OUTER JOIN owned O ON P.player_id == O.player_id
@@ -106,7 +110,34 @@ LEFT OUTER JOIN draft D ON P.player_id == D.player_id
 WHERE G.date >= '%s'
 GROUP BY G.player_id;
 """ % (as_of_date)
+        cherrypy.log(query1)
         db.execute(query1)
+
+    def query1b(self, db):
+        query1b = """
+CREATE TEMP TABLE data1b AS
+SELECT
+    name, team, pos, age, player_id, rotoworld_id, owner_id, draft_position, games, dnp,
+    CASE WHEN games == 0 THEN 0.0 ELSE min / games END as min,
+    CASE WHEN games == 0 THEN 0.0 ELSE reb / games END as reb,
+    CASE WHEN games == 0 THEN 0.0 ELSE off / games END as off,
+    CASE WHEN games == 0 THEN 0.0 ELSE def / games END as def,
+    CASE WHEN games == 0 THEN 0.0 ELSE ast / games END as ast,
+    CASE WHEN games == 0 THEN 0.0 ELSE stl / games END as stl,
+    CASE WHEN games == 0 THEN 0.0 ELSE blk / games END as blk,
+    CASE WHEN games == 0 THEN 0.0 ELSE pts / games END as pts,
+    CASE WHEN games == 0 THEN 0.0 ELSE tpa / games END as tpa,
+    CASE WHEN games == 0 THEN 0.0 ELSE tpm / games END as tpm,
+    CASE WHEN games == 0 THEN 0.0 ELSE fga / games END as fga,
+    CASE WHEN games == 0 THEN 0.0 ELSE fgm / games END as fgm,
+    CASE WHEN games == 0 THEN 0.0 ELSE fta / games END as fta,
+    CASE WHEN games == 0 THEN 0.0 ELSE ftm / games END as ftm,
+    CASE WHEN games == 0 THEN 0.0 ELSE turnovers / games END as turnovers,
+    CASE WHEN games == 0 THEN 0.0 ELSE pf / games END as pf
+FROM data1;
+"""
+        cherrypy.log(query1b)
+        db.execute(query1b);
 
     def query2(self, db):
         query2 = """
@@ -122,8 +153,9 @@ SELECT
     (blk - 0.602942934) / 0.545058275 AS zblk,
     CASE WHEN fga = 0 THEN 0.0 ELSE (((fgm / fga) - 0.465815549) / 0.054609879) * (fga / 11.52125367) END AS zfg,
     CASE WHEN fta = 0 THEN 0.0 ELSE (((ftm / fta) - 0.772864612) / 0.094757395) * (fta / 3.404121105) END AS zft
-FROM data1;
+FROM data1b;
 """
+        cherrypy.log(query2)
         db.execute(query2)
 
     def query3(self, db):
@@ -149,12 +181,10 @@ SELECT
     zft * %f as zft,
     (zpts * %f + ztpm * %f + zreb * %f + zast * %f + zstl * %f + zblk * %f + zfg * %f + zft * %f) / %f as z
 FROM data2
-WHERE min > 0.0
 ORDER BY z DESC;
 """ % format_args
 
-        # TODO: remove the min > 0.0 flag so that players (Durant) who haven't played still show up
-
+        cherrypy.log(query3)
         db.execute(query3)
 
     def query4(self, db):
@@ -163,6 +193,7 @@ ORDER BY z DESC;
             owner_sql = "WHERE owner_id in (%s)" % ",".join([str(x) for x in self.owners])
 
         query4 = "SELECT ROWID as rank, * FROM data3 %s;" % owner_sql
+        cherrypy.log(query4)
         db.execute(query4)
         return convert_results(db)
 
