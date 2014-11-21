@@ -58,7 +58,7 @@ function on_game_log_response(data) {
         var score_color = (g.teamscore > g.oppscore) ? "#009900" : "#AA0000";
         buf.push('<td><font color=' + score_color + '>' + g.teamscore + '-' + g.oppscore + '</font></td>');
         if (g.dnp == 1) {
-            buf.push(empty_tds(18));
+            buf.push(empty_tds(20));
         } else {
             buf.push(format_game_for_player(g));
         }
