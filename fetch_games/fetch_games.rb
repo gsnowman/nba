@@ -126,7 +126,7 @@ links.each do |link|
         next
       end
 
-      dnp = (player =~ /DNP/)
+      dnp = (player =~ /DNP/ or player =~ /Inactive/)
       unless dnp
         tds = player.scan(/<td.*?<\/td>/)
         start = (index < 5) ? 1 : 0
