@@ -1,17 +1,17 @@
 require 'rubygems'
 require 'mechanize'
 require 'db_wrapper'
+require 'set'
 
 agent = Mechanize.new { |agent|
   agent.user_agent_alias = 'Windows Mozilla'
-  #agent.follow_meta_refresh = true
 }
 
 league_id = "28152"
 
 owners = {}
 agent.get('https://login.yahoo.com/') do |page|
-  temp_page = page.form_with(:name => 'login_form') do |form|
+  temp_page = page.form_with(:id => 'mbr-login-form') do |form|
     form['login'] = 'gsnow3030'
     form['passwd'] = ENV["YAHOO_PWD"]
   end.submit
@@ -31,7 +31,9 @@ puts sql
 db.execute(sql)
 
 owners.each do |k,v|
-  v.each do |player_id|
+
+  s = Set.new(v)
+  s.each do |player_id|
     sql = "INSERT INTO owned VALUES (#{k}, #{player_id});"
     puts sql
     db.execute(sql)
