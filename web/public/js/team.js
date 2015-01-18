@@ -35,7 +35,7 @@ function on_response(data) {
 
     for (var k = 0; k < data.length; k=k+1) {
         var s = data[k];
-        buf.push('<tr>' + format_name(s.name, s.player_id, undefined)); // name
+        buf.push('<tr>' + format_name(s.name, s.player_id, s.rotoworld_id)); // name
         buf.push('<td align="center">' + s.games + '</td>');
         buf.push('<td align="center">' + s.dnp + '</td>');
         buf.push(format_season_player(s, true) + '</tr>');

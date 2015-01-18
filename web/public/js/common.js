@@ -94,7 +94,8 @@ function format_name(name, player_id, rotoworld_id) {
 
     // link to rotoworld
     if (rotoworld_id !== undefined && rotoworld_id != 0) {
-        buf.push(' <a href="http://www.rotoworld.com/premium/draftguide/basketball/playerpage.aspx?pid=');
+        //buf.push(' <a href="http://www.rotoworld.com/premium/draftguide/basketball/playerpage.aspx?pid=');
+        buf.push(' <a href="http://www.rotoworld.com/player/nba/');
         buf.push(rotoworld_id + '" target="_blank">');
         buf.push('<img src="/public/rw_fav.ico" style="width:12px;height:12px"></a>');
     }
