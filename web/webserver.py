@@ -73,8 +73,8 @@ SELECT
     ast, zast * %f as zast,
     stl, zstl * %f as zstl,
     blk, zblk * %f as zblk,
-    fga, fgp, zfg * %f as zfg,
-    fta, ftp, zft * %f as zft,
+    fga * fgp as fgm, fga, fgp, zfg * %f as zfg,
+    fta * ftp as ftm, fta, ftp, zft * %f as zft,
     (zpts * %f + ztpm * %f + zreb * %f + zast * %f + zstl * %f + zblk * %f + zfg * %f + zft * %f) / %f as z
 FROM
     season_values SV

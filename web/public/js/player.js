@@ -29,7 +29,7 @@ function on_seasons_response(data) {
         buf.push('<td align="center">' + s.team + '</td>');
         buf.push('<td align="center">' + s.games + '</td>');
         buf.push('<td align="center">' + (82 - s.games) + '</td>');
-        buf.push(format_season_player(s) + '</tr>');
+        buf.push(format_season_player(s, false) + '</tr>');
     }
 
     buf.push('</tbody></table>')

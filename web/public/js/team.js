@@ -38,7 +38,7 @@ function on_response(data) {
         buf.push('<tr>' + format_name(s.name, s.player_id, undefined)); // name
         buf.push('<td align="center">' + s.games + '</td>');
         buf.push('<td align="center">' + s.dnp + '</td>');
-        buf.push(format_season_player(s) + '</tr>');
+        buf.push(format_season_player(s, true) + '</tr>');
 
         var vals2 = [s.pts, s.tpm, s.reb, s.ast, s.stl, s.blk,
             s.fga, s.fga * s.fgp, s.fta, s.fta * s.ftp, s.min, s.games, s.dnp];

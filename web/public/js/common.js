@@ -110,15 +110,18 @@ function format_attempts(made, att) {
 // generates the following table cells:
 // - z pts tpm reb ast stl blk fga fgp fta ftp
 // - Z scores for: pts tpm reb ast stl blk fg ft
-function format_season_player(p) {
+function format_season_player(p, include_draft_and_rank) {
     var buf = [];
 
-    if (p.draft_position == 0) { // need to hide this
-        buf.push('<td><font style="font-size:0px">9999</font></td>');
-    } else {
-        buf.push('<td><font color="#CC0066">' + p.draft_position + '</td>');
+    if (include_draft_and_rank) {
+        if (p.draft_position == 0) { // need to hide this
+            buf.push('<td><font style="font-size:0px">9999</font></td>');
+        } else {
+            buf.push('<td><font color="#CC0066">' + p.draft_position + '</td>');
+        }
+        buf.push('<td><font color="#FF6600">' + p.rank + '</td>');
     }
-    buf.push('<td><font color="#FF6600">' + p.rank + '</td>');
+
     buf.push('<td ' + format_bgcolor(z_color(p.z, 2.0)) + '>' + p.z.toFixed(places) + '</td>');
     buf.push('<td>' + p.min.toFixed(places) + '</td>');
     buf.push('<td>' + p.pts.toFixed(places) + '</td>');

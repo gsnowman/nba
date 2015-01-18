@@ -103,7 +103,7 @@ function create_table(data) {
         buf.push('<td>' + p.games + '</td>');
         buf.push('<td>' + p.dnp + '</td>');
 
-        buf.push(format_season_player(p));
+        buf.push(format_season_player(p, true));
 
         buf.push('</tr>');
     }
