@@ -146,6 +146,30 @@ WHERE SV.player_id = %d ORDER BY season ASC;
             con.row_factory = sqlite3.Row
             return query.query(con.cursor())
 
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def get_player_periods(self, player_id):
+        days_to_query = [7, 17, 30, 60, None]
+        all_results = []
+
+        for days in days_to_query:
+            with sqlite3.connect(DB_STRING) as con:
+                con.row_factory = sqlite3.Row
+                query = PlayerQuery()
+                query.player_id = int(player_id)
+                if days is not None:
+                    query.days = days
+                    results = query.query(con.cursor())
+                    results[0]['period'] = "%d days" % days
+                    all_results.append(results)
+                else:
+                    query.days = 999
+                    results = query.query(con.cursor())
+                    results[0]['period'] = 'season'
+                    all_results.append(results)
+
+        return all_results
+
 if __name__ == '__main__':
     conf = {
         '/': {
@@ -158,6 +182,6 @@ if __name__ == '__main__':
         }
     }
 
-    webbrowser.open('http://127.0.0.1:8080/all')
+    #webbrowser.open('http://127.0.0.1:8080/all')
     cherrypy.quickstart(Stats(), '/', conf)
 

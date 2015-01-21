@@ -60,6 +60,7 @@ class PlayerQuery:
         self.owners = None
         self.days = 1000
         self.factors = Factors([1.0] * 8)
+        self.player_id = None
 
     def remove_owned(self):
         self.owners = [0]
@@ -188,11 +189,14 @@ ORDER BY z DESC;
         db.execute(query3)
 
     def query4(self, db):
-        owner_sql = ""
+        # makes the assumption that both self.owners and self.player_id won't both be non-None
+        additional_sql = ""
         if self.owners is not None:
-            owner_sql = "WHERE owner_id in (%s)" % ",".join([str(x) for x in self.owners])
+            additional_sql = "WHERE owner_id in (%s)" % ",".join([str(x) for x in self.owners])
+        if self.player_id is not None:
+            additional_sql = "WHERE player_id in (%d)" % self.player_id
 
-        query4 = "SELECT ROWID as rank, * FROM data3 %s;" % owner_sql
+        query4 = "SELECT ROWID as rank, * FROM data3 %s;" % additional_sql
         cherrypy.log(query4)
         db.execute(query4)
         return convert_results(db)

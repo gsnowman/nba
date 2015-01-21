@@ -12,6 +12,10 @@ function get_game_log_request_url() {
     return '/get_player_game_log?player_id=' + get_player_id();
 }
 
+function get_player_periods_request_url() {
+    return '/get_player_periods?player_id=' + get_player_id();
+}
+
 function on_seasons_response(data) {
     if (data.length) {
         document.title = data[0].name;
@@ -19,7 +23,7 @@ function on_seasons_response(data) {
 
     var buf = [];
     buf.push('<table id="seasons" class="tablesorter">');
-    buf.push(format_header('Name Season Team Games DNP Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push(format_header('Name Season Team Games Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
     buf.push('<tbody>')
 
     for (var i = 0; i < data.length; i=i+1) {
@@ -28,13 +32,34 @@ function on_seasons_response(data) {
         buf.push('<td align="center">' + s.season + '</td>');
         buf.push('<td align="center">' + s.team + '</td>');
         buf.push('<td align="center">' + s.games + '</td>');
-        buf.push('<td align="center">' + (82 - s.games) + '</td>');
+        //buf.push('<td align="center">' + (82 - s.games) + '</td>');
         buf.push(format_season_player(s, false) + '</tr>');
     }
 
     buf.push('</tbody></table>')
     $("#seasons_div").html(buf.join(''));
     $("#seasons").tablesorter({widgets: ['zebra'], sortInitialOrder: 'desc'});
+}
+
+function on_player_periods_response(data) {
+
+    var buf = [];
+    buf.push('<table id="periods" class="tablesorter">');
+    buf.push(format_header('Period Games DNP Draft Rank Z Min Pts 3pm Reb Ast Stl Blk FGA FG% FTA FT% Pts 3pm Reb Ast Stl Blk FG FT'.split(' ')));
+    buf.push('<tbody>')
+
+    for (var i = 0; i < data.length; i=i+1) {
+        var s = data[i][0];
+        buf.push('<tr>');
+        buf.push('<td align="center">' + s.period + '</td>');
+        buf.push('<td align="center">' + s.games + '</td>');
+        buf.push('<td align="center">' + s.dnp + '</td>');
+        buf.push(format_season_player(s, true) + '</tr>');
+    }
+
+    buf.push('</tbody></table>')
+    $("#periods_div").html(buf.join(''));
+    $("#periods").tablesorter({widgets: ['zebra'], sortInitialOrder: 'desc'});
 }
 
 function empty_tds(num) {
@@ -72,6 +97,7 @@ function on_game_log_response(data) {
 function go() {
     submit_request(get_seasons_request_url(), on_seasons_response);
     submit_request(get_game_log_request_url(), on_game_log_response);
+    submit_request(get_player_periods_request_url(), on_player_periods_response);
 }
 
 function submitenter(e) {
