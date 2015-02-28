@@ -30,6 +30,7 @@ def fetch_players_from_yahoo(teams_to_include = [])
 
   # for each team, collect all the players for that team
   teams.each do |team|
+    puts "Team: #{team.abbrev}:"
     team_html = Web.fetch_clean("http://sports.yahoo.com/nba/teams/#{team.abbrev}/roster")
     # testing
     #team_html = Web.clean(File.open('index.html', 'r').read())
@@ -38,7 +39,6 @@ def fetch_players_from_yahoo(teams_to_include = [])
       begin
         attrs = pl.scan(/<t[dh]{1}.*?<\/t[dh]{1}>/)
         name = attrs[1].remove_tags.strip.split(' ')
-        puts "Name=#{name}"
         id = pl.scan(/nba\/players\/[0-9]+/).first.split('/').last.to_i
 
         first = name.shift
@@ -56,20 +56,17 @@ def fetch_players_from_yahoo(teams_to_include = [])
           :exp => attrs[8].remove_tags.to_i,
           :college => attrs[10].remove_tags,
           :salary => attrs[11].remove_tags.gsub('$', '').gsub(',', '').to_i,
-          :team => team.abbrev,
-          :owned => 0,
-          :owner => 0,
-          :rotoworld => 0,
-          :watch => 0,
-          :drafted => 0})
-        puts "Found '#{player.first} #{player.last}'"
-
+          :team => team.abbrev
+        })
         player
       rescue Exception => e
         puts e.message
         puts e.backtrace.inspect
         []
       end
+    end
+    team.players.each do |p|
+      puts " - [#{p.player_id}] - #{p.first} #{p.last}"
     end
     team.players.flatten!
   end
@@ -105,9 +102,7 @@ end
 #
 def add_players_to_sqlite(db, teams)
   teams.each do |t|
-    if db.exists('teams', {:abbrev => t.abbrev})
-      puts "Skipped team '#{t.name}' ('#{t.abbrev}')"
-    else
+    unless db.exists('teams', {:abbrev => t.abbrev})
       db.insert(t, 'teams')
       puts "Inserted team '#{t.name}' ('#{t.abbrev}')"
     end
