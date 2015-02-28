@@ -13,6 +13,7 @@ function get_request_url() {
     buf.push("fg=" + $("#text_fg").val());
     buf.push("ft=" + $("#text_ft").val());
     buf.push("season=" + $("#select_season").val());
+    buf.push("teams=" + $("#text_teams").val());
     buf.push("remove_owned=" + ($("#chk_remove_owned").prop('checked') ? 1 : 0));
     buf.push("num_days=" + ($("#text_days").val() == "" ? "1000" : $("#text_days").val()));
     return '/all_players?' + buf.join('&');

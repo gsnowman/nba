@@ -12,7 +12,7 @@ end
 
 class Player < SqliteMessage
   sql_accessor :player_id, :number, :last, :first, :pos, :height, :weight, :age,
-    :exp, :college, :salary, :team, :owned, :owner, :rotoworld, :watch, :drafted
+    :exp, :college, :salary, :team
   attr_accessor :games
   def initialize
     @games = []

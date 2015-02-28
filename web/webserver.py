@@ -32,10 +32,12 @@ class Stats(object):
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def all_players(self, pts, tpm, reb, ast, stl, blk, fg, ft, season, remove_owned, num_days):
+    def all_players(self, pts, tpm, reb, ast, stl, blk, fg, ft, season, teams, remove_owned, num_days):
         query = PlayerQuery()
         if int(remove_owned) == 1:
             query.remove_owned()
+        if len(remove_owned) > 0:
+            query.teams = teams.split(',')
         query.factors = Factors([float(x) for x in [pts, tpm, reb, ast, stl, blk, fg, ft]])
         query.days = int(num_days)
 
