@@ -36,7 +36,7 @@ class Stats(object):
         query = PlayerQuery()
         if int(remove_owned) == 1:
             query.remove_owned()
-        if len(remove_owned) > 0:
+        if len(teams) > 0:
             query.teams = teams.split(',')
         query.factors = Factors([float(x) for x in [pts, tpm, reb, ast, stl, blk, fg, ft]])
         query.days = int(num_days)
