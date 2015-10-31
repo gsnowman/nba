@@ -41,7 +41,7 @@ def fill(str)
 end
 
 password = ENV["YAHOO_PWD"]
-league_id = "28152"
+league_id = "26130"
 week_num = ARGV.first.to_i
 
 ids = []
