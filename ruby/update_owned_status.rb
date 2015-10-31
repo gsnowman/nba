@@ -3,23 +3,20 @@ require 'mechanize'
 require 'db_wrapper'
 require 'set'
 
-agent = Mechanize.new { |agent|
-  agent.user_agent_alias = 'Windows Mozilla'
-}
-
-league_id = "26130"
-
 pwd = ENV["YAHOO_PWD"]
 if pwd.nil? or pwd.empty?
     puts "Must set YAHOO_PWD environment variable"
     exit 1
 end
 
+agent = Mechanize.new { |agent| agent.user_agent_alias = 'Windows Mozilla' }
+league_id = "26130"
+
 owners = {}
-agent.get('https://login.yahoo.com/') do |page|
-  temp_page = page.form_with(:id => 'mbr-login-form') do |form|
+agent.get('https://login.yahoo.com/') do |login|
+  temp_page = login.form_with(:id => 'mbr-login-form') do |form|
     form['login'] = 'gsnow3030'
-    form['passwd'] = ENV["YAHOO_PWD"]
+    form['passwd'] = pwd
   end.submit
 
   (1..12).to_a.each do |team|
@@ -46,9 +43,7 @@ puts sql
 db.execute(sql)
 
 owners.each do |k,v|
-
-  s = Set.new(v)
-  s.each do |player_id|
+  Set.new(v).each do |player_id|
     sql = "INSERT INTO owned VALUES (#{k}, #{player_id});"
     puts sql
     db.execute(sql)
