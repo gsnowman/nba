@@ -110,10 +110,16 @@ def add_players_to_sqlite(db, teams)
     t.players.each do |p|
       if db.exists('players', {:player_id => p.player_id})
         puts "Updating '#{p.first} #{p.last}' with id #{p.player_id}"
-        db.update(p, 'players', 'player_id', ['owned', 'rotoworld']) # last parameter is fields to ignore
+        db.update(p, 'players', 'player_id')
       else
         db.insert(p, 'players')
         puts "Inserted '#{p.first} #{p.last}' with id #{p.player_id}"
+      end
+
+      unless db.exists('player_ids', {:yahoo => p.player_id})
+        name = p.first.gsub("'", '') + ' ' + p.last.gsub("'", '')
+        db.execute("INSERT INTO player_ids VALUES ('#{name}', #{p.player_id}, 0, 0)")
+        puts "Inserted into player_ids [#{p.player_id}]: '#{name}'"
       end
     end
   end
