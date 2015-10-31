@@ -40,7 +40,7 @@ agent.get('https://login.yahoo.com/') do |page|
   end
 end
 
-db = DbWrapper.new('../nba.sqlite')
+db = DbWrapper.new('nba.sqlite')
 sql = "DELETE FROM owned;"
 puts sql
 db.execute(sql)

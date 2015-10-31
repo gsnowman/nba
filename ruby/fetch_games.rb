@@ -18,7 +18,7 @@ def convert_min(m)
   min + (sec / 60.0)
 end
 
-db = DbWrapper.new('../nba.sqlite')
+db = DbWrapper.new('nba.sqlite')
 
 if ARGV.size > 0
   date_yr, date_month, date_day = ARGV.first.split('-').collect {|x| x.to_i}
