@@ -21,8 +21,12 @@ end
 db = DbWrapper.new('nba.sqlite')
 
 if ARGV.size > 0
-  date_yr, date_month, date_day = ARGV.first.split('-').collect {|x| x.to_i}
-  d = Date.new(date_yr, date_month, date_day)
+  if ARGV.first == "today"
+    d = Date.today
+  else
+    date_yr, date_month, date_day = ARGV.first.split('-').collect {|x| x.to_i}
+    d = Date.new(date_yr, date_month, date_day)
+  end
 else
   d = Date.today - 1
 end
