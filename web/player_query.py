@@ -2,6 +2,45 @@ import itertools
 import datetime as dt
 import cherrypy
 
+#PTS_MEAN  = 14.35475088
+#PTS_STDEV = 4.69424049
+#TPM_MEAN  = 1.046000798
+#TPM_STDEV = 0.831125077
+#REB_MEAN  = 5.470573613
+#REB_STDEV = 2.635452221
+#AST_MEAN  = 3.246593841
+#AST_STDEV = 2.155897725
+#STL_MEAN  = 1.018010561
+#STL_STDEV = 0.423021501
+#BLK_MEAN  = 0.602942934
+#BLK_STDEV = 0.545058275
+#FGP_MEAN  = 0.465815549
+#FGP_STDEV = 0.054609879
+#FGA_MEAN  = 11.52125367
+#FTP_MEAN  = 0.772864612
+#FTP_STDEV = 0.094757395
+#FTA_MEAN  = 3.404121105
+
+# using the averages of the top-168 as of 11/20/2015
+PTS_MEAN   = 13.72805513
+PTS_STDEV  = 5.261494411
+TPM_MEAN   = 1.053209026
+TPM_STDEV  = 0.8568547011
+REB_MEAN   = 5.496582254
+REB_STDEV  = 2.796284055
+AST_MEAN   = 2.923778883
+AST_STDEV  = 2.030287051
+STL_MEAN   = 1.036000871
+STL_STDEV  = 0.5195446512
+BLK_MEAN   = 0.6803871558
+BLK_STDEV  = 0.6763268253
+FGP_MEAN   = 0.4672976779
+FGP_STDEV  = 0.07255159149
+FGA_MEAN   = 11.08983165
+FTP_MEAN   = 0.7499932936
+FTP_STDEV  = 0.170467464
+FTA_MEAN   = 3.260466154
+
 def convert_results(db):
     field_names = [d[0].lower() for d in db.description]
     rows = db.fetchall()
@@ -31,18 +70,28 @@ CREATE TEMP TABLE data1 AS
 SELECT
     date,team,opp,home,teamscore,oppscore,dnp,start,min,
     pts,tpm,reb,ast,stl,blk,fgm,fga,ftm,fta,
-    (1.0*pts - 14.35475088) / 4.69424049 AS zpts,
-    (1.0*tpm - 1.046000798) / 0.831125077 AS ztpm,
-    (1.0*reb - 5.470573613) / 2.635452221 AS zreb,
-    (1.0*ast - 3.246593841) / 2.155897725 AS zast,
-    (1.0*stl - 1.018010561) / 0.423021501 AS zstl,
-    (1.0*blk - 0.602942934) / 0.545058275 AS zblk,
-    CASE WHEN fga = 0 THEN 0.0 ELSE (((1.0*fgm / fga) - 0.465815549) / 0.054609879) * (fga / 11.52125367) END AS zfg,
-    CASE WHEN fta = 0 THEN 0.0 ELSE (((1.0*ftm / fta) - 0.772864612) / 0.094757395) * (fta / 3.404121105) END AS zft
+    (1.0*pts - %f) / %f AS zpts,
+    (1.0*tpm - %f) / %f AS ztpm,
+    (1.0*reb - %f) / %f AS zreb,
+    (1.0*ast - %f) / %f AS zast,
+    (1.0*stl - %f) / %f AS zstl,
+    (1.0*blk - %f) / %f AS zblk,
+    CASE WHEN fga = 0 THEN 0.0 ELSE (((1.0*fgm / fga) - %f) / %f) * (fga / %f) END AS zfg,
+    CASE WHEN fta = 0 THEN 0.0 ELSE (((1.0*ftm / fta) - %f) / %f) * (fta / %f) END AS zft
 FROM games
 WHERE player_id = %d AND date >= '%s'
 ORDER BY date desc;
-""" % (self.player_id, as_of_date);
+""" % (
+    PTS_MEAN, PTS_STDEV,
+    TPM_MEAN, TPM_STDEV,
+    REB_MEAN, REB_STDEV,
+    AST_MEAN, AST_STDEV,
+    STL_MEAN, STL_STDEV,
+    BLK_MEAN, BLK_STDEV,
+    FGP_MEAN, FGP_STDEV, FGA_MEAN,
+    FTP_MEAN, FTP_STDEV, FTA_MEAN,
+    self.player_id, as_of_date
+);
 
         cherrypy.log(query1)
         db.execute(query1)
@@ -147,16 +196,25 @@ CREATE TEMP TABLE data2 AS
 SELECT
     name, team, pos, age, player_id, rotoworld_id, owner_id, draft_position,
     games, dnp, min, pts, tpm, reb, ast, stl, blk, fgm, fga, ftm, fta,
-    (pts - 14.35475088) / 4.69424049 AS zpts,
-    (tpm - 1.046000798) / 0.831125077 AS ztpm,
-    (reb - 5.470573613) / 2.635452221 AS zreb,
-    (ast - 3.246593841) / 2.155897725 AS zast,
-    (stl - 1.018010561) / 0.423021501 AS zstl,
-    (blk - 0.602942934) / 0.545058275 AS zblk,
-    CASE WHEN fga = 0 THEN 0.0 ELSE (((fgm / fga) - 0.465815549) / 0.054609879) * (fga / 11.52125367) END AS zfg,
-    CASE WHEN fta = 0 THEN 0.0 ELSE (((ftm / fta) - 0.772864612) / 0.094757395) * (fta / 3.404121105) END AS zft
+    (pts - %f) / %f AS zpts,
+    (tpm - %f) / %f AS ztpm,
+    (reb - %f) / %f AS zreb,
+    (ast - %f) / %f AS zast,
+    (stl - %f) / %f AS zstl,
+    (blk - %f) / %f AS zblk,
+    CASE WHEN fga = 0 THEN 0.0 ELSE (((fgm / fga) - %f) / %f) * (fga / %f) END AS zfg,
+    CASE WHEN fta = 0 THEN 0.0 ELSE (((ftm / fta) - %f) / %f) * (fta / %f) END AS zft
 FROM data1b;
-"""
+""" % (
+    PTS_MEAN, PTS_STDEV,
+    TPM_MEAN, TPM_STDEV,
+    REB_MEAN, REB_STDEV,
+    AST_MEAN, AST_STDEV,
+    STL_MEAN, STL_STDEV,
+    BLK_MEAN, BLK_STDEV,
+    FGP_MEAN, FGP_STDEV, FGA_MEAN,
+    FTP_MEAN, FTP_STDEV, FTA_MEAN
+)
         cherrypy.log(query2)
         db.execute(query2)
 
