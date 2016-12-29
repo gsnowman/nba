@@ -108,6 +108,7 @@ class PlayerQuery:
     def __init__(self):
         self.owners = None
         self.days = 1000
+        self.month = None
         self.factors = Factors([1.0] * 8)
         self.player_id = None
         self.teams = None
@@ -123,7 +124,26 @@ class PlayerQuery:
         return self.query4(db)
 
     def query1(self, db):
-        as_of_date = (dt.datetime.now() - dt.timedelta(days=int(self.days))).strftime("%Y-%m-%d")
+        if (self.month is None):
+            as_of_date = (dt.datetime.now() - dt.timedelta(days=int(self.days))).strftime("%Y-%m-%d")
+            date_where = "WHERE G.date >= '%s'" % as_of_date
+        else:
+            if self.month == "Oct":
+                date_where = "WHERE G.date >= '2015-10-01' AND G.date < '2015-11-01'"
+            elif self.month == "Nov":
+                date_where = "WHERE G.date >= '2015-11-01' AND G.date < '2015-12-01'"
+            elif self.month == "Dec":
+                date_where = "WHERE G.date >= '2015-12-01' AND G.date < '2016-01-01'"
+            elif self.month == "Jan":
+                date_where = "WHERE G.date >= '2016-01-01' AND G.date < '2016-02-01'"
+            elif self.month == "Feb":
+                date_where = "WHERE G.date >= '2016-02-01' AND G.date < '2016-03-01'"
+            elif self.month == "Mar":
+                date_where = "WHERE G.date >= '2016-03-01' AND G.date < '2016-04-01'"
+            elif self.month == "Apr":
+                date_where = "WHERE G.date >= '2016-04-01' AND G.date < '2016-05-01'"
+            else:
+                raise RuntimeError("Unsupported '%s'" % self.month)
         query1 = """
 CREATE TEMP TABLE data1 AS
 SELECT
@@ -158,9 +178,9 @@ INNER JOIN players P ON G.player_id == P.player_id
 LEFT OUTER JOIN owned O ON P.player_id == O.player_id
 LEFT OUTER JOIN player_ids IDS ON P.player_id == IDS.yahoo
 LEFT OUTER JOIN draft D ON P.player_id == D.player_id
-WHERE G.date >= '%s'
+%s
 GROUP BY G.player_id;
-""" % (as_of_date)
+""" % (date_where)
         cherrypy.log(query1)
         db.execute(query1)
 
